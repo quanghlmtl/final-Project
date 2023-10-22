@@ -1,0 +1,58 @@
+D:\C# winform\CuoiKi_QuanLyNganHang\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe.config
+D:\C# winform\CuoiKi_QuanLyNganHang\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe
+D:\C# winform\CuoiKi_QuanLyNganHang\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.pdb
+D:\C# winform\CuoiKi_QuanLyNganHang\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csprojResolveAssemblyReference.cache
+D:\C# winform\CuoiKi_QuanLyNganHang\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Properties.Resources.resources
+D:\C# winform\CuoiKi_QuanLyNganHang\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.GenerateResource.Cache
+D:\C# winform\CuoiKi_QuanLyNganHang\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.exe
+D:\C# winform\CuoiKi_QuanLyNganHang\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.pdb
+D:\C# winform\CuoiKi_QuanLyNganHang\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormLogin.resources
+D:\C# winform\CuoiKi_QuanLyNganHang\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.RJControls.RJTextBox.resources
+D:\C# winform\CuoiKi_QuanLyNganHang\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.MainForm.resources
+D:\C# winform\CuoiKi_QuanLyNganHang\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Class.lineShape.resources
+D:\C# winform\CuoiKi_QuanLyNganHang\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.ResetPassword.resources
+C:\Project\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe.config
+C:\Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.exe
+C:\Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.pdb
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe.config
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.exe
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.pdb
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.pdb
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csprojResolveAssemblyReference.cache
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Class.lineShape.resources
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormLogin.resources
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.MainForm.resources
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormNewAccount.resources
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Properties.Resources.resources
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.ResetPassword.resources
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.RJControls.RJTextBox.resources
+D:\C# winform\cuoiki\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.GenerateResource.Cache
+D:\finalexam.io\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe.config
+D:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.exe
+D:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.pdb
+D:\finalexam.io\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe
+D:\finalexam.io\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.pdb
+D:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csprojResolveAssemblyReference.cache
+D:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Class.lineShape.resources
+D:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormLogin.resources
+D:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.MainForm.resources
+D:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormNewAccount.resources
+D:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Properties.Resources.resources
+D:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.ResetPassword.resources
+D:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.RJControls.RJTextBox.resources
+D:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.GenerateResource.Cache
+F:\finalexam.io\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe.config
+F:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.exe
+F:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.pdb
+F:\finalexam.io\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe
+F:\finalexam.io\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.pdb
+F:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csprojResolveAssemblyReference.cache
+F:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Class.lineShape.resources
+F:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormLogin.resources
+F:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.MainForm.resources
+F:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormNewAccount.resources
+F:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Properties.Resources.resources
+F:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.ResetPassword.resources
+F:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.RJControls.RJTextBox.resources
+F:\finalexam.io\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.GenerateResource.Cache
