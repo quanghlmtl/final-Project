@@ -22,7 +22,7 @@ namespace CuoiKi_QuanLyNganHang.RJControls
         private int borderSize = 2;
         private bool underLinedStyle = false;
         private Color borderFocusColor = Color.HotPink;
-        private bool isForcued = true;
+        private bool isForcued = false;
         private Choose stateValue;
         private Choose2 cTextAlign;
         private Padding controlPadding = new Padding(0);
@@ -200,8 +200,9 @@ namespace CuoiKi_QuanLyNganHang.RJControls
             {
                 penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
 
-                if (!isForcued)
+                if (isForcued)
                 {
+                    
                     if (underLinedStyle)//line style
                         graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
                     else//normal style
