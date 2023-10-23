@@ -35,20 +35,10 @@ namespace CuoiKi_QuanLyNganHang
         //Methods
         private void Login()
         {
-            if (string.IsNullOrWhiteSpace(txtUser.Texts) || txtUser.Texts == "Tên đăng nhập")
-            {
-                this.lblMessage.Visible = true;
-                this.lblMessage.Text = "*Please enter your username";
-                txtUser.Focus();
+            if (CheckNullOrWhiteSpace(txtUser, lblMessage, "Tên đăng nhập", "username"))
                 return;
-            }
-            else if (string.IsNullOrWhiteSpace(txtPassword.Texts) || txtPassword.Texts == "Mật khẩu")
-            {
-                this.lblMessage.Text = "*Please enter your password";
-                this.lblMessage.Visible = true;
-                txtPassword.Focus();
+            else if (CheckNullOrWhiteSpace(txtUser, lblMessage, "Mật khẩu", "password"))
                 return;
-            }
             else
             {
                 //ur ur = new ur().Login(this.txtUser.Texts, this.txtPassword.Texts);
@@ -78,10 +68,6 @@ namespace CuoiKi_QuanLyNganHang
         //Event toolboxes
 
         //Check login
-        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             this.Login();

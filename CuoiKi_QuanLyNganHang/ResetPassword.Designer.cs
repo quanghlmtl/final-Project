@@ -158,9 +158,9 @@
             this.txtNumberPhone.Multiline = true;
             this.txtNumberPhone.Name = "txtNumberPhone";
             this.txtNumberPhone.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
-            this.txtNumberPhone.PasswordChar = false;
+            this.txtNumberPhone.PasswordChar = true;
             this.txtNumberPhone.Size = new System.Drawing.Size(400, 59);
-            this.txtNumberPhone.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
+            this.txtNumberPhone.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.Number;
             this.txtNumberPhone.TabIndex = 26;
             this.txtNumberPhone.TabStop = false;
             this.txtNumberPhone.Texts = "Số điện thoại";
@@ -214,7 +214,7 @@
             this.txtCCCD.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
             this.txtCCCD.PasswordChar = false;
             this.txtCCCD.Size = new System.Drawing.Size(400, 59);
-            this.txtCCCD.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
+            this.txtCCCD.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.Number;
             this.txtCCCD.TabIndex = 24;
             this.txtCCCD.TabStop = false;
             this.txtCCCD.Texts = "Số CCCD";

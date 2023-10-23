@@ -166,17 +166,6 @@ namespace CuoiKi_QuanLyNganHang.RJControls
             }
         }
         [Category("Custom Advance")]
-        private Color BorderFocusColor{
-            get
-            {
-                return borderFocusColor;
-            }
-            set
-            {
-                borderFocusColor = value;
-            }
-        }
-        [Category("Custom Advance")]
         public Padding ControlPadding
         {
             get

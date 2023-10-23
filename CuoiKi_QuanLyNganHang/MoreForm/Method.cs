@@ -45,7 +45,7 @@ namespace CuoiKi_QuanLyNganHang.MoreForm
         {
             if (txt.Texts == value)
                 txt.Texts = "";
-            if (txtpassword == true)
+            if (txtpassword)
                 txt.PasswordChar = true;
         }
         //Textbox leave
@@ -54,12 +54,12 @@ namespace CuoiKi_QuanLyNganHang.MoreForm
             if (txt.Texts == "")
             {
                 txt.Texts = value;
-                if (txtpassword == true)
+                if (txtpassword)
                     txt.PasswordChar = false;
             }
             else if (txt.Texts != value)
             {
-                if (txtpassword == true)
+                if (txtpassword)
                     txt.PasswordChar = true;
             }
         }
@@ -75,6 +75,7 @@ namespace CuoiKi_QuanLyNganHang.MoreForm
             }
 
         }
+        //Textbox enter more prooerties
         protected void HandleEnterMoreProperties(object sender, EventArgs e, Label label, RJControls.RJTextBox textBox, string placeholder)
         {
             label.Show();
@@ -82,6 +83,18 @@ namespace CuoiKi_QuanLyNganHang.MoreForm
             textBox.Padding = new Padding(8, 20, 5, 5);
             if (textBox.Texts == placeholder)
                 textBox.Texts = "";
+        }
+        //Check Textbox is Null Or White Space
+        protected bool CheckNullOrWhiteSpace(RJControls.RJTextBox txt, Label lb, string value1, string value2)
+        {
+            if (string.IsNullOrWhiteSpace(txt.Texts) || txt.Texts == value1)
+            {
+                lb.Visible = true;
+                lb.Text = "*Please enter " + value2;
+                txt.Focus();
+                return true;
+            }
+            else return false;
         }
     }
 }
