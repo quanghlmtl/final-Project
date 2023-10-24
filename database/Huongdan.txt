@@ -1,0 +1,19 @@
+// CÂU LỆNH ĐỂ TẠO DATABASE - ATTACH
+USE master;
+GO
+
+CREATE DATABASE QLNS
+ON (FILENAME = 'D:\...\final-Project\databaseL\quanly.mdf'),
+   (FILENAME = 'D:\...\final-Project\database\quanly_log.ldf')
+FOR ATTACH;
+GO
+
+
+
+Sau khi tạo database xong thì chạy file solution kết nối với SQL 
+Hoàn thành
+
+fix erro cannot executi...
+chuột phải --> properti --> file --> tại Owner: sa --> ok
+tạo new query: exec sp_changedbowner 'sa' -->f5 
+hoàn thành -->chạy datadiagram bình thường.
