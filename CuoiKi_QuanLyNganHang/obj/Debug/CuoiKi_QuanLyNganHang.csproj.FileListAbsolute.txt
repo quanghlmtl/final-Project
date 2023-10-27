@@ -66,10 +66,16 @@ D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLy
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csprojResolveAssemblyReference.cache
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Class.lineShape.resources
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormLogin.resources
-D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.MainForm.resources
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.MoreForm.Method.resources
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormNewAccount.resources
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Properties.Resources.resources
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.ResetPassword.resources
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.RJControls.RJTextBox.resources
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.GenerateResource.Cache
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormMain.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormCustomers.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormNotifications.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormOders.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormProduct.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormReporting.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormSetting.resources

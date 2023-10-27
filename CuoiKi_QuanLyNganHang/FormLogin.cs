@@ -50,10 +50,13 @@ namespace CuoiKi_QuanLyNganHang
                     //mainForm.FormClosed += this.MainForm_Logout;
                 //}
                 //else
-                {
-                    this.lblMessage.Text = "*Incorrect username or password";
-                    this.lblMessage.Visible = true;
-                }
+                //{
+                //    this.lblMessage.Text = "*Incorrect username or password";
+                //    this.lblMessage.Visible = true;
+                //}
+                FormMain formMain = new FormMain();
+                this.Hide();
+                formMain.ShowDialog();
             }
         }
         private void Logout()

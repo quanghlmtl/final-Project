@@ -265,7 +265,7 @@
             this.txtPassword1.Name = "txtPassword1";
             this.txtPassword1.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
             this.txtPassword1.PasswordChar = false;
-            this.txtPassword1.Size = new System.Drawing.Size(372, 55);
+            this.txtPassword1.Size = new System.Drawing.Size(372, 46);
             this.txtPassword1.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
             this.txtPassword1.TabIndex = 3;
             this.txtPassword1.TabStop = false;

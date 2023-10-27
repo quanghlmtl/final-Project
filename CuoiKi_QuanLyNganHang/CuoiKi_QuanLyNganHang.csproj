@@ -48,17 +48,53 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Class\ur.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\FormCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="Forms\FormCustomers.designer.cs">
+      <DependentUpon>FormCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormNotifications.designer.cs">
+      <DependentUpon>FormNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormOders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormOders.designer.cs">
+      <DependentUpon>FormOders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormProduct.designer.cs">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormReporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormReporting.designer.cs">
+      <DependentUpon>FormReporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSetting.designer.cs">
+      <DependentUpon>FormSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="MoreForm\Method.cs">
       <SubType>Form</SubType>
@@ -89,6 +125,7 @@
     <Compile Include="RJControls\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemeColor.cs" />
     <Compile Include="Toolbox\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -104,11 +141,29 @@
     <EmbeddedResource Include="Class\lineShape.resx">
       <DependentUpon>lineShape.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormCustomers.resx">
+      <DependentUpon>FormCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormNotifications.resx">
+      <DependentUpon>FormNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormOders.resx">
+      <DependentUpon>FormOders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormProduct.resx">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormReporting.resx">
+      <DependentUpon>FormReporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSetting.resx">
+      <DependentUpon>FormSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoreForm\Method.resx">
       <DependentUpon>Method.cs</DependentUpon>
@@ -163,6 +218,7 @@
   <ItemGroup>
     <None Include="Resources\home1-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
