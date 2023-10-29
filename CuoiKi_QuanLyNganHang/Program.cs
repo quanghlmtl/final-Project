@@ -16,7 +16,7 @@ namespace CuoiKi_QuanLyNganHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            Application.Run(new CFormHistory());
         }
     }
 }

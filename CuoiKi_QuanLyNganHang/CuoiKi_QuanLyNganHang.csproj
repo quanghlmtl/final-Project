@@ -137,6 +137,9 @@
     <Compile Include="RJControls\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="RJControls\RJToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ThemeColor.cs" />
     <Compile Include="Toolbox\CustomButton.cs">
       <SubType>Component</SubType>
