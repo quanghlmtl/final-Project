@@ -73,12 +73,6 @@ D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLy
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.RJControls.RJTextBox.resources
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.GenerateResource.Cache
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormMain.resources
-D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormCustomers.resources
-D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormNotifications.resources
-D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormOders.resources
-D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormProduct.resources
-D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormReporting.resources
-D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormSetting.resources
 C:\New folder\final-Project\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe.config
 C:\New folder\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.exe
 C:\New folder\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.pdb
@@ -98,3 +92,10 @@ C:\New folder\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHan
 C:\New folder\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormSaving.resources
 C:\New folder\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormHistory.resources
 C:\New folder\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormTransferMoney.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Card_details_2.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.card_details.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormHistory.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormTransferMoney.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormInformation.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormSaving.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Link_card.resources
