@@ -179,6 +179,7 @@
             this.hidden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.hidden.TabIndex = 5;
             this.hidden.TabStop = false;
+            this.hidden.Click += new System.EventHandler(this.lsNewAccout_Click);
             this.hidden.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Hidden_MouseDown);
             this.hidden.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Hidden_MouseUp);
             // 

@@ -105,13 +105,13 @@ namespace CuoiKi_QuanLyNganHang
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormProduct(), sender);
+            OpenChildForm(new CFormTransferMoney(), sender);
             btnCloseChildForm.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormOders(), sender);
+            OpenChildForm(new CFormHistory(), sender);
             btnCloseChildForm.Visible = true;
         }
 
@@ -201,6 +201,11 @@ namespace CuoiKi_QuanLyNganHang
         private void btn_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void hidden_MouseUp(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

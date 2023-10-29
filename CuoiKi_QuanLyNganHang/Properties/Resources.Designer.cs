@@ -63,9 +63,29 @@ namespace CuoiKi_QuanLyNganHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _368821744_1666664673824546_8402289674147141834_n {
+            get {
+                object obj = ResourceManager.GetObject("368821744_1666664673824546_8402289674147141834_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cool_background {
             get {
                 object obj = ResourceManager.GetObject("cool-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DNQT {
+            get {
+                object obj = ResourceManager.GetObject("DNQT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

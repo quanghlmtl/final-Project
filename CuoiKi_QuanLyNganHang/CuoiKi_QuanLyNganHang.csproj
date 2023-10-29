@@ -44,6 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CFormHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CFormHistory.Designer.cs">
+      <DependentUpon>CFormHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFormTransferMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CFormTransferMoney.Designer.cs">
+      <DependentUpon>CFormTransferMoney.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\lineShape.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -138,6 +150,12 @@
     <Compile Include="Toolbox\VBButon.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="CFormHistory.resx">
+      <DependentUpon>CFormHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CFormTransferMoney.resx">
+      <DependentUpon>CFormTransferMoney.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Class\lineShape.resx">
       <DependentUpon>lineShape.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,7 +236,12 @@
   <ItemGroup>
     <None Include="Resources\home1-removebg-preview.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\368821744_1666664673824546_8402289674147141834_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DNQT.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
