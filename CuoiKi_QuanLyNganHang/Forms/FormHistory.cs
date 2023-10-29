@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CuoiKi_QuanLyNganHang
 {
-    public partial class CFormHistory : Form
+    public partial class FormHistory : Form
     {
-        public CFormHistory()
+        public FormHistory()
         {
             InitializeComponent();
         }

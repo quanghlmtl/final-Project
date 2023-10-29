@@ -26,7 +26,6 @@ namespace CuoiKi_QuanLyNganHang
         {
             InitializeComponent();
             random = new Random();
-            btnCloseChildForm.Visible = false;
             this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
@@ -67,8 +66,8 @@ namespace CuoiKi_QuanLyNganHang
                     panel1.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     ThemeColor.PrimaryColor = color;
                     ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-                    btnCloseChildForm.BackColor = color;
-                    btnCloseChildForm.Visible = true;
+                    btnHome.BackColor = color;
+                    btnHome.Visible = true;
                 }
             }
         }  
@@ -100,43 +99,34 @@ namespace CuoiKi_QuanLyNganHang
             this.panelDesktopPane.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            label1.Text = childForm.Text.Substring(4);
+            label1.Text = childForm.Text.Substring(0);
         }
-
-        private void btnProducts_Click(object sender, EventArgs e)
+        //btn form con
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new CFormTransferMoney(), sender);
-            btnCloseChildForm.Visible = true;
+            btnHome.Enabled = false;
+            if (ActiveForm != null)
+            {
+                activeForm.Close();
+            }
+            
+            Reset();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnTransfer_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new CFormHistory(), sender);
-            btnCloseChildForm.Visible = true;
+            OpenChildForm(new FormTransferMoney(), sender);
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSaving_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormCustomers(), sender);
-            btnCloseChildForm.Visible = true;
+            OpenChildForm(new Forms.FormSaving(), sender);
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void btnHistory_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormReporting(), sender);
-            btnCloseChildForm.Visible = true;
+            OpenChildForm(new FormHistory(), sender);
         }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void btnInformation_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormNotifications(), sender);
-            btnCloseChildForm.Visible = true;
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.FormSetting(), sender);
-            btnCloseChildForm.Visible = true;
+            OpenChildForm(new Forms.FormInformation(), sender);
         }
 
         private void panelLogo_Paint(object sender, PaintEventArgs e)
@@ -146,11 +136,7 @@ namespace CuoiKi_QuanLyNganHang
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
-            if(ActiveForm != null)
-            {
-                activeForm.Close();
-            }
-            Reset();
+            OpenChildForm(new FormTransferMoney(), sender);
         }
 
         private void Reset()
@@ -160,12 +146,6 @@ namespace CuoiKi_QuanLyNganHang
             panelTitle.BackColor = Color.FromArgb(0, 135, 137);
             panel1.BackColor = Color.FromArgb(27, 38, 56);
             currentButton = null;
-            btnCloseChildForm.Visible = false;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void panelDesktopPane_MouseDown(object sender, MouseEventArgs e)
@@ -179,12 +159,7 @@ namespace CuoiKi_QuanLyNganHang
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-        private void panelDesktopPane_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -207,5 +182,27 @@ namespace CuoiKi_QuanLyNganHang
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            btnHome.Enabled = false;
+            btnHome.ForeColor = Color.White;
+        }
+
+        
+
+        
+
+       
+
+        
+
+
+        
     }
 }

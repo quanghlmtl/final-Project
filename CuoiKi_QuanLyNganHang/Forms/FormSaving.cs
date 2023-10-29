@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CuoiKi_QuanLyNganHang
+namespace CuoiKi_QuanLyNganHang.Forms
 {
-    public partial class CFormTransferMoney : Form
+    public partial class FormSaving : Form
     {
-        public CFormTransferMoney()
+        public FormSaving()
         {
             InitializeComponent();
         }

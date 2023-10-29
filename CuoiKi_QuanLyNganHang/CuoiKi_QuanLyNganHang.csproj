@@ -44,17 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CFormHistory.cs">
+    <Compile Include="Forms\FormHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CFormHistory.Designer.cs">
-      <DependentUpon>CFormHistory.cs</DependentUpon>
+    <Compile Include="Forms\FormHistory.Designer.cs">
+      <DependentUpon>FormHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="CFormTransferMoney.cs">
+    <Compile Include="Forms\FormTransferMoney.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CFormTransferMoney.Designer.cs">
-      <DependentUpon>CFormTransferMoney.cs</DependentUpon>
+    <Compile Include="Forms\FormTransferMoney.Designer.cs">
+      <DependentUpon>FormTransferMoney.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\lineShape.cs">
       <SubType>Component</SubType>
@@ -72,41 +72,17 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormCustomers.cs">
+    <Compile Include="Forms\FormInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormCustomers.designer.cs">
-      <DependentUpon>FormCustomers.cs</DependentUpon>
+    <Compile Include="Forms\FormInformation.Designer.cs">
+      <DependentUpon>FormInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormNotifications.cs">
+    <Compile Include="Forms\FormSaving.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormNotifications.designer.cs">
-      <DependentUpon>FormNotifications.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormOders.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormOders.designer.cs">
-      <DependentUpon>FormOders.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormProduct.designer.cs">
-      <DependentUpon>FormProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormReporting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormReporting.designer.cs">
-      <DependentUpon>FormReporting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormSetting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormSetting.designer.cs">
-      <DependentUpon>FormSetting.cs</DependentUpon>
+    <Compile Include="Forms\FormSaving.Designer.cs">
+      <DependentUpon>FormSaving.cs</DependentUpon>
     </Compile>
     <Compile Include="MoreForm\Method.cs">
       <SubType>Form</SubType>
@@ -153,11 +129,11 @@
     <Compile Include="Toolbox\VBButon.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="CFormHistory.resx">
-      <DependentUpon>CFormHistory.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormHistory.resx">
+      <DependentUpon>FormHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CFormTransferMoney.resx">
-      <DependentUpon>CFormTransferMoney.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormTransferMoney.resx">
+      <DependentUpon>FormTransferMoney.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Class\lineShape.resx">
       <DependentUpon>lineShape.cs</DependentUpon>
@@ -168,23 +144,11 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormCustomers.resx">
-      <DependentUpon>FormCustomers.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormInformation.resx">
+      <DependentUpon>FormInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormNotifications.resx">
-      <DependentUpon>FormNotifications.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormOders.resx">
-      <DependentUpon>FormOders.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormProduct.resx">
-      <DependentUpon>FormProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormReporting.resx">
-      <DependentUpon>FormReporting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormSetting.resx">
-      <DependentUpon>FormSetting.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormSaving.resx">
+      <DependentUpon>FormSaving.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoreForm\Method.resx">
       <DependentUpon>Method.cs</DependentUpon>
