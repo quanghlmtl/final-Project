@@ -44,6 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Card details 2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Card details 2.designer.cs">
+      <DependentUpon>Card details 2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="card details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="card details.designer.cs">
+      <DependentUpon>card details.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,12 @@
     </Compile>
     <Compile Include="Forms\FormSaving.Designer.cs">
       <DependentUpon>FormSaving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Link card.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Link card.designer.cs">
+      <DependentUpon>Link card.cs</DependentUpon>
     </Compile>
     <Compile Include="MoreForm\Method.cs">
       <SubType>Form</SubType>
@@ -129,6 +147,12 @@
     <Compile Include="Toolbox\VBButon.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Card details 2.resx">
+      <DependentUpon>Card details 2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="card details.resx">
+      <DependentUpon>card details.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormHistory.resx">
       <DependentUpon>FormHistory.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormSaving.resx">
       <DependentUpon>FormSaving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Link card.resx">
+      <DependentUpon>Link card.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoreForm\Method.resx">
       <DependentUpon>Method.cs</DependentUpon>
