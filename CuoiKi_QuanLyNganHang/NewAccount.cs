@@ -20,6 +20,10 @@ namespace CuoiKi_QuanLyNganHang
             btnHome.Parent = pictureBox1;
         }
 
+        public void HideHomeButton()
+        {
+            btnHome.Visible = false;
+        }
         //Event toolboxs
         //Button click
         private void btnCreate_Click(object sender, EventArgs e)

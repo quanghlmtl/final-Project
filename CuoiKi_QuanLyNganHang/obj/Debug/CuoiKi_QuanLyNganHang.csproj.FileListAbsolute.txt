@@ -99,3 +99,5 @@ D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLy
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormInformation.resources
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormSaving.resources
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Link_card.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Search1.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.UserManagement.resources

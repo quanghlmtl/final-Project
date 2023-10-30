@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtAccountBalance = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblName1 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.txtBank = new System.Windows.Forms.ComboBox();
             this.btnConfirm = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,32 +43,21 @@
             this.txtContent = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.txtMoney = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.txtBankNumber = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblName1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtAccountBalance);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(770, 96);
+            this.groupBox1.Size = new System.Drawing.Size(770, 82);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 25);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Thông tin tài khoản";
+            this.groupBox1.Text = "Thông tin tài khoản";
             // 
             // txtAccountBalance
             // 
@@ -78,7 +68,7 @@
             this.txtAccountBalance.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
             this.txtAccountBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAccountBalance.ForeColor = System.Drawing.Color.DimGray;
-            this.txtAccountBalance.Location = new System.Drawing.Point(240, 56);
+            this.txtAccountBalance.Location = new System.Drawing.Point(240, 29);
             this.txtAccountBalance.Margin = new System.Windows.Forms.Padding(4);
             this.txtAccountBalance.Multiline = false;
             this.txtAccountBalance.Name = "txtAccountBalance";
@@ -94,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 56);
+            this.label1.Location = new System.Drawing.Point(24, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 25);
             this.label1.TabIndex = 6;
@@ -118,6 +108,28 @@
             this.groupBox2.Size = new System.Drawing.Size(770, 333);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // lblName1
+            // 
+            this.lblName1.AutoSize = true;
+            this.lblName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName1.Location = new System.Drawing.Point(26, 120);
+            this.lblName1.Name = "lblName1";
+            this.lblName1.Size = new System.Drawing.Size(134, 20);
+            this.lblName1.TabIndex = 15;
+            this.lblName1.Text = "Người thụ hưởng: ";
+            this.lblName1.Visible = false;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(237, 120);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(61, 24);
+            this.lblName.TabIndex = 14;
+            this.lblName.Text = "Name";
+            this.lblName.Visible = false;
             // 
             // txtBank
             // 
@@ -251,28 +263,6 @@
             this.txtBankNumber.Texts = "";
             this.txtBankNumber.UnderLinedStyle = false;
             // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(237, 120);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(61, 24);
-            this.lblName.TabIndex = 14;
-            this.lblName.Text = "Name";
-            this.lblName.Visible = false;
-            // 
-            // lblName1
-            // 
-            this.lblName1.AutoSize = true;
-            this.lblName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName1.Location = new System.Drawing.Point(26, 120);
-            this.lblName1.Name = "lblName1";
-            this.lblName1.Size = new System.Drawing.Size(134, 20);
-            this.lblName1.TabIndex = 15;
-            this.lblName1.Text = "Người thụ hưởng: ";
-            this.lblName1.Visible = false;
-            // 
             // FormTransferMoney
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,7 +284,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private RJControls.RJTextBox txtAccountBalance;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox txtBank;

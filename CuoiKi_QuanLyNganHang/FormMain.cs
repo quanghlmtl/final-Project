@@ -106,6 +106,18 @@ namespace CuoiKi_QuanLyNganHang
             panelLogo.BackColor = Color.FromArgb(27, 38, 56);
             currentButton = null;
         }
+
+        private void hideMoreButton(bool value)
+        {
+            item1.Visible = value;
+            item2.Visible = value;
+            item3.Visible = value;
+            btnHide.Visible = value;
+            value = !value;
+            btnShow.Visible = value;
+            
+        }
+
         //Button click 
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -153,6 +165,17 @@ namespace CuoiKi_QuanLyNganHang
         private void btn_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        //button show more
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            hideMoreButton(true);
+        }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            hideMoreButton(false);
         }
     }
 }
