@@ -10,10 +10,12 @@ go
    CREATE TABLE [dbo].[Bank](
 	[IDbank] [int] IDENTITY(1,1) NOT NULL primary key,
 	[namebank] [nvarchar](50) NOT NULL,
+	--xoa dia chi va phone
 	[Diachi] [nvarchar](150) NULL,
 	[Phone] [char](12) NULL,
 ) ON [PRIMARY]
 go
+--table name thong tin
 CREATE TABLE [dbo].[KhachHang](
 	[IDkh] [int] IDENTITY(1,1) NOT NULL primary key,
 	[IDbank] [int]	 NOT NULL references dbo.Bank(IDbank),
@@ -24,17 +26,20 @@ CREATE TABLE [dbo].[KhachHang](
 	[CCCD] [varchar](50) NOT NULL unique,
 	[Date] [smalldatetime] NOT NULL,
 	)on [PRIMARY]
- go
+go
  CREATE TABLE [dbo].[Loaitk](
 	[IDloaitk] [int] IDENTITY(1,1) NOT NULL primary key,
 	[name] [nvarchar](100) NOT NULL,
 	)
- go
+go
+--bo bang loaitk va nhap loaitk vao table taikhoan
  CREATE TABLE [dbo].[Taikhoan](
+	--idtk nhap vs so tk
 	[IDtk] [int] IDENTITY(1,1) NOT NULL primary key,
 	[IDkh] [int] NOT NULL references dbo.KhachHang(IDkh),
 	[tentk] [nvarchar](100) NOT NULL,
 	[sodutk] [decimal](18, 2) NOT NULL,
+	--bo loai tai khoan 
 	[loaitk] [int] NOT NULL  references dbo.Loaitk(IDloaitk),
 	[sotk] [varchar](10) NULL,
 	[Datestart] [smalldatetime] NOT NULL,
@@ -59,6 +64,7 @@ go
 	[Name] [nvarchar](50) NOT NULL,
 	)on [PRIMARY]
 	go
+	select * from Loails
  CREATE TABLE [dbo].[Laisuat](
 	[IDls] [int] IDENTITY(1,1) NOT NULL primary key,
 	[IDtk] [int] NOT NULL references dbo.Taikhoan(IDtk),
@@ -73,6 +79,7 @@ CREATE TABLE [dbo].[tk_login](
 	[Username] [nvarchar](50) NOT NULL,
 	[Pass] [nvarchar](50) not NULL,
 	[namebank] [nchar](10) NULL,
+	--them idkhachhang vao day xoa ten di ket noi khoa vs idkh trong bang thong tin(bang khach hang doi ten)
 	[Ten] [nvarchar](50) NULL,
 ) ON [PRIMARY]
 go
