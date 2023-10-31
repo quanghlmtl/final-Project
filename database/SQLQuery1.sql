@@ -11,10 +11,9 @@ go
 	[IDbank] [int] IDENTITY(1,1) NOT NULL primary key,
 	[namebank] [nvarchar](50) NOT NULL,
 	--xoa dia chi va phone
-	[Diachi] [nvarchar](150) NULL,
-	[Phone] [char](12) NULL,
 ) ON [PRIMARY]
 go
+
 --table name thong tin
 CREATE TABLE [dbo].[KhachHang](
 	[IDkh] [int] IDENTITY(1,1) NOT NULL primary key,
@@ -36,7 +35,6 @@ go
 	[tentk] [nvarchar](100) NOT NULL,
 	[sodutk] [decimal](18, 2) NOT NULL,
 	--bo loai tai khoan 
-	[loaitk] [int] NOT NULL ,
 	[Datestart] [smalldatetime] NOT NULL,
 	)on [PRIMARY]
 go
@@ -75,6 +73,7 @@ CREATE TABLE [dbo].[tk_login](
 	[Pass] [nvarchar](50) not NULL,
 	--them idkhachhang vao day xoa ten di ket noi khoa vs idkh trong bang thong tin(bang khach hang doi ten)
 	Idkh int not null references dbo.KhachHang([IDkh]),
+	[loaitk] [int] NOT NULL ,
 ) ON [PRIMARY]
 go
 ALTER TABLE dbo.Taikhoan ADD CONSTRAINT DF_taikhoan_datestart DEFAULT GETDATE() for [Datestart];
@@ -133,11 +132,11 @@ INSERT INTO [dbo].[KhachHang] (IDbank,[Name], [CCCD], [Date]) VALUES (4,N'Lê Th
 INSERT INTO [dbo].[KhachHang] (IDbank,[Name], [CCCD], [Date]) VALUES (5,N'Nguyễn Hưng Định', '1234567', '11-11-2003');
 go
 --ALTER TABLE dbo.Laisuat ALTER COLUMN [mucls] [decimal](18, 2) NULL;
-insert Taikhoan (IDkh,tentk,loaitk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '123'),N'DinhNhu',2,100000000)
-insert Taikhoan (IDkh,tentk,loaitk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '1234'),N'DangQuang',1,7000000)
-insert Taikhoan (IDkh,tentk,loaitk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '12345'),N'KimNguyen',2,4000000)
-insert Taikhoan (IDkh,tentk,loaitk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '123456'),N'ThanhTu',1,5500000)
-insert Taikhoan (IDkh,tentk,loaitk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '1234567'),N'HungDinh',1,1700000)
+insert Taikhoan (IDkh,tentk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '123'),N'DinhNhu',100000000)
+insert Taikhoan (IDkh,tentk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '1234'),N'DangQuang',7000000)
+insert Taikhoan (IDkh,tentk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '12345'),N'KimNguyen',4000000)
+insert Taikhoan (IDkh,tentk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '123456'),N'ThanhTu',5500000)
+insert Taikhoan (IDkh,tentk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '1234567'),N'HungDinh',1700000)
 go
 insert Loaigd([Name]) values (N'Chuyển tiền'),(N'Rút tiền')
 go 
@@ -156,7 +155,7 @@ insert Laisuat(IDtk,IDloails,Datend) values ((SELECT IDtk FROM Taikhoan join Kha
 insert Laisuat(IDtk,IDloails,Datend) values ((SELECT IDtk FROM Taikhoan join KhachHang on Taikhoan.IDkh=KhachHang.IDkh where CCCD='123456'),1,'24-5-2024')
 insert Laisuat(IDtk,IDloails,Datend) values ((SELECT IDtk FROM Taikhoan join KhachHang on Taikhoan.IDkh=KhachHang.IDkh where CCCD='1234567'),1,'24-2-2024')
  GO
- INSERT tk_login(Username,Pass) values (N'Nhu',1),(N'Quang',1),(N'Tu',1),(N'Nguyen',1),(N'Dinh',1)
+ INSERT tk_login(Username,Pass,loaitk) values (N'Nhu',1,0),(N'Quang',1,0),(N'Tu',1,1),(N'Nguyen',1,0),(N'Dinh',1,1)
 
 
 
