@@ -27,11 +27,7 @@ CREATE TABLE [dbo].[KhachHang](
 	[Date] [smalldatetime] NOT NULL,
 	)on [PRIMARY]
 go
- CREATE TABLE [dbo].[Loaitk](
-	[IDloaitk] [int] IDENTITY(1,1) NOT NULL primary key,
-	[name] [nvarchar](100) NOT NULL,
-	)
-go
+
 --bo bang loaitk va nhap loaitk vao table taikhoan
  CREATE TABLE [dbo].[Taikhoan](
 	--idtk nhap vs so tk
@@ -40,8 +36,7 @@ go
 	[tentk] [nvarchar](100) NOT NULL,
 	[sodutk] [decimal](18, 2) NOT NULL,
 	--bo loai tai khoan 
-	[loaitk] [int] NOT NULL  references dbo.Loaitk(IDloaitk),
-	[sotk] [varchar](10) NULL,
+	[loaitk] [int] NOT NULL ,
 	[Datestart] [smalldatetime] NOT NULL,
 	)on [PRIMARY]
 go
@@ -78,9 +73,8 @@ go
 CREATE TABLE [dbo].[tk_login](
 	[Username] [nvarchar](50) NOT NULL,
 	[Pass] [nvarchar](50) not NULL,
-	[namebank] [nchar](10) NULL,
 	--them idkhachhang vao day xoa ten di ket noi khoa vs idkh trong bang thong tin(bang khach hang doi ten)
-	[Ten] [nvarchar](50) NULL,
+	Idkh int not null references dbo.KhachHang([IDkh]),
 ) ON [PRIMARY]
 go
 ALTER TABLE dbo.Taikhoan ADD CONSTRAINT DF_taikhoan_datestart DEFAULT GETDATE() for [Datestart];
@@ -137,9 +131,6 @@ INSERT INTO [dbo].[KhachHang] (IDbank,[Name], [CCCD], [Date]) VALUES (2,N'Trịn
 INSERT INTO [dbo].[KhachHang] (IDbank,[Name], [CCCD], [Date]) VALUES (3,N'Dương Kim Nguyên', '12345', '12-11-2003');	
 INSERT INTO [dbo].[KhachHang] (IDbank,[Name], [CCCD], [Date]) VALUES (4,N'Lê Thanh Tú', '123456', '12-12-2003');
 INSERT INTO [dbo].[KhachHang] (IDbank,[Name], [CCCD], [Date]) VALUES (5,N'Nguyễn Hưng Định', '1234567', '11-11-2003');
-go
-insert into [dbo].[Loaitk] ([name]) values (N'Thường')
-insert Loaitk ([name]) values (N'Vip')
 go
 --ALTER TABLE dbo.Laisuat ALTER COLUMN [mucls] [decimal](18, 2) NULL;
 insert Taikhoan (IDkh,tentk,loaitk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '123'),N'DinhNhu',2,100000000)
