@@ -28,57 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.chID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblDatepicker = new System.Windows.Forms.Label();
             this.rjButton1 = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chID,
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.Location = new System.Drawing.Point(12, 100);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(770, 347);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // chID
-            // 
-            this.chID.Text = "Mã giao dịch";
-            this.chID.Width = 105;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Từ tài khoản";
-            this.columnHeader1.Width = 144;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Số tiền giao dịch";
-            this.columnHeader2.Width = 121;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Ngày giao dịch";
-            this.columnHeader3.Width = 135;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Nội dung";
-            this.columnHeader4.Width = 274;
             // 
             // dateTimePicker1
             // 
@@ -120,17 +82,76 @@
             this.rjButton1.UseVisualStyleBackColor = false;
             this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column1,
+            this.Column0});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 100);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(769, 346);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Từ tài khoản";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Người tạo giao dịch";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Tới tài khoản";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Ngày giao dịch";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Nội dung";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã giao dịch";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column0
+            // 
+            this.Column0.HeaderText = "STT";
+            this.Column0.Name = "Column0";
+            this.Column0.ReadOnly = true;
+            // 
             // FormHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 459);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.lblDatepicker);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.listView1);
             this.Name = "FormHistory";
             this.Text = "Lịch sử giao dịch";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,14 +159,16 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader chID;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblDatepicker;
         private RJControls.RJButton rjButton1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column0;
     }
 }

@@ -44,20 +44,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Card details 2.cs">
+    <Compile Include="CardDetail2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Card details 2.designer.cs">
-      <DependentUpon>Card details 2.cs</DependentUpon>
+    <Compile Include="CardDetail2.designer.cs">
+      <DependentUpon>CardDetail2.cs</DependentUpon>
     </Compile>
-    <Compile Include="card details.cs">
+    <Compile Include="CardDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="card details.designer.cs">
-      <DependentUpon>card details.cs</DependentUpon>
+    <Compile Include="CardDetail.designer.cs">
+      <DependentUpon>CardDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\cbBorder.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormHistory.cs">
       <SubType>Form</SubType>
@@ -99,11 +105,18 @@
     <Compile Include="Forms\FormSaving.Designer.cs">
       <DependentUpon>FormSaving.cs</DependentUpon>
     </Compile>
-    <Compile Include="Link card.cs">
+    <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Link card.designer.cs">
-      <DependentUpon>Link card.cs</DependentUpon>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandleSql.cs" />
+    <Compile Include="LinkCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LinkCard.designer.cs">
+      <DependentUpon>LinkCard.cs</DependentUpon>
     </Compile>
     <Compile Include="MoreForm\Method.cs">
       <SubType>Form</SubType>
@@ -143,6 +156,8 @@
     <Compile Include="Search1.designer.cs">
       <DependentUpon>Search1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sql\DataProvider.cs" />
+    <Compile Include="Sql\LoginToFormMain.cs" />
     <Compile Include="ThemeColor.cs" />
     <Compile Include="Toolbox\CustomButton.cs">
       <SubType>Component</SubType>
@@ -162,11 +177,14 @@
     <Compile Include="UserManagement.designer.cs">
       <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Card details 2.resx">
-      <DependentUpon>Card details 2.cs</DependentUpon>
+    <EmbeddedResource Include="CardDetail2.resx">
+      <DependentUpon>CardDetail2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="card details.resx">
-      <DependentUpon>card details.cs</DependentUpon>
+    <EmbeddedResource Include="CardDetail.resx">
+      <DependentUpon>CardDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormHistory.resx">
       <DependentUpon>FormHistory.cs</DependentUpon>
@@ -189,8 +207,11 @@
     <EmbeddedResource Include="Forms\FormSaving.resx">
       <DependentUpon>FormSaving.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Link card.resx">
-      <DependentUpon>Link card.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinkCard.resx">
+      <DependentUpon>LinkCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoreForm\Method.resx">
       <DependentUpon>Method.cs</DependentUpon>
@@ -271,6 +292,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-double-up-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-no-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

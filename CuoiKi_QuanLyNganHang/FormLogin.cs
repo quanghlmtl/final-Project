@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CuoiKi_QuanLyNganHang.Class;
 using CuoiKi_QuanLyNganHang.MoreForm;
+using CuoiKi_QuanLyNganHang.Sql;
 namespace CuoiKi_QuanLyNganHang
 {
     public partial class FormLogin : Method
@@ -17,8 +18,6 @@ namespace CuoiKi_QuanLyNganHang
         {
             InitializeComponent();
         }
-        string strMK = "Mật khẩu";
-        string strTK = "Tên đăng nhập";
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
@@ -33,31 +32,49 @@ namespace CuoiKi_QuanLyNganHang
         }
 
         //Methods
+        bool checkLogin(string tk, string mk)
+        {
+            return LoginToFormMain.Instance.LoginFormMain(tk, mk);
+        }
+
         private void Login()
         {
-            if (CheckNullOrWhiteSpace(txtUser, lblMessage, "Tên đăng nhập", "username"))
-                return;
-            else if (CheckNullOrWhiteSpace(txtUser, lblMessage, "Mật khẩu", "password"))
-                return;
-            else
+            string tk = txtUser.Texts;
+            string mk = txtPassword.Texts;
+            if (checkLogin(tk, mk))
             {
-                //ur ur = new ur().Login(this.txtUser.Texts, this.txtPassword.Texts);
-                //if (ur != null)
-                //{
-                //    MainForm mainForm = new MainForm(ur);
-                //    mainForm.Show();
-                //    base.Hide();
-                    //mainForm.FormClosed += this.MainForm_Logout;
-                //}
-                //else
-                //{
-                //    this.lblMessage.Text = "*Incorrect username or password";
-                //    this.lblMessage.Visible = true;
-                //}
-                FormMain formMain = new FormMain();
+                FormMain formMain = new FormMain(tk, mk);
                 this.Hide();
                 formMain.ShowDialog();
             }
+            else
+            {
+                CustomMessageBox mb = new CustomMessageBox("Sai tài khoản mật khẩu");
+                mb.ShowDialog();
+            }
+            //if (CheckNullOrWhiteSpace(txtUser, lblMessage, "Tên đăng nhập", "username"))
+            //    return;
+            //else if (CheckNullOrWhiteSpace(txtPassword, lblMessage, "Mật khẩu", "password"))
+            //    return;
+            //else
+            //{
+            //    //ur ur = new ur().Login(this.txtUser.Texts, this.txtPassword.Texts);
+            //    //if (ur != null)
+            //    //{
+            //    //    MainForm mainForm = new MainForm(ur);
+            //    //    mainForm.Show();
+            //    //    base.Hide();
+            //        //mainForm.FormClosed += this.MainForm_Logout;
+            //    //}
+            //    //else
+            //    //{
+            //    //    this.lblMessage.Text = "*Incorrect username or password";
+            //    //    this.lblMessage.Visible = true;
+            //    //}
+            //    FormMain formMain = new FormMain();
+            //    this.Hide();
+            //    formMain.ShowDialog();
+            //}
         }
         private void Logout()
         {
@@ -73,7 +90,7 @@ namespace CuoiKi_QuanLyNganHang
         //Check login
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Login();
+            Login();
         }
 
         //Hidden password
