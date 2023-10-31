@@ -1,26 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using CuoiKi_QuanLyNganHang;
-
+using CuoiKi_QuanLyNganHang.Forms;
+using CuoiKi_QuanLyNganHang.Sql;
+using CuoiKi_QuanLyNganHang.HandleSql;
 namespace CuoiKi_QuanLyNganHang
 {
     public partial class FormMain : Form
     {
         //Fields
-        private Button currentButton;
-        private Random random;
-        private int tempIndex;
         private Form activeForm;
-        private Form preForm;
+        string accountquery = "select * from [Account]";
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -32,23 +24,49 @@ namespace CuoiKi_QuanLyNganHang
         public FormMain()
         {
             InitializeComponent();
-            random = new Random();
-            this.Text = string.Empty;
-            this.ControlBox = false;
+            CenterToScreen();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+        }
+        private string tk;
+        private string mk;
+        public FormMain(string tk, string mk)
+        {
+            this.tk = tk;
+            this.mk = mk;
+            InitializeComponent();
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+        }
+
+        //Even form load
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            string displayName = "";
+            foreach (DataRow account in GetAllDataNew(accountquery).Rows)
+            {
+                if (account["AccountName"].ToString().Equals(tk))
+                {
+                    displayName = account["DisplayName"].ToString();
+                    break;
+                }
+            }
+            Home form = new Home(displayName);
+            OpenChildForm(form, btnHome.Text);
+            //activeButton(btnHome.Text);
+            if (checkStaff(tk))
+            {
+                btnHome.Enabled = false;
+                btnTransfer.Enabled = false;
+                btnSaving.Enabled = false;
+                btnHistory.Enabled = false;
+                btnInformation.Enabled = false;
+            }
         }
 
         //Methods
-        private Color SelectThemeColor()
+        bool checkStaff(string tk)
         {
-            int index = random.Next(ThemeColor.colorList.Count);
-            while (tempIndex == index)
-            {
-                random.Next(ThemeColor.colorList.Count);
-            }
-            tempIndex = index;
-            string color = ThemeColor.colorList[index];
-            return ColorTranslator.FromHtml(color);
+            return LoginToFormMain.Instance.checkStaff(tk);
         }
         private void DisableButton()
         {
@@ -62,22 +80,21 @@ namespace CuoiKi_QuanLyNganHang
                 }
             }
         }
-        private void ActivateButton(object btnSender)
+        private void ActivateButton(string value)
         {
-            if (btnSender != null)
+            foreach (Control control in panelDesktopPane.Controls)
             {
-                if (currentButton != (Button)btnSender)
+                if (control is System.Windows.Forms.Button)
                 {
-                    DisableButton();
-                    Color color = SelectThemeColor();
-                    currentButton = (Button)btnSender;
-                    currentButton.BackColor = color;
-                    currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    lblTitle.BackColor = color;
-                    panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-                    ThemeColor.PrimaryColor = color;
-                    ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    System.Windows.Forms.Button button = (System.Windows.Forms.Button)control;
+                    //if (button.Text == title)
+                    //{
+                    //    button.BackColor = Color.AliceBlue;
+                    //}
+                    //else
+                    //{
+                    //    button.BackColor = Color.Transparent;
+                    //}
                 }
             }
         }
@@ -98,35 +115,12 @@ namespace CuoiKi_QuanLyNganHang
             childForm.Show();
             lblTitle.Text = text;
         }
-        private void Reset()
-        {
-            DisableButton();
-            lblTitle.Text = "Home";
-            panelTitle.BackColor = Color.FromArgb(0, 135, 137);
-            panelLogo.BackColor = Color.FromArgb(27, 38, 56);
-            currentButton = null;
-        }
-
-        private void hideMoreButton(bool value)
-        {
-            item1.Visible = value;
-            item2.Visible = value;
-            item3.Visible = value;
-            btnHide.Visible = value;
-            value = !value;
-            btnShow.Visible = value;
-            
-        }
 
         //Button click 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-                activeForm.Dispose();
-                lblTitle.Text = "Home";
-            }
+            OpenChildForm(new Home(), btnTransfer.Text);
+
         }
         private void btnTransfer_Click(object sender, EventArgs e)
         {
@@ -165,17 +159,6 @@ namespace CuoiKi_QuanLyNganHang
         private void btn_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        //button show more
-        private void btnShow_Click(object sender, EventArgs e)
-        {
-            hideMoreButton(true);
-        }
-
-        private void btnHide_Click(object sender, EventArgs e)
-        {
-            hideMoreButton(false);
         }
     }
 }
