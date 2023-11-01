@@ -63,32 +63,9 @@ namespace CuoiKi_QuanLyNganHang.Sql
 
             return data;
         }
-        public DataTable ExecuteQuery2(string query, object[] parameter = null)
-        {
-            DataTable data = new DataTable();
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand(query, connection);
-
-                if (parameter != null)
-                {
-                    string[] listPara = query.Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
-                    for (int i = 0; i < parameter.Length; i++)
-                    {
-                        command.Parameters.AddWithValue(listPara[i], parameter[i]);
-                    }
-                }
-
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(data);
-            }
-
-            return data;
-        }
         public bool checkforgot2(string name, string cccd, string phone, string username)
         {
-            string query = "forgotpass @name, @cccd, @Phone, @Username";
+            string query = "[CHECK_FORGOT] @name, @cccd, @Phone, @userName";
             DataTable data = new DataTable();
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
@@ -97,14 +74,13 @@ namespace CuoiKi_QuanLyNganHang.Sql
                 {
                     command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
                     command.Parameters.Add("@cccd", SqlDbType.Char).Value = cccd;
-                    command.Parameters.Add("@Phone", SqlDbType.Char).Value = phone;
-                    command.Parameters.Add("@Username", SqlDbType.Char).Value = username;
+                    command.Parameters.Add("@phone", SqlDbType.Char).Value = phone;
+                    command.Parameters.Add("@userName", SqlDbType.Char).Value = username;
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
                     adapter.Fill(data);
+                    return data.Rows.Count > 0;
                 }
             }
-
-            return false; // Nếu thông tin đăng nhập sai hoặc có lỗi, trả về false
         }
 
         public void ExecuteNonQueryProvider(string name, string query, object[] parameter = null)

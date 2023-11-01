@@ -26,14 +26,5 @@ namespace CuoiKi_QuanLyNganHang
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, displayname, password });
             return result.Rows.Count > 0;
         }
-        public bool checkforgot(string name, string cccd, string phone, string username)
-        {
-            string query = "CHECK_FORGOT";
-
-            DataTable result = DataProvider.Instance.ExecuteQuery2(query, new object[] { name, cccd, phone, username });
-            return result.Rows.Count > 0;
-        }
-
-
     }
 }
