@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace CuoiKi_QuanLyNganHang
 {
-    public class HandleSql
+    public static class HandleSql
     {
-        public DataTable GetAllDataNew(string query)
+        public static DataTable GetAllDataNew(string query)
         {
             DataProvider provider = new DataProvider();
 

@@ -1,18 +1,17 @@
-﻿using System;
+﻿using CuoiKi_QuanLyNganHang.Forms;
+using CuoiKi_QuanLyNganHang.Sql;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using CuoiKi_QuanLyNganHang.Forms;
-using CuoiKi_QuanLyNganHang.Sql;
-using CuoiKi_QuanLyNganHang.HandleSql;
 namespace CuoiKi_QuanLyNganHang
 {
     public partial class FormMain : Form
     {
         //Fields
         private Form activeForm;
-        string accountquery = "select * from [Account]";
+        string accountquery = "select * from [ThongTin], [Login]";
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -42,17 +41,16 @@ namespace CuoiKi_QuanLyNganHang
         private void FormMain_Load(object sender, EventArgs e)
         {
             string displayName = "";
-            foreach (DataRow account in GetAllDataNew(accountquery).Rows)
+            foreach (DataRow account in HandleSql.GetAllDataNew(accountquery).Rows)
             {
-                if (account["AccountName"].ToString().Equals(tk))
+                if (account["Username"].ToString().Equals(tk))
                 {
-                    displayName = account["DisplayName"].ToString();
+                    displayName = account["Name"].ToString();
                     break;
                 }
             }
             Home form = new Home(displayName);
             OpenChildForm(form, btnHome.Text);
-            //activeButton(btnHome.Text);
             if (checkStaff(tk))
             {
                 btnHome.Enabled = false;

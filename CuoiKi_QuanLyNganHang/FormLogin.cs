@@ -18,7 +18,7 @@ namespace CuoiKi_QuanLyNganHang
         {
             InitializeComponent();
         }
-
+        string accountquery = "select * from [ThongTin], [Login]";
         private void FormLogin_Load(object sender, EventArgs e)
         {
             this.ActiveControl = null;
@@ -43,38 +43,22 @@ namespace CuoiKi_QuanLyNganHang
             string mk = txtPassword.Texts;
             if (checkLogin(tk, mk))
             {
+                string query = "SELECT loaitk FROM Login WHERE Username = @Username AND Pass = @Password";
+
                 FormMain formMain = new FormMain(tk, mk);
                 this.Hide();
                 formMain.ShowDialog();
             }
+            else if (CheckNullOrWhiteSpace(txtUser, lblMessage, "Tên đăng nhập", "username"))
+            {
+                return;
+            }
+            else if (CheckNullOrWhiteSpace(txtPassword, lblMessage, "Mật khẩu", "password")) return;
             else
             {
-                CustomMessageBox mb = new CustomMessageBox("Sai tài khoản mật khẩu");
-                mb.ShowDialog();
+                this.lblMessage.Text = "*Incorrect username or password";
+                this.lblMessage.Visible = true;
             }
-            //if (CheckNullOrWhiteSpace(txtUser, lblMessage, "Tên đăng nhập", "username"))
-            //    return;
-            //else if (CheckNullOrWhiteSpace(txtPassword, lblMessage, "Mật khẩu", "password"))
-            //    return;
-            //else
-            //{
-            //    //ur ur = new ur().Login(this.txtUser.Texts, this.txtPassword.Texts);
-            //    //if (ur != null)
-            //    //{
-            //    //    MainForm mainForm = new MainForm(ur);
-            //    //    mainForm.Show();
-            //    //    base.Hide();
-            //        //mainForm.FormClosed += this.MainForm_Logout;
-            //    //}
-            //    //else
-            //    //{
-            //    //    this.lblMessage.Text = "*Incorrect username or password";
-            //    //    this.lblMessage.Visible = true;
-            //    //}
-            //    FormMain formMain = new FormMain();
-            //    this.Hide();
-            //    formMain.ShowDialog();
-            //}
         }
         private void Logout()
         {

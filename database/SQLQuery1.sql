@@ -1,166 +1,84 @@
 ﻿ USE master;
 GO
 
-CREATE DATABASE quanly
-  use quanly
+CREATE DATABASE QLNH
+go
+  use QLNH
 set dateformat DMY
 go
 
+CREATE TABLE [dbo].[Bank](
+    [IDBank] [int] NOT NULL PRIMARY KEY,
+    [NameBank] [nvarchar](50) NOT NULL
+);
 go
-   CREATE TABLE [dbo].[Bank](
-	[IDbank] [int] IDENTITY(1,1) NOT NULL primary key,
-	[namebank] [nvarchar](50) NOT NULL,
-	--xoa dia chi va phone
-) ON [PRIMARY]
+CREATE TABLE [dbo].[ThongTin](
+    [ID] [int] NOT NULL PRIMARY KEY,
+    [IDBank] [int] NOT NULL,
+    [Name] [nvarchar](50) NOT NULL,
+    [DiaChi] [nvarchar](100) NULL,
+    [Phone] [char](10) NOT NULL UNIQUE,
+    [CCCD] [char](12) NOT NULL UNIQUE,
+    [Date] [smalldatetime] NOT NULL,
+    FOREIGN KEY (IDBank) REFERENCES [dbo].[Bank]([IDBank])
+);
 go
-
---table name thong tin
-CREATE TABLE [dbo].[KhachHang](
-	[IDkh] [int] IDENTITY(1,1) NOT NULL primary key,
-	[IDbank] [int]	 NOT NULL references dbo.Bank(IDbank),
-	[Name] [nvarchar](100) NOT NULL,
-	[DiaChi] [nvarchar](50) NULL,
-	[Email] [varchar](100) NULL,
-	[Phone] [char](12) NULL,
-	[CCCD] [varchar](50) NOT NULL unique,
-	[Date] [smalldatetime] NOT NULL,
-	)on [PRIMARY]
+CREATE TABLE [dbo].[TaiKhoan](
+    [ID] [int] NOT NULL PRIMARY KEY,
+    [Sotk] [int] NOT NULL,
+    [NameTK] [nvarchar](50) NOT NULL,
+    [SoDuTK] [decimal](18, 2) NOT NULL,
+    FOREIGN KEY (ID) REFERENCES [dbo].[ThongTin]([ID])
+);
 go
-
---bo bang loaitk va nhap loaitk vao table taikhoan
- CREATE TABLE [dbo].[Taikhoan](
-	--idtk nhap vs so tk
-	[IDtk] [int] IDENTITY(1,1) NOT NULL primary key,
-	[IDkh] [int] NOT NULL references dbo.KhachHang(IDkh),
-	[tentk] [nvarchar](100) NOT NULL,
-	[sodutk] [decimal](18, 2) NOT NULL,
-	--bo loai tai khoan 
-	[Datestart] [smalldatetime] NOT NULL,
-	)on [PRIMARY]
-go
-  CREATE TABLE [dbo].[Loaigd](
-	[IDloaigd] [int] IDENTITY(1,1) NOT NULL primary key,
-	[Name] [nvarchar](50) NOT NULL,
-	)on [PRIMARY]
+CREATE TABLE [dbo].[LoaiGD](
+    [IDLoaiGD] [int] NOT NULL PRIMARY KEY,
+    [Name] [nvarchar](50) NOT NULL
+);
 go
 CREATE TABLE [dbo].[GiaoDich](
-	[IDgd] [int] IDENTITY(1,1) NOT NULL primary key,
-	[IDtk] [int] NOT NULL references [dbo].[Taikhoan]([IDtk]),
-	[IDloaigd] [int] NOT NULL references dbo.Loaigd(IDloaigd),
-	[sotien] [decimal](18, 2) NOT NULL,
-	[Dategd] [datetime] NOT NULL,
-	[Notes] [nvarchar](100) NULL,
-	)on [PRIMARY]
+    [IDGD] [int] NOT NULL PRIMARY KEY,
+    [ID] [int] NOT NULL,
+    [IDLoaiGD] [int] NOT NULL,
+    [SoTien] [decimal](18, 2) NOT NULL,
+    [DateGD] [datetime] NOT NULL,
+    [Notes] [nvarchar](200) NULL,
+    FOREIGN KEY (ID) REFERENCES [dbo].[TaiKhoan]([ID]),
+    FOREIGN KEY (IDLoaiGD) REFERENCES [dbo].[LoaiGD]([IDLoaiGD])
+);
 go
- CREATE TABLE [dbo].[Loails](
-	[IDloails] [int] IDENTITY(1,1) NOT NULL primary key,
-	[Name] [nvarchar](50) NOT NULL,
-	)on [PRIMARY]
-	go
-	select * from Loails
- CREATE TABLE [dbo].[Laisuat](
-	[IDls] [int] IDENTITY(1,1) NOT NULL primary key,
-	[IDtk] [int] NOT NULL references dbo.Taikhoan(IDtk),
-	[IDloails] [int] NOT NULL references dbo.Loails(IDloails),
-	[mucls] [decimal](18, 2) NULL,
-	[Datestart] [smalldatetime] NOT NULL,
-	[Datend] [smalldatetime] NOT NULL,
-	)on [PRIMARY]
+CREATE TABLE [dbo].[LoaiLS](
+    [IDLoaiLS] [int] NOT NULL PRIMARY KEY,
+    [Name] [nvarchar](50) NOT NULL
+);
 go
+CREATE TABLE [dbo].[LaiSuat](
+    [IDls] [int] NOT NULL PRIMARY KEY,
+    [ID] [int] NOT NULL,
+    [IDLoaiLS] [int] NOT NULL,
+    [MuCLS] [decimal](18, 2) NULL,
+    [DateStart] [smalldatetime] NOT NULL,
+    [DateEnd] [smalldatetime] NOT NULL,
+    FOREIGN KEY (ID) REFERENCES [dbo].[TaiKhoan]([ID]),
+    FOREIGN KEY (IDLoaiLS) REFERENCES [dbo].[LoaiLS]([IDLoaiLS])
+);
 go
-CREATE TABLE [dbo].[tk_login](
-	[Username] [nvarchar](50) NOT NULL,
-	[Pass] [nvarchar](50) not NULL,
-	--them idkhachhang vao day xoa ten di ket noi khoa vs idkh trong bang thong tin(bang khach hang doi ten)
-	Idkh int not null references dbo.KhachHang([IDkh]),
-	[loaitk] [int] NOT NULL ,
-) ON [PRIMARY]
-go
-ALTER TABLE dbo.Taikhoan ADD CONSTRAINT DF_taikhoan_datestart DEFAULT GETDATE() for [Datestart];
-ALTER TABLE dbo.Giaodich ADD CONSTRAINT DF_Giaodich_date DEFAULT GETDATE() for [Dategd];
-
-ALTER TABLE dbo.Laisuat ADD CONSTRAINT DF_Laisuat_dates DEFAULT GETDATE() for [Datestart];
-ALTER TABLE [dbo].[Taikhoan] ADD  CONSTRAINT [DF_Taikhoan_sodu]  DEFAULT ((0)) FOR [sodutk];
+CREATE TABLE [dbo].[Login](
+    [Username] [char](50) NOT NULL,
+    [Pass] [char](50) NOT NULL,
+    [ID] [int] NOT NULL,
+    [loaitk] [int] NOT NULL,
+    FOREIGN KEY (ID) REFERENCES [dbo].[ThongTin]([ID])
+);
 go
 
-/*CREATE TRIGGER UpdateIDbank
-ON [dbo].[KhachHang]
-AFTER INSERT
-AS
+CREATE PROC CHECK_LOGIN
+@userName nvarchar(100),
+@passWord nvarchar(100)
+AS 
 BEGIN
-    -- Cập nhật trường IDbank trong bảng KhachHang với giá trị từ bảng Bank
-    UPDATE KhachHang
-    SET KhachHang.IDbank = Bank.IDbank
-    FROM KhachHang
-    INNER JOIN Bank ON KhachHang.IDbank = Bank.IDbank;
-END;*/
-go
-/*CREATE TRIGGER UpdateIDkh
-ON TaiKhoan
-AFTER INSERT
-AS
-BEGIN
-    UPDATE Taikhoan
-    SET IDkh = inserted.IDkh 
-    FROM KhachHang
-    INNER JOIN inserted ON KhachHang.IDkh = inserted.IDtk;
-END; */
-go
-/*CREATE TRIGGER UpdateIDloaitk
-ON TaiKhoan
-AFTER INSERT
-AS
-BEGIN
-    UPDATE Taikhoan
-    SET loaitk = inserted.loaitk
-    FROM Loaitk
-    INNER JOIN inserted ON Loaitk.IDloaitk = inserted.loaitk;
-END;	   */
-
- go
-INSERT INTO [dbo].[Bank] ([namebank]) VALUES (N'DinhNhuBank');
-INSERT INTO [dbo].[Bank] ([namebank]) VALUES (N'DangQuangBank');
-INSERT INTO [dbo].[Bank] ([namebank]) VALUES (N'KimNguyenBank');
-INSERT INTO [dbo].[Bank] ([namebank]) VALUES (N'ThanhTuBank'); 
-INSERT INTO [dbo].[Bank] ([namebank]) VALUES (N'HungDinhBank');
- go
-DELETE FROM [dbo].[KhachHang];
-INSERT INTO [dbo].[KhachHang] (IDbank,[Name], [CCCD], [Date]) VALUES (1,N'Bùi Đình Nhu', '123', '29-01-2003');
-INSERT INTO [dbo].[KhachHang] (IDbank,[Name], [CCCD], [Date]) VALUES (2,N'Trịnh Đăng Quang', '1234', '12-3-2003');
-INSERT INTO [dbo].[KhachHang] (IDbank,[Name], [CCCD], [Date]) VALUES (3,N'Dương Kim Nguyên', '12345', '12-11-2003');	
-INSERT INTO [dbo].[KhachHang] (IDbank,[Name], [CCCD], [Date]) VALUES (4,N'Lê Thanh Tú', '123456', '12-12-2003');
-INSERT INTO [dbo].[KhachHang] (IDbank,[Name], [CCCD], [Date]) VALUES (5,N'Nguyễn Hưng Định', '1234567', '11-11-2003');
-go
---ALTER TABLE dbo.Laisuat ALTER COLUMN [mucls] [decimal](18, 2) NULL;
-insert Taikhoan (IDkh,tentk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '123'),N'DinhNhu',100000000)
-insert Taikhoan (IDkh,tentk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '1234'),N'DangQuang',7000000)
-insert Taikhoan (IDkh,tentk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '12345'),N'KimNguyen',4000000)
-insert Taikhoan (IDkh,tentk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '123456'),N'ThanhTu',5500000)
-insert Taikhoan (IDkh,tentk,sodutk) values ((SELECT IDkh FROM KhachHang WHERE CCCD = '1234567'),N'HungDinh',1700000)
-go
-insert Loaigd([Name]) values (N'Chuyển tiền'),(N'Rút tiền')
-go 
-insert GiaoDich(IDtk,IDloaigd,sotien) values ((SELECT IDtk FROM Taikhoan join KhachHang on Taikhoan.IDkh=KhachHang.IDkh where CCCD='123'),1,100000)
-insert GiaoDich(IDtk,IDloaigd,sotien) values ((SELECT IDtk FROM Taikhoan join KhachHang on Taikhoan.IDkh=KhachHang.IDkh where CCCD='1234'),2,15000)
-insert GiaoDich(IDtk,IDloaigd,sotien) values ((SELECT IDtk FROM Taikhoan join KhachHang on Taikhoan.IDkh=KhachHang.IDkh where CCCD='12345'),2,15000)
-insert GiaoDich(IDtk,IDloaigd,sotien) values ((SELECT IDtk FROM Taikhoan join KhachHang on Taikhoan.IDkh=KhachHang.IDkh where CCCD='123456'),2,15000)
-insert GiaoDich(IDtk,IDloaigd,sotien) values ((SELECT IDtk FROM Taikhoan join KhachHang on Taikhoan.IDkh=KhachHang.IDkh where CCCD='1234567'),1,20000)
-go
-insert Loails([Name]) values (N'Vay nợ'),(N'Ngân hàng')
-
-go
-insert Laisuat(IDtk,IDloails,Datend) values ((SELECT IDtk FROM Taikhoan join KhachHang on Taikhoan.IDkh=KhachHang.IDkh where CCCD='123'),1,'24-11-2023')
-insert Laisuat(IDtk,IDloails,Datend) values ((SELECT IDtk FROM Taikhoan join KhachHang on Taikhoan.IDkh=KhachHang.IDkh where CCCD='1234'),2,'24-11-2024')
-insert Laisuat(IDtk,IDloails,Datend) values ((SELECT IDtk FROM Taikhoan join KhachHang on Taikhoan.IDkh=KhachHang.IDkh where CCCD='12345'),1,'24-12-2023')
-insert Laisuat(IDtk,IDloails,Datend) values ((SELECT IDtk FROM Taikhoan join KhachHang on Taikhoan.IDkh=KhachHang.IDkh where CCCD='123456'),1,'24-5-2024')
-insert Laisuat(IDtk,IDloails,Datend) values ((SELECT IDtk FROM Taikhoan join KhachHang on Taikhoan.IDkh=KhachHang.IDkh where CCCD='1234567'),1,'24-2-2024')
- GO
- INSERT tk_login(Username,Pass,loaitk) values (N'Nhu',1,0),(N'Quang',1,0),(N'Tu',1,1),(N'Nguyen',1,0),(N'Dinh',1,1)
-
-
-
-
-select*from Laisuat
-select*from Taikhoan
-select *from tk_login
- SELECT IDtk FROM Taikhoan join KhachHang on Taikhoan.IDkh=KhachHang.IDkh where CCCD='123'
+	SELECT * FROM dbo.Login, dbo.ThongTin
+	WHERE Username =@userName AND Pass = @passWord
+END
+GO
+	

@@ -129,13 +129,15 @@
             // 
             // lblName
             // 
+            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(202, 75);
+            this.lblName.Location = new System.Drawing.Point(277, 73);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(377, 37);
+            this.lblName.Size = new System.Drawing.Size(35, 37);
             this.lblName.TabIndex = 35;
-            this.lblName.Text = "LÊ NGUYỄN THANH TÚ";
+            this.lblName.Text = "0";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rjTextBox1
             // 

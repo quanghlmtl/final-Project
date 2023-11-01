@@ -158,7 +158,6 @@
     </Compile>
     <Compile Include="Sql\DataProvider.cs" />
     <Compile Include="Sql\LoginToFormMain.cs" />
-    <Compile Include="ThemeColor.cs" />
     <Compile Include="Toolbox\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,17 +20,39 @@ namespace CuoiKi_QuanLyNganHang.Sql
         private LoginToFormMain() { }
         public bool LoginFormMain(string username, string password)
         {
-            string query = "USP_LOGIN @userName , @passWord ";
+            string query = "CHECK_LOGIN @userName , @passWord ";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, password });
             return result.Rows.Count > 0;
         }
         public bool checkStaff(string username)
         {
-            string query = "SELECT *\r\nFROM RoleAccount\r\nINNER JOIN Account ON Account.AccountName = RoleAccount.AccountName\r\nINNER JOIN Role ON Role.ID = RoleAccount.RoleID\r\nWHERE Account.AccountName = '" + username + "' and RoleID = 2;";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query);
-            return result.Rows.Count > 0;
+            string query = "SELECT loaitk FROM Login WHERE Username = @username";
+            int loaitk;
+
+            // Gọi phương thức ExecuteQuery với tham số username
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username });
+
+            if (result.Rows.Count > 0)
+            {
+                loaitk = Convert.ToInt32(result.Rows[0]["loaitk"]);
+
+                if (loaitk == 0)
+                {
+                    // Gán true cho Admin (loaitk = 0)
+                    return true;
+                }
+                else if (loaitk == 1)
+                {
+                    // Gán false cho User (loaitk = 1)
+                    return false;
+                }
+            }
+
+            // Nếu không tìm thấy hoặc có lỗi, mặc định trả về false cho User
+            return false;
         }
+
         public bool UpdateAccount(string username, string displayname, string password)
         {
             string query = "Account_Update @AccountName  , @DisplayName , @Pass";

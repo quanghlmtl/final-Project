@@ -10,7 +10,7 @@ namespace CuoiKi_QuanLyNganHang.Sql
 {
     public class DataProvider
     {
-        public string connectionSTR = "Data Source=HUYENMYDANG\\SQL;Initial Catalog=RestaurantManagement;Integrated Security=True";
+        public string connectionSTR = "Data Source=HUYENMYDANG\\SQL;Initial Catalog=QLNH;Integrated Security=True";
         private static DataProvider instance;
 
         public string getconnectionSTR()
@@ -57,7 +57,6 @@ namespace CuoiKi_QuanLyNganHang.Sql
 
                     }
                 }
-
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 connection.Close();
                 adapter.Fill(data);
@@ -65,7 +64,7 @@ namespace CuoiKi_QuanLyNganHang.Sql
 
             return data;
         }
-
+   
         public void ExecuteNonQueryProvider(string name, string query, object[] parameter = null)
         {
             using (SqlConnection connection = new SqlConnection(connectionSTR))
