@@ -59,5 +59,18 @@ namespace CuoiKi_QuanLyNganHang.Sql
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, displayname, password });
             return result.Rows.Count > 0;
         }
+
+       
+
+
+
+
+
+
+
+
+
+       
     }
+    
 }

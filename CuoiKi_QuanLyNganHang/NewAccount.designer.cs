@@ -62,8 +62,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(743, 630);
+            this.pictureBox1.Size = new System.Drawing.Size(1114, 969);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -77,13 +78,13 @@
             this.txtName.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtName.Location = new System.Drawing.Point(183, 94);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Location = new System.Drawing.Point(274, 145);
+            this.txtName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
+            this.txtName.Padding = new System.Windows.Forms.Padding(12, 23, 8, 8);
             this.txtName.PasswordChar = false;
-            this.txtName.Size = new System.Drawing.Size(372, 55);
+            this.txtName.Size = new System.Drawing.Size(558, 85);
             this.txtName.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
             this.txtName.TabIndex = 1;
             this.txtName.Texts = "Họ và tên";
@@ -100,13 +101,13 @@
             this.txtCCCD.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
             this.txtCCCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCCCD.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCCCD.Location = new System.Drawing.Point(183, 167);
-            this.txtCCCD.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCCCD.Location = new System.Drawing.Point(274, 257);
+            this.txtCCCD.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtCCCD.Multiline = true;
             this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
+            this.txtCCCD.Padding = new System.Windows.Forms.Padding(12, 23, 8, 8);
             this.txtCCCD.PasswordChar = false;
-            this.txtCCCD.Size = new System.Drawing.Size(372, 55);
+            this.txtCCCD.Size = new System.Drawing.Size(558, 85);
             this.txtCCCD.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.Number;
             this.txtCCCD.TabIndex = 2;
             this.txtCCCD.Texts = "Số CCCD";
@@ -123,13 +124,13 @@
             this.txtPhoneNumb.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
             this.txtPhoneNumb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumb.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPhoneNumb.Location = new System.Drawing.Point(183, 239);
-            this.txtPhoneNumb.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhoneNumb.Location = new System.Drawing.Point(274, 368);
+            this.txtPhoneNumb.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtPhoneNumb.Multiline = true;
             this.txtPhoneNumb.Name = "txtPhoneNumb";
-            this.txtPhoneNumb.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
+            this.txtPhoneNumb.Padding = new System.Windows.Forms.Padding(12, 23, 8, 8);
             this.txtPhoneNumb.PasswordChar = false;
-            this.txtPhoneNumb.Size = new System.Drawing.Size(372, 55);
+            this.txtPhoneNumb.Size = new System.Drawing.Size(558, 85);
             this.txtPhoneNumb.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.Number;
             this.txtPhoneNumb.TabIndex = 3;
             this.txtPhoneNumb.Texts = "Số điện thoại";
@@ -146,13 +147,13 @@
             this.txtUsername.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUsername.Location = new System.Drawing.Point(183, 311);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Location = new System.Drawing.Point(274, 478);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
+            this.txtUsername.Padding = new System.Windows.Forms.Padding(12, 23, 8, 8);
             this.txtUsername.PasswordChar = false;
-            this.txtUsername.Size = new System.Drawing.Size(372, 55);
+            this.txtUsername.Size = new System.Drawing.Size(558, 85);
             this.txtUsername.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
             this.txtUsername.TabIndex = 4;
             this.txtUsername.Texts = "Tên tài khoản";
@@ -165,9 +166,10 @@
             this.lblNewAcc.AutoSize = true;
             this.lblNewAcc.BackColor = System.Drawing.Color.Transparent;
             this.lblNewAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewAcc.Location = new System.Drawing.Point(216, 22);
+            this.lblNewAcc.Location = new System.Drawing.Point(324, 34);
+            this.lblNewAcc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNewAcc.Name = "lblNewAcc";
-            this.lblNewAcc.Size = new System.Drawing.Size(319, 33);
+            this.lblNewAcc.Size = new System.Drawing.Size(473, 52);
             this.lblNewAcc.TabIndex = 7;
             this.lblNewAcc.Text = "TẠO TÀI KHOẢN MỚI";
             // 
@@ -182,9 +184,10 @@
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(277, 554);
+            this.btnCreate.Location = new System.Drawing.Point(416, 852);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(150, 40);
+            this.btnCreate.Size = new System.Drawing.Size(225, 62);
             this.btnCreate.TabIndex = 8;
             this.btnCreate.Text = "Xác nhận";
             this.btnCreate.TextColor = System.Drawing.Color.White;
@@ -196,9 +199,10 @@
             this.lblMessage.AutoSize = true;
             this.lblMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.Location = new System.Drawing.Point(191, 516);
+            this.lblMessage.Location = new System.Drawing.Point(286, 794);
+            this.lblMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(60, 24);
+            this.lblMessage.Size = new System.Drawing.Size(93, 33);
             this.lblMessage.TabIndex = 10;
             this.lblMessage.Text = "label1";
             this.lblMessage.Visible = false;
@@ -209,9 +213,10 @@
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(691, 11);
+            this.btnHome.Location = new System.Drawing.Point(1036, 17);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(40, 40);
+            this.btnHome.Size = new System.Drawing.Size(60, 62);
             this.btnHome.TabIndex = 33;
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
@@ -221,17 +226,19 @@
             this.panel2.Controls.Add(this.hidden1);
             this.panel2.Controls.Add(this.presently1);
             this.panel2.Controls.Add(this.txtPassword1);
-            this.panel2.Location = new System.Drawing.Point(183, 385);
+            this.panel2.Location = new System.Drawing.Point(274, 592);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(372, 55);
+            this.panel2.Size = new System.Drawing.Size(558, 85);
             this.panel2.TabIndex = 34;
             // 
             // hidden1
             // 
             this.hidden1.Image = ((System.Drawing.Image)(resources.GetObject("hidden1.Image")));
-            this.hidden1.Location = new System.Drawing.Point(342, 15);
+            this.hidden1.Location = new System.Drawing.Point(513, 23);
+            this.hidden1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.hidden1.Name = "hidden1";
-            this.hidden1.Size = new System.Drawing.Size(27, 25);
+            this.hidden1.Size = new System.Drawing.Size(40, 38);
             this.hidden1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.hidden1.TabIndex = 5;
             this.hidden1.TabStop = false;
@@ -241,9 +248,10 @@
             // presently1
             // 
             this.presently1.Image = ((System.Drawing.Image)(resources.GetObject("presently1.Image")));
-            this.presently1.Location = new System.Drawing.Point(342, 15);
+            this.presently1.Location = new System.Drawing.Point(513, 23);
+            this.presently1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.presently1.Name = "presently1";
-            this.presently1.Size = new System.Drawing.Size(27, 25);
+            this.presently1.Size = new System.Drawing.Size(40, 38);
             this.presently1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.presently1.TabIndex = 4;
             this.presently1.TabStop = false;
@@ -260,12 +268,12 @@
             this.txtPassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword1.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassword1.Location = new System.Drawing.Point(0, 0);
-            this.txtPassword1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtPassword1.Multiline = false;
             this.txtPassword1.Name = "txtPassword1";
-            this.txtPassword1.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
+            this.txtPassword1.Padding = new System.Windows.Forms.Padding(12, 23, 8, 8);
             this.txtPassword1.PasswordChar = false;
-            this.txtPassword1.Size = new System.Drawing.Size(372, 46);
+            this.txtPassword1.Size = new System.Drawing.Size(558, 69);
             this.txtPassword1.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
             this.txtPassword1.TabIndex = 3;
             this.txtPassword1.TabStop = false;
@@ -279,17 +287,19 @@
             this.panel1.Controls.Add(this.hidden2);
             this.panel1.Controls.Add(this.presently2);
             this.panel1.Controls.Add(this.txtPassword2);
-            this.panel1.Location = new System.Drawing.Point(183, 458);
+            this.panel1.Location = new System.Drawing.Point(274, 705);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(372, 55);
+            this.panel1.Size = new System.Drawing.Size(558, 85);
             this.panel1.TabIndex = 35;
             // 
             // hidden2
             // 
             this.hidden2.Image = ((System.Drawing.Image)(resources.GetObject("hidden2.Image")));
-            this.hidden2.Location = new System.Drawing.Point(342, 15);
+            this.hidden2.Location = new System.Drawing.Point(513, 23);
+            this.hidden2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.hidden2.Name = "hidden2";
-            this.hidden2.Size = new System.Drawing.Size(27, 25);
+            this.hidden2.Size = new System.Drawing.Size(40, 38);
             this.hidden2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.hidden2.TabIndex = 5;
             this.hidden2.TabStop = false;
@@ -299,9 +309,10 @@
             // presently2
             // 
             this.presently2.Image = ((System.Drawing.Image)(resources.GetObject("presently2.Image")));
-            this.presently2.Location = new System.Drawing.Point(342, 15);
+            this.presently2.Location = new System.Drawing.Point(513, 23);
+            this.presently2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.presently2.Name = "presently2";
-            this.presently2.Size = new System.Drawing.Size(27, 25);
+            this.presently2.Size = new System.Drawing.Size(40, 38);
             this.presently2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.presently2.TabIndex = 4;
             this.presently2.TabStop = false;
@@ -318,12 +329,12 @@
             this.txtPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword2.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassword2.Location = new System.Drawing.Point(0, 0);
-            this.txtPassword2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtPassword2.Multiline = false;
             this.txtPassword2.Name = "txtPassword2";
-            this.txtPassword2.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
+            this.txtPassword2.Padding = new System.Windows.Forms.Padding(12, 23, 8, 8);
             this.txtPassword2.PasswordChar = false;
-            this.txtPassword2.Size = new System.Drawing.Size(372, 46);
+            this.txtPassword2.Size = new System.Drawing.Size(558, 69);
             this.txtPassword2.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
             this.txtPassword2.TabIndex = 3;
             this.txtPassword2.TabStop = false;
@@ -334,9 +345,9 @@
             // 
             // FormNewAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 630);
+            this.ClientSize = new System.Drawing.Size(1114, 969);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnHome);
@@ -348,6 +359,7 @@
             this.Controls.Add(this.txtCCCD);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Name = "FormNewAccount";
             this.Text = "FormNewAccount";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormNewAccount_FormClosing);

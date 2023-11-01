@@ -62,8 +62,9 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(743, 630);
+            this.panel1.Size = new System.Drawing.Size(1114, 969);
             this.panel1.TabIndex = 0;
             // 
             // lsNewAccout
@@ -75,10 +76,11 @@
             this.lsNewAccout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lsNewAccout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lsNewAccout.ForeColor = System.Drawing.Color.White;
-            this.lsNewAccout.Location = new System.Drawing.Point(429, 508);
+            this.lsNewAccout.Location = new System.Drawing.Point(644, 782);
+            this.lsNewAccout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lsNewAccout.Name = "lsNewAccout";
-            this.lsNewAccout.Padding = new System.Windows.Forms.Padding(7);
-            this.lsNewAccout.Size = new System.Drawing.Size(109, 31);
+            this.lsNewAccout.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.lsNewAccout.Size = new System.Drawing.Size(151, 47);
             this.lsNewAccout.TabIndex = 24;
             this.lsNewAccout.Text = "Tạo tài khoản";
             this.lsNewAccout.UnderLinedStyle = true;
@@ -93,10 +95,11 @@
             this.lsForgetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lsForgetPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lsForgetPassword.ForeColor = System.Drawing.Color.White;
-            this.lsForgetPassword.Location = new System.Drawing.Point(134, 508);
+            this.lsForgetPassword.Location = new System.Drawing.Point(201, 782);
+            this.lsForgetPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lsForgetPassword.Name = "lsForgetPassword";
-            this.lsForgetPassword.Padding = new System.Windows.Forms.Padding(7);
-            this.lsForgetPassword.Size = new System.Drawing.Size(119, 31);
+            this.lsForgetPassword.Padding = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.lsForgetPassword.Size = new System.Drawing.Size(166, 47);
             this.lsForgetPassword.TabIndex = 23;
             this.lsForgetPassword.Text = "Quên mật khẩu";
             this.lsForgetPassword.UnderLinedStyle = true;
@@ -108,9 +111,10 @@
             this.lblLogin.BackColor = System.Drawing.Color.Transparent;
             this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblLogin.Location = new System.Drawing.Point(242, 146);
+            this.lblLogin.Location = new System.Drawing.Point(363, 225);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(165, 33);
+            this.lblLogin.Size = new System.Drawing.Size(244, 52);
             this.lblLogin.TabIndex = 21;
             this.lblLogin.Text = "Đăng nhập";
             // 
@@ -125,10 +129,11 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(137, 412);
+            this.btnLogin.Location = new System.Drawing.Point(206, 634);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.btnLogin.Size = new System.Drawing.Size(400, 45);
+            this.btnLogin.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.btnLogin.Size = new System.Drawing.Size(600, 69);
             this.btnLogin.TabIndex = 19;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -142,9 +147,10 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblTitle.Location = new System.Drawing.Point(12, 9);
+            this.lblTitle.Location = new System.Drawing.Point(18, 14);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(172, 33);
+            this.lblTitle.Size = new System.Drawing.Size(259, 52);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "DNQT Bank";
             // 
@@ -153,9 +159,10 @@
             this.lblMessage.AutoSize = true;
             this.lblMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.Location = new System.Drawing.Point(145, 363);
+            this.lblMessage.Location = new System.Drawing.Point(218, 558);
+            this.lblMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(60, 24);
+            this.lblMessage.Size = new System.Drawing.Size(93, 33);
             this.lblMessage.TabIndex = 7;
             this.lblMessage.Text = "label1";
             this.lblMessage.Visible = false;
@@ -165,17 +172,19 @@
             this.panel2.Controls.Add(this.hidden);
             this.panel2.Controls.Add(this.presently);
             this.panel2.Controls.Add(this.txtPassword);
-            this.panel2.Location = new System.Drawing.Point(137, 301);
+            this.panel2.Location = new System.Drawing.Point(206, 463);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(400, 39);
+            this.panel2.Size = new System.Drawing.Size(600, 60);
             this.panel2.TabIndex = 6;
             // 
             // hidden
             // 
             this.hidden.Image = ((System.Drawing.Image)(resources.GetObject("hidden.Image")));
-            this.hidden.Location = new System.Drawing.Point(370, 3);
+            this.hidden.Location = new System.Drawing.Point(555, 5);
+            this.hidden.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.hidden.Name = "hidden";
-            this.hidden.Size = new System.Drawing.Size(27, 25);
+            this.hidden.Size = new System.Drawing.Size(40, 38);
             this.hidden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.hidden.TabIndex = 5;
             this.hidden.TabStop = false;
@@ -186,9 +195,10 @@
             // presently
             // 
             this.presently.Image = ((System.Drawing.Image)(resources.GetObject("presently.Image")));
-            this.presently.Location = new System.Drawing.Point(370, 3);
+            this.presently.Location = new System.Drawing.Point(555, 5);
+            this.presently.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.presently.Name = "presently";
-            this.presently.Size = new System.Drawing.Size(27, 25);
+            this.presently.Size = new System.Drawing.Size(40, 38);
             this.presently.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.presently.TabIndex = 4;
             this.presently.TabStop = false;
@@ -205,12 +215,12 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassword.Location = new System.Drawing.Point(0, 0);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(6);
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Padding = new System.Windows.Forms.Padding(5);
+            this.txtPassword.Padding = new System.Windows.Forms.Padding(8);
             this.txtPassword.PasswordChar = false;
-            this.txtPassword.Size = new System.Drawing.Size(400, 36);
+            this.txtPassword.Size = new System.Drawing.Size(600, 54);
             this.txtPassword.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
             this.txtPassword.TabIndex = 3;
             this.txtPassword.TabStop = false;
@@ -231,13 +241,13 @@
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.Color.DimGray;
             this.txtUser.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtUser.Location = new System.Drawing.Point(137, 228);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUser.Location = new System.Drawing.Point(206, 351);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(6);
             this.txtUser.Multiline = false;
             this.txtUser.Name = "txtUser";
-            this.txtUser.Padding = new System.Windows.Forms.Padding(5);
+            this.txtUser.Padding = new System.Windows.Forms.Padding(8);
             this.txtUser.PasswordChar = false;
-            this.txtUser.Size = new System.Drawing.Size(400, 36);
+            this.txtUser.Size = new System.Drawing.Size(600, 54);
             this.txtUser.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
             this.txtUser.TabIndex = 2;
             this.txtUser.TabStop = false;
@@ -251,19 +261,21 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(743, 630);
+            this.pictureBox1.Size = new System.Drawing.Size(1114, 969);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(743, 630);
+            this.ClientSize = new System.Drawing.Size(1114, 969);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Name = "FormLogin";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
