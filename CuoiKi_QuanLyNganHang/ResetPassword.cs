@@ -1,6 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 using CuoiKi_QuanLyNganHang.MoreForm;
+using CuoiKi_QuanLyNganHang.Class;
+using CuoiKi_QuanLyNganHang.Sql;
 namespace CuoiKi_QuanLyNganHang
 {
     public partial class ResetPassword : Method
@@ -14,6 +24,28 @@ namespace CuoiKi_QuanLyNganHang
             txtNumberPhone.Enter += ResetPassword_Enter;
             txtUser.Enter += ResetPassword_Enter;
         }
+
+        bool checkforgot(string name,string cccd,string phone,string username)
+        {
+            return DataProvider.Instance.checkforgot(name, cccd, phone, username);
+        }
+        private void checklog()
+        {
+            string name = txtFullName.Texts;
+            string cccd = txtCCCD.Texts;
+            string phone = txtNumberPhone.Texts;
+            string username = txtUser.Texts;
+
+            if (checkforgot(name, cccd, phone, username))
+            {
+
+                Newpass newpass = new Newpass();
+                this.Hide();
+                newpass.ShowDialog();
+            }
+            else MessageBox.Show("ERRo");
+        }
+
 
         //Event Form load
         private void ResetPassword_Load(object sender, EventArgs e)
@@ -71,6 +103,11 @@ namespace CuoiKi_QuanLyNganHang
         private void ResetPassword_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            checklog();
         }
     }
 }

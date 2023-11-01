@@ -10,7 +10,7 @@ namespace CuoiKi_QuanLyNganHang.Sql
 {
     public class DataProvider
     {
-        public string connectionSTR = "Data Source=HUYENMYDANG\\SQL;Initial Catalog=QLNH;Integrated Security=True";
+        public string connectionSTR = "Data Source=.;Initial Catalog=QLNH;Integrated Security=True";
         private static DataProvider instance;
 
         public string getconnectionSTR()
@@ -105,6 +105,31 @@ namespace CuoiKi_QuanLyNganHang.Sql
             }
             return data;
         }
+        public bool checkforgot(string name, string cccd, string phone, string username)
+        {
+            string query = "forgotpass @name, @cccd, @Phone, @Username";
+
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
+                    command.Parameters.Add("@cccd", SqlDbType.Char).Value = cccd;
+                    command.Parameters.Add("@Phone", SqlDbType.Char).Value = phone;
+                    command.Parameters.Add("@Username", SqlDbType.Char).Value = username;
+
+
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable data = new DataTable();
+                    adapter.Fill(data);
+
+                }
+            }
+
+            return false; // Nếu thông tin đăng nhập sai hoặc có lỗi, trả về false
+        }
+
     }
 
 }

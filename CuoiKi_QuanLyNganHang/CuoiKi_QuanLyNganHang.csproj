@@ -65,6 +65,7 @@
     <Compile Include="CustomMessageBox.Designer.cs">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomParameter.cs" />
     <Compile Include="Forms\FormHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +136,12 @@
     </Compile>
     <Compile Include="NewAccount.designer.cs">
       <DependentUpon>NewAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newpass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newpass.Designer.cs">
+      <DependentUpon>Newpass.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewAccount.resx">
       <DependentUpon>NewAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newpass.resx">
+      <DependentUpon>Newpass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
