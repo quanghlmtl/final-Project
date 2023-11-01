@@ -85,9 +85,7 @@ namespace CuoiKi_QuanLyNganHang.Sql
                         }
                     }
                 }
-
                 command.ExecuteNonQuery();
-
                 connection.Close();
             }
         }

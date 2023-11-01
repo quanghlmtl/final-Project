@@ -10,13 +10,11 @@ namespace CuoiKi_QuanLyNganHang
 {
     public static class HandleSql
     {
-        public static DataTable GetAllDataNew(string query)
+        public static bool UpdateAccount(string username, string displayname, string password)
         {
-            DataProvider provider = new DataProvider();
-
-            DataTable dataTable = provider.ExecuteQuery(query);
-
-            return dataTable;
+            string query = "Account_Update @AccountName  , @DisplayName , @Pass";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, displayname, password });
+            return result.Rows.Count > 0;
         }
 
     }

@@ -38,7 +38,6 @@ namespace CuoiKi_QuanLyNganHang.Sql
                 loaitk = Convert.ToInt32(result.Rows[0]["loaitk"]);
                 return loaitk;
             }
-
             return -1;
         }
 
@@ -60,13 +59,6 @@ namespace CuoiKi_QuanLyNganHang.Sql
                 name = "Không tìm thấy tên người dùng.";
                 return name;
             }
-        }
-
-        public bool UpdateAccount(string username, string displayname, string password)
-        {
-            string query = "Account_Update @AccountName  , @DisplayName , @Pass";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, displayname, password });
-            return result.Rows.Count > 0;
         }
     }
 }
