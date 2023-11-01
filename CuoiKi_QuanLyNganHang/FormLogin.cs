@@ -42,8 +42,6 @@ namespace CuoiKi_QuanLyNganHang
             string mk = txtPassword.Texts;
             if (checkLogin(tk, mk))
             {
-                string query = "SELECT loaitk FROM Login WHERE Username = @Username AND Pass = @Password";
-
                 FormMain formMain = new FormMain(tk, mk);
                 this.Hide();
                 formMain.ShowDialog();

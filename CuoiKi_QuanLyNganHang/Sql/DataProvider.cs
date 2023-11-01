@@ -54,7 +54,6 @@ namespace CuoiKi_QuanLyNganHang.Sql
                             command.Parameters.AddWithValue(item, parameter[i]);
                             i++;
                         }
-
                     }
                 }
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -65,35 +64,6 @@ namespace CuoiKi_QuanLyNganHang.Sql
             return data;
         }
 
-        public string GetNameFromDatabase(string query, string username)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
-            {
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    command.Parameters.Add("@userName", SqlDbType.NVarChar).Value = username;
-
-                    connection.Open();
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(command);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-                    string name;
-                    if (dataTable.Rows.Count > 0)
-                    {
-                         name = dataTable.Rows[0]["Name"].ToString();
-                        return name;
-                    }
-                    else
-                    {
-                        name = "Không tìm thấy tên người dùng.";
-                        return name;
-                    }
-                }
-            }
-        }
         public void ExecuteNonQueryProvider(string name, string query, object[] parameter = null)
         {
             using (SqlConnection connection = new SqlConnection(connectionSTR))

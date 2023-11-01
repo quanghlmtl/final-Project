@@ -25,7 +25,7 @@ namespace CuoiKi_QuanLyNganHang.Sql
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, password });
             return result.Rows.Count > 0;
         }
-        public bool checkStaff(string username)
+        public int checkStaff(string username)
         {
             string query = "SELECT loaitk FROM Login WHERE Username = @username";
             int loaitk;
@@ -36,21 +36,30 @@ namespace CuoiKi_QuanLyNganHang.Sql
             if (result.Rows.Count > 0)
             {
                 loaitk = Convert.ToInt32(result.Rows[0]["loaitk"]);
-
-                if (loaitk == 0)
-                {
-                    // Gán true cho Admin (loaitk = 0)
-                    return true;
-                }
-                else if (loaitk == 1)
-                {
-                    // Gán false cho User (loaitk = 1)
-                    return false;
-                }
+                return loaitk;
             }
 
-            // Nếu không tìm thấy hoặc có lỗi, mặc định trả về false cho User
-            return false;
+            return -1;
+        }
+
+        public string GetNameFromDatabase(string username)
+        {
+            string query =
+                "SELECT Name FROM ThongTin INNER JOIN Login ON ThongTin.ID = Login.ID Where Username = @username";
+            string name;
+            // Gọi phương thức ExecuteQuery với tham số username
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username });
+
+            if (result.Rows.Count > 0)
+            {
+                name = result.Rows[0]["Name"].ToString();
+                return name;
+            }
+            else
+            {
+                name = "Không tìm thấy tên người dùng.";
+                return name;
+            }
         }
 
         public bool UpdateAccount(string username, string displayname, string password)

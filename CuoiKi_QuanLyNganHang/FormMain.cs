@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using CuoiKi_QuanLyNganHang.Sql;
 namespace CuoiKi_QuanLyNganHang
 {
     public partial class FormMain : Method
@@ -36,57 +37,57 @@ namespace CuoiKi_QuanLyNganHang
             InitializeComponent();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
+
         //Even form load
         string displayName = "";
         private void FormMain_Load(object sender, EventArgs e)
         {
-            DataProvider data = new DataProvider();
-            displayName = data.GetNameFromDatabase(accountquery, tk);
-            Home form = new Home(displayName);
-            OpenChildForm(form, btnHome.Text);
-            if (checkStaff(tk))
+            displayName = LoginToFormMain.Instance.GetNameFromDatabase(tk);
+            if (checkStaff(tk) == 1)
             {
-                btnHome.Enabled = false;
-                btnTransfer.Enabled = false;
-                btnSaving.Enabled = false;
-                btnHistory.Enabled = false;
-                btnInformation.Enabled = false;
+                Home form = new Home(displayName);
+                OpenChildForm(form, btnHome.Text);
+                ButtonViable(1, true);
+                ButtonViable(0, false);
+            }
+            else if (checkStaff(tk) == 0)
+            {
+                HomeAdmin form = new HomeAdmin(displayName);
+                OpenChildForm(form, btnHome.Text);
+                ButtonViable(0, true);
+                ButtonViable(1, false);
             }
         }
 
         //Methods
-        bool checkStaff(string tk)
+        int checkStaff(string tk)
         {
-            return LoginToFormMain.Instance.checkStaff(tk);
+           return LoginToFormMain.Instance.checkStaff(tk);
         }
-        private void DisableButton()
+        private void EnableButton(Button choiceButtton)
         {
-            foreach (Control previousBtn in panelMenu.Controls)
+            btnHome.Enabled = true;
+            btnTransfer.Enabled = true;
+            btnSaving.Enabled = true;
+            btnHistory.Enabled = true;
+            btnInformation.Enabled = true;
+            choiceButtton.Enabled = false;
+        } 
+        void ButtonViable(int tk, bool check)
+        {
+            if (tk == 1) 
             {
-                if (previousBtn.GetType() == typeof(Button))
-                {
-                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
-                    previousBtn.ForeColor = Color.Gainsboro;
-                    previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))); ;
-                }
+                btnHome.Visible = check;
+                btnTransfer.Visible = check;
+                btnSaving.Visible = check;
+                btnHistory.Visible = check;
+                btnInformation.Visible = check;
             }
-        }
-        private void ActivateButton(string value)
-        {
-            foreach (Control control in panelDesktopPane.Controls)
+            if (tk == 0) 
             {
-                if (control is System.Windows.Forms.Button)
-                {
-                    System.Windows.Forms.Button button = (System.Windows.Forms.Button)control;
-                    //if (button.Text == title)
-                    //{
-                    //    button.BackColor = Color.AliceBlue;
-                    //}
-                    //else
-                    //{
-                    //    button.BackColor = Color.Transparent;
-                    //}
-                }
+                btnHomeAdmin.Visible = check;
+                btnSearch.Visible = check;
+                btnStatistics.Visible = check;
             }
         }
         private void OpenChildForm(Form childForm, string text)
@@ -95,7 +96,6 @@ namespace CuoiKi_QuanLyNganHang
             {
                 activeForm.Hide();
             }
-            //ActivateButton(text);
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None; 
@@ -106,16 +106,6 @@ namespace CuoiKi_QuanLyNganHang
             childForm.Show();
             lblTitle.Text = text;
         }
-
-        private void EnableButton(Button choiceButtton)
-        {
-            btnHome.Enabled = true;
-            btnTransfer.Enabled = true;
-            btnSaving.Enabled = true;
-            btnHistory.Enabled = true;
-            btnInformation.Enabled = true;
-            choiceButtton.Enabled = false;
-        } 
 
         //Button click 
         private void btnHome_Click(object sender, EventArgs e)

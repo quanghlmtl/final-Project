@@ -102,8 +102,8 @@ D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLy
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.UserManagement.resources
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.CustomMessageBox.resources
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.Home.resources
-D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.AssemblyReference.cache
-D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.CoreCompileInputs.cache
 C:\Users\lengu\OneDrive\Desktop\New folder\testttttt\final-Project\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe.config
 C:\Users\lengu\OneDrive\Desktop\New folder\testttttt\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.exe
 C:\Users\lengu\OneDrive\Desktop\New folder\testttttt\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.pdb
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csprojResolveAssemblyReference.cache
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.HomeAdmin.resources
