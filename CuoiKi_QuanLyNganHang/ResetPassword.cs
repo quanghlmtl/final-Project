@@ -27,7 +27,7 @@ namespace CuoiKi_QuanLyNganHang
 
         bool checkforgot(string name,string cccd,string phone,string username)
         {
-            return DataProvider.Instance.checkforgot(name, cccd, phone, username);
+            return DataProvider.Instance.checkforgot2(name, cccd, phone, username);
         }
         private void checklog()
         {
@@ -38,7 +38,6 @@ namespace CuoiKi_QuanLyNganHang
 
             if (checkforgot(name, cccd, phone, username))
             {
-
                 Newpass newpass = new Newpass();
                 this.Hide();
                 newpass.ShowDialog();

@@ -137,3 +137,6 @@ D:\C#\C# cuoi ky\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNgan
 D:\C#\C# cuoi ky\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.GenerateResource.Cache
 D:\C#\C# cuoi ky\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Newpass.resources
 >>>>>>> 4acc33afd937f95e9401c1ce801ee77c87e5a71a
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Newpass.resources
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.AssemblyReference.cache
+D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.CoreCompileInputs.cache
