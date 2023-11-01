@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblDatepicker = new System.Windows.Forms.Label();
             this.rjButton1 = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
@@ -44,10 +45,11 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(179, 35);
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(184, 29);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(210, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 26);
             this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.Visible = false;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
@@ -73,9 +75,9 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(16, 25);
+            this.rjButton1.Location = new System.Drawing.Point(16, 29);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(142, 30);
+            this.rjButton1.Size = new System.Drawing.Size(136, 26);
             this.rjButton1.TabIndex = 4;
             this.rjButton1.Text = "Tìm kiếm theo ngày";
             this.rjButton1.TextColor = System.Drawing.Color.White;
@@ -84,6 +86,17 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
@@ -95,7 +108,9 @@
             this.Column0});
             this.dataGridView1.Location = new System.Drawing.Point(12, 100);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(769, 346);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(913, 346);
             this.dataGridView1.TabIndex = 5;
             // 
             // Column2
@@ -103,48 +118,55 @@
             this.Column2.HeaderText = "Từ tài khoản";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 130;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Người tạo giao dịch";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 130;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Tới tài khoản";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 130;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Ngày giao dịch";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Width = 130;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Nội dung";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 130;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Mã giao dịch";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 130;
             // 
             // Column0
             // 
             this.Column0.HeaderText = "STT";
             this.Column0.Name = "Column0";
             this.Column0.ReadOnly = true;
+            this.Column0.Width = 130;
             // 
             // FormHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 459);
+            this.ClientSize = new System.Drawing.Size(949, 459);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.lblDatepicker);
