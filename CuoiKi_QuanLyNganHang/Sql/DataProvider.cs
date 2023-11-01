@@ -64,7 +64,36 @@ namespace CuoiKi_QuanLyNganHang.Sql
 
             return data;
         }
-   
+
+        public string GetNameFromDatabase(string query, string username)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.Add("@userName", SqlDbType.NVarChar).Value = username;
+
+                    connection.Open();
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    string name;
+                    if (dataTable.Rows.Count > 0)
+                    {
+                         name = dataTable.Rows[0]["Name"].ToString();
+                        return name;
+                    }
+                    else
+                    {
+                        name = "Không tìm thấy tên người dùng.";
+                        return name;
+                    }
+                }
+            }
+        }
         public void ExecuteNonQueryProvider(string name, string query, object[] parameter = null)
         {
             using (SqlConnection connection = new SqlConnection(connectionSTR))
@@ -91,6 +120,22 @@ namespace CuoiKi_QuanLyNganHang.Sql
 
                 connection.Close();
             }
+        }
+        public DataTable ExecuteQueryProc(string procName, string username)
+        {
+            DataTable data = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(procName, connection);
+                command.CommandType = CommandType.StoredProcedure; // Xác định loại command là stored procedure
+
+                command.Parameters.AddWithValue("@userName", username); // Truyền tham số cho stored procedure
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+            }
+            return data;
         }
     }
 

@@ -78,7 +78,7 @@
             this.lblUser.ForeColor = System.Drawing.Color.DimGray;
             this.lblUser.Location = new System.Drawing.Point(161, 396);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(89, 16);
+            this.lblUser.Size = new System.Drawing.Size(88, 16);
             this.lblUser.TabIndex = 31;
             this.lblUser.Text = "Tên tài khoản";
             this.lblUser.Visible = false;
@@ -91,7 +91,7 @@
             this.lblNumberPhone.ForeColor = System.Drawing.Color.DimGray;
             this.lblNumberPhone.Location = new System.Drawing.Point(161, 297);
             this.lblNumberPhone.Name = "lblNumberPhone";
-            this.lblNumberPhone.Size = new System.Drawing.Size(86, 16);
+            this.lblNumberPhone.Size = new System.Drawing.Size(85, 16);
             this.lblNumberPhone.TabIndex = 30;
             this.lblNumberPhone.Text = "Số điện thoại";
             // 
@@ -103,7 +103,7 @@
             this.lblCCCD.ForeColor = System.Drawing.Color.DimGray;
             this.lblCCCD.Location = new System.Drawing.Point(161, 193);
             this.lblCCCD.Name = "lblCCCD";
-            this.lblCCCD.Size = new System.Drawing.Size(65, 16);
+            this.lblCCCD.Size = new System.Drawing.Size(64, 16);
             this.lblCCCD.TabIndex = 29;
             this.lblCCCD.Text = "Số CCCD";
             this.lblCCCD.Visible = false;
@@ -116,7 +116,7 @@
             this.lblFullName.ForeColor = System.Drawing.Color.DimGray;
             this.lblFullName.Location = new System.Drawing.Point(161, 99);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(65, 16);
+            this.lblFullName.Size = new System.Drawing.Size(64, 16);
             this.lblFullName.TabIndex = 28;
             this.lblFullName.Text = "họ và tên ";
             this.lblFullName.Visible = false;
@@ -142,7 +142,6 @@
             // 
             // txtNumberPhone
             // 
-            this.txtNumberPhone.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.txtNumberPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNumberPhone.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.txtNumberPhone.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -196,7 +195,6 @@
             // 
             // txtCCCD
             // 
-            this.txtCCCD.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.txtCCCD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCCCD.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.txtCCCD.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -223,7 +221,6 @@
             // 
             // txtFullName
             // 
-            this.txtFullName.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.txtFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFullName.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.txtFullName.BackColor = System.Drawing.SystemColors.MenuBar;

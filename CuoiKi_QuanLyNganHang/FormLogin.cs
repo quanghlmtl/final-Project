@@ -18,7 +18,6 @@ namespace CuoiKi_QuanLyNganHang
         {
             InitializeComponent();
         }
-        string accountquery = "select * from [ThongTin], [Login]";
         private void FormLogin_Load(object sender, EventArgs e)
         {
             this.ActiveControl = null;

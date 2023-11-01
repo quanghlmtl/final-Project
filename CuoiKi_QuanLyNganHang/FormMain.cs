@@ -1,5 +1,6 @@
 ﻿using CuoiKi_QuanLyNganHang.Forms;
 using CuoiKi_QuanLyNganHang.Sql;
+using CuoiKi_QuanLyNganHang.MoreForm;
 using System;
 using System.Data;
 using System.Drawing;
@@ -7,11 +8,11 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 namespace CuoiKi_QuanLyNganHang
 {
-    public partial class FormMain : Form
+    public partial class FormMain : Method
     {
         //Fields
         private Form activeForm;
-        string accountquery = "select * from [ThongTin], [Login]";
+        string accountquery = "GET_NAME";
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -34,21 +35,13 @@ namespace CuoiKi_QuanLyNganHang
             this.mk = mk;
             InitializeComponent();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-
         }
-
         //Even form load
+        string displayName = "";
         private void FormMain_Load(object sender, EventArgs e)
         {
-            string displayName = "";
-            foreach (DataRow account in HandleSql.GetAllDataNew(accountquery).Rows)
-            {
-                if (account["Username"].ToString().Equals(tk))
-                {
-                    displayName = account["Name"].ToString();
-                    break;
-                }
-            }
+            DataProvider data = new DataProvider();
+            displayName = data.GetNameFromDatabase(accountquery, tk);
             Home form = new Home(displayName);
             OpenChildForm(form, btnHome.Text);
             if (checkStaff(tk))
@@ -100,7 +93,7 @@ namespace CuoiKi_QuanLyNganHang
         {
             if (activeForm != null)
             {
-                activeForm.Close();
+                activeForm.Hide();
             }
             //ActivateButton(text);
             activeForm = childForm;
@@ -114,27 +107,41 @@ namespace CuoiKi_QuanLyNganHang
             lblTitle.Text = text;
         }
 
+        private void EnableButton(Button choiceButtton)
+        {
+            btnHome.Enabled = true;
+            btnTransfer.Enabled = true;
+            btnSaving.Enabled = true;
+            btnHistory.Enabled = true;
+            btnInformation.Enabled = true;
+            choiceButtton.Enabled = false;
+        } 
+
         //Button click 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Home(), btnTransfer.Text);
-
+            OpenChildForm(new Home(displayName), btnTransfer.Text);
+            EnableButton(btnHome);
         }
         private void btnTransfer_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormTransferMoney(), btnTransfer.Text);
+            EnableButton(btnTransfer);
         }
         private void btnSaving_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormSaving(), btnSaving.Text);
+            EnableButton(btnSaving);
         }
         private void btnHistory_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormHistory(), btnHistory.Text);
+            EnableButton(btnHistory);
         }
         private void btnInformation_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormInformation(), btnInformation.Text);
+            EnableButton(btnInformation);
         }
         //Move form
         private void label1_MouseDown(object sender, MouseEventArgs e)
