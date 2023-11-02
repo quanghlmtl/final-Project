@@ -12,8 +12,14 @@ namespace CuoiKi_QuanLyNganHang
 {
     public partial class FormTransferMoney : Form
     {
+        private string id;
         public FormTransferMoney()
         {
+            InitializeComponent();
+        }
+        public FormTransferMoney(string id)
+        {
+            this.id = id;
             InitializeComponent();
         }
         private void btnConfirm_Click(object sender, EventArgs e)

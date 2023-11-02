@@ -14,10 +14,18 @@ namespace CuoiKi_QuanLyNganHang.Sql
 
         public static LoginToFormMain Instance
         {
-            get { if (instance == null) instance = new LoginToFormMain(); return instance; }
+            get
+            {
+                if (instance == null) instance = new LoginToFormMain();
+                return instance;
+            }
             private set { instance = value; }
         }
-        private LoginToFormMain() { }
+
+        private LoginToFormMain()
+        {
+        }
+
         public bool LoginFormMain(string username, string password)
         {
             string query = "CHECK_LOGIN @userName , @passWord ";
@@ -25,12 +33,12 @@ namespace CuoiKi_QuanLyNganHang.Sql
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, password });
             return result.Rows.Count > 0;
         }
+
         public int checkStaff(string username)
         {
             string query = "SELECT loaitk FROM Login WHERE Username = @username";
             int loaitk;
 
-            // Gọi phương thức ExecuteQuery với tham số username
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username });
 
             if (result.Rows.Count > 0)
@@ -38,40 +46,30 @@ namespace CuoiKi_QuanLyNganHang.Sql
                 loaitk = Convert.ToInt32(result.Rows[0]["loaitk"]);
                 return loaitk;
             }
+
             return -1;
         }
 
-        public string GetNameFromDatabase(string username)
+        public string[] GetNameAndIdFromDatabase(string username)
         {
             string query =
-                "SELECT Name FROM ThongTin INNER JOIN Login ON ThongTin.ID = Login.ID Where Username = @username";
-            string name;
-            // Gọi phương thức ExecuteQuery với tham số username
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username });
+                "SELECT ThongTin.Name, Login.ID FROM ThongTin INNER JOIN Login ON ThongTin.ID = Login.ID WHERE Login.Username = @username";
+            string[] result = new string[2];
 
-            if (result.Rows.Count > 0)
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { username });
+
+            if (data.Rows.Count > 0)
             {
-                name = result.Rows[0]["Name"].ToString();
-                return name;
+                result[0] = data.Rows[0]["Name"].ToString();
+                result[1] = data.Rows[0]["ID"].ToString();
+                return result;
             }
             else
             {
-                name = "Không tìm thấy tên người dùng.";
-                return name;
+                result[0] = "Không tìm thấy tên người dùng.";
+                result[1] = "-1";
+                return result;
             }
         }
-
-       
-
-
-
-
-
-
-
-
-
-       
     }
-    
 }

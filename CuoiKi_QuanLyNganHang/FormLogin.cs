@@ -36,20 +36,24 @@ namespace CuoiKi_QuanLyNganHang
             return LoginToFormMain.Instance.LoginFormMain(tk, mk);
         }
 
+        private string[] listSTR = new string[] { };
+        private string name = "";
         private void Login()
         {
+            
             string tk = txtUser.Texts;
             string mk = txtPassword.Texts;
+            string id = "";
             if (checkLogin(tk, mk))
             {
-                FormMain formMain = new FormMain(tk, mk);
+                listSTR = LoginToFormMain.Instance.GetNameAndIdFromDatabase(tk);
+                name = listSTR[0];
+                id = listSTR[1];
+                FormMain formMain = new FormMain(tk, name, id);
                 this.Hide();
                 formMain.ShowDialog();
             }
-            else if (CheckNullOrWhiteSpace(txtUser, lblMessage, "Tên đăng nhập", "username"))
-            {
-                return;
-            }
+            else if (CheckNullOrWhiteSpace(txtUser, lblMessage, "Tên đăng nhập", "username")) return;
             else if (CheckNullOrWhiteSpace(txtPassword, lblMessage, "Mật khẩu", "password")) return;
             else
             {

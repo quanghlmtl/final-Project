@@ -28,31 +28,32 @@ namespace CuoiKi_QuanLyNganHang
             CenterToScreen();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
+
         private string tk;
-        private string mk;
-        public FormMain(string tk, string mk)
+        private string name;
+        private string id;
+        public FormMain(string tk, string name, string id)
         {
             this.tk = tk;
-            this.mk = mk;
+            this.name = name;
+            this.id = id;
             InitializeComponent();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         //Even form load
-        string displayName = "";
         private void FormMain_Load(object sender, EventArgs e)
         {
-            displayName = LoginToFormMain.Instance.GetNameFromDatabase(tk);
             if (checkStaff(tk) == 1)
             {
-                Home form = new Home(displayName);
+                Home form = new Home(name);
                 OpenChildForm(form, btnHome.Text);
                 ButtonViable(1, true);
                 ButtonViable(0, false);
             }
             else if (checkStaff(tk) == 0)
             {
-                HomeAdmin form = new HomeAdmin(displayName);
+                HomeAdmin form = new HomeAdmin(name);
                 OpenChildForm(form, btnHome.Text);
                 ButtonViable(0, true);
                 ButtonViable(1, false);
@@ -110,12 +111,12 @@ namespace CuoiKi_QuanLyNganHang
         //Button click 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Home(displayName), btnTransfer.Text);
+            OpenChildForm(new Home(name), btnTransfer.Text);
             EnableButton(btnHome);
         }
         private void btnTransfer_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormTransferMoney(), btnTransfer.Text);
+            OpenChildForm(new FormTransferMoney(id), btnTransfer.Text);
             EnableButton(btnTransfer);
         }
         private void btnSaving_Click(object sender, EventArgs e)
