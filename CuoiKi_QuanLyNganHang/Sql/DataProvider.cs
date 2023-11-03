@@ -10,7 +10,9 @@ namespace CuoiKi_QuanLyNganHang.Sql
 {
     public class DataProvider
     {
-        public string connectionSTR = "Data Source=HUYENMYDANG\\SQL;Initial Catalog=QLNH;Integrated Security=True";
+        public string connectionSTR = //"Data Source=HUYENMYDANG\\SQL;Initial Catalog=QLNH;Integrated Security=True";
+            "Data Source=.;Initial Catalog=QLNH;Integrated Security=True";
+
         private static DataProvider instance;
 
         public string getconnectionSTR()
@@ -123,6 +125,28 @@ namespace CuoiKi_QuanLyNganHang.Sql
                 adapter.Fill(data);
             }
             return data;
+        }
+        public bool UpdateAccount(string username, string newpass)
+        {
+            string query = "update Login set Pass = @newpass where Username = @username";
+            DataTable datatable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@newpass", newpass);
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                    adapter.Fill(datatable);
+                    return datatable.Rows.Count > 0;
+                }
+                
+
+            }
+            
         }
     }
 

@@ -38,7 +38,7 @@ namespace CuoiKi_QuanLyNganHang
 
             if (checkforgot(name, cccd, phone, username))
             {
-                Newpass newpass = new Newpass();
+                Newpass newpass = new Newpass(username);
                 this.Hide();
                 newpass.ShowDialog();
             }

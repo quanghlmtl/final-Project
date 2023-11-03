@@ -20,13 +20,8 @@ namespace CuoiKi_QuanLyNganHang
         }
         private HandleSql() { }
 
-        public static bool UpdateAccount(string username, string displayname, string password)
-        {
-            string query = "Account_Update @AccountName  , @DisplayName , @Pass";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, displayname, password });
-            return result.Rows.Count > 0;
-        }
-        public string GetBalanceFromDatabase(string username)
+        
+        public string[] GetBalanceFromDatabase(string username)
         {
             string query =
                 "SELECT ThongTin.Name, Login.ID FROM ThongTin INNER JOIN Login ON ThongTin.ID = Login.ID WHERE Login.Username = @username";
