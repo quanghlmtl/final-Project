@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CuoiKi_QuanLyNganHang.MoreForm
 {
@@ -95,6 +96,28 @@ namespace CuoiKi_QuanLyNganHang.MoreForm
                 return true;
             }
             else return false;
+        }
+        protected void TextBoxTextChanged(object sender, EventArgs e, RJControls.RJTextBox textBox)
+        {
+            string text = textBox.Text;
+            string formattedText = FormatNumberWithCommas(text);
+            textBox.Text = formattedText;
+        }
+        private string FormatNumberWithCommas(string text)
+        {
+            text = text.Replace(".", "").Replace(",", "");
+            string formattedText = "";
+            int count = 0;
+            for (int i = text.Length - 1; i >= 0; i--)
+            {
+                formattedText = text[i] + formattedText;
+                count++;
+                if (count % 3 == 0 && i > 0)
+                {
+                    formattedText = "." + formattedText;
+                }
+            }
+            return formattedText;
         }
     }
 }

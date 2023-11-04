@@ -39,7 +39,7 @@
             this.btnRefresh = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
             this.btnBack = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
             this.btnSearch2 = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
-            this.cbListBanks = new CuoiKi_QuanLyNganHang.Class.cbBorder();
+            this.cbListBanks = new CuoiKi_QuanLyNganHang.Class.CustomComboBox();
             this.txtKeyWord = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.btnSearch = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
             this.btnNewUser = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
@@ -203,15 +203,12 @@
             this.cbListBanks.BackColor = System.Drawing.SystemColors.Window;
             this.cbListBanks.BorderColor = System.Drawing.Color.MediumBlue;
             this.cbListBanks.BorderSize = 2;
-            this.cbListBanks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbListBanks.Font = new System.Drawing.Font("Averta Std CY", 10F);
             this.cbListBanks.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cbListBanks.FormattingEnabled = true;
             this.cbListBanks.Location = new System.Drawing.Point(126, 109);
             this.cbListBanks.Name = "cbListBanks";
             this.cbListBanks.Size = new System.Drawing.Size(445, 25);
             this.cbListBanks.TabIndex = 23;
-            this.cbListBanks.UnderLinedStyle = false;
             this.cbListBanks.Visible = false;
             // 
             // txtKeyWord
@@ -314,7 +311,7 @@
         private System.Windows.Forms.Label lblBank;
         private System.Windows.Forms.Label lblKeyWord;
         private System.Windows.Forms.Label lblDate;
-        private Class.cbBorder cbListBanks;
+        private Class.CustomComboBox cbListBanks;
         private System.Windows.Forms.DateTimePicker dateTime2;
         private System.Windows.Forms.DateTimePicker dateTime1;
         private RJControls.RJTextBox txtKeyWord;

@@ -23,6 +23,7 @@ namespace CuoiKi_QuanLyNganHang.RJControls
         private bool underLinedStyle = false;
         private Color borderFocusColor = Color.HotPink;
         private bool isForcued = false;
+        private bool numberMoney = false;
         private Choose stateValue;
         private Choose2 cTextAlign;
         private Padding controlPadding = new Padding(0);
@@ -178,6 +179,18 @@ namespace CuoiKi_QuanLyNganHang.RJControls
                 this.Invalidate();
             }
         }
+        [Category("Custom Advance")]
+        public bool NumberMoney
+        {
+            get
+            {
+                return numberMoney;
+            }
+            set
+            {
+                numberMoney = value;
+            }
+        }
         //overridden methods
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -282,9 +295,38 @@ namespace CuoiKi_QuanLyNganHang.RJControls
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (_TextChanged != null)
-                _TextChanged.Invoke(sender, e);
+            {
+                if (numberMoney == true)
+                {
+                    string text = textBox1.Text;
+                    string formattedText = FormatNumberWithCommas(text);
+                    textBox1.Text = formattedText;
+                    textBox1.SelectionStart = formattedText.Length;
+                    textBox1.Enabled = false;
+                    _TextChanged.Invoke(sender, e);
+                }
+            }
         }
+        private string FormatNumberWithCommas(string text)
+        {
+            // Xóa các dấu chấm hoặc dấu phẩy hiện có để chuẩn bị định dạng lại số
+            text = text.Replace(".", "").Replace(",", "");
 
+            // Định dạng lại số
+            string formattedText = "";
+            int count = 0;
+            for (int i = text.Length - 1; i >= 0; i--)
+            {
+                formattedText = text[i] + formattedText;
+                count++;
+                if (count % 3 == 0 && i > 0)
+                {
+                    formattedText = "." + formattedText; // Thay dấu chấm thành dấu phẩy nếu bạn muốn
+                }
+            }
+
+            return formattedText;
+        }
         private void textBox1_Click(object sender, EventArgs e)
         {
             this.OnClick(e);

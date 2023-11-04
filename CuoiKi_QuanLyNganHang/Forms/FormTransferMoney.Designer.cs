@@ -32,9 +32,9 @@
             this.txtAccountBalance = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtBank = new CuoiKi_QuanLyNganHang.Class.CustomComboBox();
             this.lblName1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtBank = new System.Windows.Forms.ComboBox();
             this.btnConfirm = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -72,7 +72,8 @@
             this.txtAccountBalance.Margin = new System.Windows.Forms.Padding(4);
             this.txtAccountBalance.Multiline = false;
             this.txtAccountBalance.Name = "txtAccountBalance";
-            this.txtAccountBalance.Padding = new System.Windows.Forms.Padding(5);
+            this.txtAccountBalance.NumberMoney = true;
+            this.txtAccountBalance.Padding = new System.Windows.Forms.Padding(10, 5, 5, 5);
             this.txtAccountBalance.PasswordChar = false;
             this.txtAccountBalance.Size = new System.Drawing.Size(511, 36);
             this.txtAccountBalance.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
@@ -92,9 +93,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtBank);
             this.groupBox2.Controls.Add(this.lblName1);
             this.groupBox2.Controls.Add(this.lblName);
-            this.groupBox2.Controls.Add(this.txtBank);
             this.groupBox2.Controls.Add(this.btnConfirm);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
@@ -109,6 +110,25 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
+            // txtBank
+            // 
+            this.txtBank.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtBank.BorderColor = System.Drawing.Color.HotPink;
+            this.txtBank.BorderSize = 2;
+            this.txtBank.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.txtBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBank.ForeColor = System.Drawing.Color.DimGray;
+            this.txtBank.IconColor = System.Drawing.Color.HotPink;
+            this.txtBank.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.txtBank.ListTextColor = System.Drawing.Color.DimGray;
+            this.txtBank.Location = new System.Drawing.Point(240, 19);
+            this.txtBank.MinimumSize = new System.Drawing.Size(200, 30);
+            this.txtBank.Name = "txtBank";
+            this.txtBank.Padding = new System.Windows.Forms.Padding(2);
+            this.txtBank.Size = new System.Drawing.Size(510, 36);
+            this.txtBank.TabIndex = 16;
+            this.txtBank.Texts = "";
+            // 
             // lblName1
             // 
             this.lblName1.AutoSize = true;
@@ -118,7 +138,6 @@
             this.lblName1.Size = new System.Drawing.Size(134, 20);
             this.lblName1.TabIndex = 15;
             this.lblName1.Text = "Người thụ hưởng: ";
-            this.lblName1.Visible = false;
             // 
             // lblName
             // 
@@ -129,16 +148,6 @@
             this.lblName.Size = new System.Drawing.Size(61, 24);
             this.lblName.TabIndex = 14;
             this.lblName.Text = "Name";
-            this.lblName.Visible = false;
-            // 
-            // txtBank
-            // 
-            this.txtBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBank.FormattingEnabled = true;
-            this.txtBank.Location = new System.Drawing.Point(240, 19);
-            this.txtBank.Name = "txtBank";
-            this.txtBank.Size = new System.Drawing.Size(511, 33);
-            this.txtBank.TabIndex = 13;
             // 
             // btnConfirm
             // 
@@ -164,7 +173,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 218);
+            this.label5.Location = new System.Drawing.Point(24, 218);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(200, 20);
             this.label5.TabIndex = 10;
@@ -184,7 +193,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 64);
+            this.label3.Location = new System.Drawing.Point(26, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 20);
             this.label3.TabIndex = 8;
@@ -213,6 +222,7 @@
             this.txtContent.Margin = new System.Windows.Forms.Padding(4);
             this.txtContent.Multiline = false;
             this.txtContent.Name = "txtContent";
+            this.txtContent.NumberMoney = false;
             this.txtContent.Padding = new System.Windows.Forms.Padding(5);
             this.txtContent.PasswordChar = false;
             this.txtContent.Size = new System.Drawing.Size(510, 36);
@@ -234,10 +244,11 @@
             this.txtMoney.Margin = new System.Windows.Forms.Padding(4);
             this.txtMoney.Multiline = false;
             this.txtMoney.Name = "txtMoney";
+            this.txtMoney.NumberMoney = false;
             this.txtMoney.Padding = new System.Windows.Forms.Padding(5);
             this.txtMoney.PasswordChar = false;
             this.txtMoney.Size = new System.Drawing.Size(511, 36);
-            this.txtMoney.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
+            this.txtMoney.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.Number;
             this.txtMoney.TabIndex = 4;
             this.txtMoney.Texts = "";
             this.txtMoney.UnderLinedStyle = false;
@@ -251,17 +262,19 @@
             this.txtBankNumber.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
             this.txtBankNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBankNumber.ForeColor = System.Drawing.Color.DimGray;
-            this.txtBankNumber.Location = new System.Drawing.Point(240, 64);
+            this.txtBankNumber.Location = new System.Drawing.Point(239, 64);
             this.txtBankNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtBankNumber.Multiline = false;
             this.txtBankNumber.Name = "txtBankNumber";
+            this.txtBankNumber.NumberMoney = false;
             this.txtBankNumber.Padding = new System.Windows.Forms.Padding(5);
             this.txtBankNumber.PasswordChar = false;
             this.txtBankNumber.Size = new System.Drawing.Size(511, 36);
-            this.txtBankNumber.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
+            this.txtBankNumber.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.Number;
             this.txtBankNumber.TabIndex = 3;
             this.txtBankNumber.Texts = "";
             this.txtBankNumber.UnderLinedStyle = false;
+            this.txtBankNumber.Leave += new System.EventHandler(this.txtBankNumber_Leave);
             // 
             // FormTransferMoney
             // 
@@ -272,6 +285,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FormTransferMoney";
             this.Text = "Chuyển tiền";
+            this.Load += new System.EventHandler(this.FormTransferMoney_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -286,7 +300,6 @@
         private RJControls.RJTextBox txtAccountBalance;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox txtBank;
         private RJControls.RJButton btnConfirm;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -297,5 +310,6 @@
         private RJControls.RJTextBox txtBankNumber;
         private System.Windows.Forms.Label lblName1;
         private System.Windows.Forms.Label lblName;
+        private Class.CustomComboBox txtBank;
     }
 }
