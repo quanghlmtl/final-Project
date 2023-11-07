@@ -1,17 +1,22 @@
 ﻿using System;
+using System.Linq;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CuoiKi_QuanLyNganHang.MoreForm;
+using CuoiKi_QuanLyNganHang.Class;
+using CuoiKi_QuanLyNganHang.Sql;
 namespace CuoiKi_QuanLyNganHang
 {
     public partial class FormNewAccount : Method
     {
+        static int i = 2;
+        DateTime datetime = DateTime.Now;
         public FormNewAccount()
         {
             InitializeComponent();
@@ -28,6 +33,7 @@ namespace CuoiKi_QuanLyNganHang
         //Button click
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            
             if ( CheckNullOrWhiteSpace(txtName, lblMessage, "Họ và tên", "full name"))
                 return;
             else if ( CheckNullOrWhiteSpace(txtCCCD, lblMessage, "Số CCCD", "citizen identification"))
@@ -47,7 +53,20 @@ namespace CuoiKi_QuanLyNganHang
                 txtPassword2.Focus();
                 return;
             }
-            else lblMessage.Visible = false;
+            else
+            {
+                lblMessage.Visible = false;
+                //if (checkadd() == true)
+                //{
+                checkadd();
+                MessageBox.Show("Thêm tài khoản thành công");
+                FormLogin flg = new FormLogin();
+                this.Hide();
+                flg.ShowDialog();
+                //}
+                //else MessageBox.Show("Không thể thêm tài khoản");
+                
+            }
         }
 
         //Hidden password
@@ -103,9 +122,6 @@ namespace CuoiKi_QuanLyNganHang
         private void NewAccount_Leave(object sender, EventArgs e)
         {
             HandleLeave(sender, e, txtName, "Họ và tên", false);
-            HandleLeave(sender, e, txtCCCD, "Số CCCD", false);
-            HandleLeave(sender, e, txtPhoneNumb, "Số điện thoại", false);
-            HandleLeave(sender, e, txtUsername, "Tên tài khoản", false);
             HandleLeave(sender, e, txtPassword1, "Mật khẩu", true);
             HandleLeave(sender, e, txtPassword2, "Nhập lại mật khẩu", true);
         }
@@ -123,6 +139,95 @@ namespace CuoiKi_QuanLyNganHang
         private void FormNewAccount_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+        public void checkadd()
+        {
+            string query = "[dbo].[add_account] @name, @cccd, @phone, @user, @pass, @id, @date, @loaitk,@bank,@stk";
+            string name = txtName.Texts;
+            string cccd = txtCCCD.Texts;
+            string phone = txtPhoneNumb.Texts;
+            string user = txtUsername.Texts;
+            string pass = txtPassword1.Texts;
+            string date = datetime.ToString();
+            int bank = 1210001;
+            int stk = 0;
+            int loaitk = 1;
+            int id = ++i;
+            DataProvider.Instance.add_newacc(query, name, cccd, phone, user, pass, id, date, loaitk,bank,stk);
+            //DataTable reasul = DataProvider.Instance.add_newacc(query, name, cccd, phone, user, pass, id, date, loaitk);
+            //if (reasul.Rows.Count > 0) { return true; }
+            //else return false;
+        }
+
+       
+
+        private void txtCCCD_Leave(object sender, EventArgs e)
+        {
+            string cccd = txtCCCD.Texts;
+            if (string.IsNullOrEmpty(txtCCCD.Texts))
+            {
+
+                HandleLeave(sender, e, txtCCCD, "Số CCCD", false);
+            }
+            else
+            {
+
+                string query = "select CCCD from ThongTin where CCCD = @cccd ";
+                if (check(query, cccd) == true)
+                {
+                    MessageBox.Show("Căn cước công dân đã tốn tại");
+                    txtCCCD.Focus();
+                    txtCCCD.Texts = "";
+                }
+
+            }
+        }
+        bool check(string query, string data)
+        {
+            return DataProvider.Instance.Checked(query, new object[] { data });
+        }
+
+        private void txtPhoneNumb_Leave(object sender, EventArgs e)
+        {
+            string phone = txtPhoneNumb.Texts;
+            if (string.IsNullOrEmpty(txtPhoneNumb.Texts))
+            {
+
+                HandleLeave(sender, e, txtPhoneNumb, "Số điện thoại", false);
+            }
+            else
+            {
+
+                string query = "select Phone from ThongTin where Phone = @phone";
+                if (check(query, phone) == true)
+                {
+                    MessageBox.Show("Số điện thoại đã được sử dụng ");
+                    txtPhoneNumb.Focus();
+                    txtPhoneNumb.Texts = "";
+                }
+
+            }
+        }
+
+        private void txtUsername_Leave(object sender, EventArgs e)
+        {
+            string user = txtUsername.Texts;
+            if (string.IsNullOrEmpty(txtUsername.Texts))
+            {
+                HandleLeave(sender, e, txtUsername, "Tên tài khoản", false);
+            }
+            else
+            {
+
+                string query = "select Username from Login where Username = @user ";
+                if (check(query, user) == true)
+                {
+                    MessageBox.Show("Username đã tốn tại");
+                    txtUsername.Focus();
+                    txtUsername.Texts = "";
+                }
+
+            }
         }
     }
 }

@@ -6,14 +6,13 @@ using System.Data;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using CuoiKi_QuanLyNganHang.Sql;
 namespace CuoiKi_QuanLyNganHang
 {
     public partial class FormMain : Method
     {
         //Fields
         private Form activeForm;
-        string accountquery = "GET_NAME";
+       //string accountquery = "GET_NAME";
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
