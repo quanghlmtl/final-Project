@@ -17,6 +17,7 @@ namespace CuoiKi_QuanLyNganHang
         public FormLogin()
         {
             InitializeComponent();
+            CenterToScreen();
         }
         private void FormLogin_Load(object sender, EventArgs e)
         {

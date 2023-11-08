@@ -49,6 +49,15 @@ namespace CuoiKi_QuanLyNganHang
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { id });
             return result.Rows[0][0].ToString();
         }
+        public static string GetDataFromDTB(string query, int id, string nameBank)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { id, nameBank });
+            if (result.Rows.Count > 0)
+            {
+                return result.Rows[0]["NameTK"].ToString();
+            }
+            return "null";
+        }
         public static string GetDataFromDTB(string query, Class.CustomComboBox combobox)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery(query);

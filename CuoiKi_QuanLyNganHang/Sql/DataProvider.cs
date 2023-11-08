@@ -62,9 +62,31 @@ namespace CuoiKi_QuanLyNganHang.Sql
                 connection.Close();
                 adapter.Fill(data);
             }
-
             return data;
         }
+        public DataTable ExecuteQuery2(string query, object[] parameters = null)
+        {
+            DataTable data = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+
+                if (parameters != null)
+                {
+                    for (int i = 0; i < parameters.Length; i++)
+                    {
+                        command.Parameters.AddWithValue($"@p{i}", parameters[i]);
+                    }
+                }
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                connection.Close();
+            }
+            return data;
+        }
+
         public bool checkforgot2(string name, string cccd, string phone, string username)
         {
             string query = "[CHECK_FORGOT] @name, @cccd, @Phone, @userName";

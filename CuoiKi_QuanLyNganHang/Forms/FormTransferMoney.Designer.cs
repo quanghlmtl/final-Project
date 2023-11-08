@@ -128,6 +128,7 @@
             this.txtBank.Size = new System.Drawing.Size(510, 36);
             this.txtBank.TabIndex = 16;
             this.txtBank.Texts = "";
+            this.txtBank.OnSelectedIndexChanged += new System.EventHandler(this.txtBank_OnSelectedIndexChanged);
             // 
             // lblName1
             // 
@@ -230,6 +231,7 @@
             this.txtContent.TabIndex = 5;
             this.txtContent.Texts = "";
             this.txtContent.UnderLinedStyle = false;
+            this.txtContent.Leave += new System.EventHandler(this.txtContent_Leave);
             // 
             // txtMoney
             // 
@@ -244,7 +246,7 @@
             this.txtMoney.Margin = new System.Windows.Forms.Padding(4);
             this.txtMoney.Multiline = false;
             this.txtMoney.Name = "txtMoney";
-            this.txtMoney.NumberMoney = false;
+            this.txtMoney.NumberMoney = true;
             this.txtMoney.Padding = new System.Windows.Forms.Padding(5);
             this.txtMoney.PasswordChar = false;
             this.txtMoney.Size = new System.Drawing.Size(511, 36);
@@ -252,6 +254,7 @@
             this.txtMoney.TabIndex = 4;
             this.txtMoney.Texts = "";
             this.txtMoney.UnderLinedStyle = false;
+            this.txtMoney.Leave += new System.EventHandler(this.txtMoney_Leave);
             // 
             // txtBankNumber
             // 

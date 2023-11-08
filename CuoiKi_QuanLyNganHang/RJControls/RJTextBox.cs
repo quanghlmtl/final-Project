@@ -294,7 +294,7 @@ namespace CuoiKi_QuanLyNganHang.RJControls
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (_TextChanged != null)
+            //if (_TextChanged != null)
             {
                 if (numberMoney == true)
                 {
@@ -302,8 +302,7 @@ namespace CuoiKi_QuanLyNganHang.RJControls
                     string formattedText = FormatNumberWithCommas(text);
                     textBox1.Text = formattedText;
                     textBox1.SelectionStart = formattedText.Length;
-                    textBox1.Enabled = false;
-                    _TextChanged.Invoke(sender, e);
+                    //_TextChanged.Invoke(sender, e);
                 }
             }
         }

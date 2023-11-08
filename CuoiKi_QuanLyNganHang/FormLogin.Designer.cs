@@ -208,6 +208,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.NumberMoney = false;
             this.txtPassword.Padding = new System.Windows.Forms.Padding(5);
             this.txtPassword.PasswordChar = false;
             this.txtPassword.Size = new System.Drawing.Size(400, 36);
@@ -235,6 +236,7 @@
             this.txtUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtUser.Multiline = false;
             this.txtUser.Name = "txtUser";
+            this.txtUser.NumberMoney = false;
             this.txtUser.Padding = new System.Windows.Forms.Padding(5);
             this.txtUser.PasswordChar = false;
             this.txtUser.Size = new System.Drawing.Size(400, 36);

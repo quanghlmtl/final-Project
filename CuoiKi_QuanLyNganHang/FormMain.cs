@@ -116,7 +116,7 @@ namespace CuoiKi_QuanLyNganHang
         }
         private void btnTransfer_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormTransferMoney(id), btnTransfer.Text);
+            OpenChildForm(new FormTransferMoney(id, name), btnTransfer.Text);
             EnableButton(btnTransfer);
         }
         private void btnSaving_Click(object sender, EventArgs e)
