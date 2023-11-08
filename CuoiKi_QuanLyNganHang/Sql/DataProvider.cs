@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CuoiKi_QuanLyNganHang.Sql
 {
@@ -165,11 +166,81 @@ namespace CuoiKi_QuanLyNganHang.Sql
                     adapter.Fill(datatable);
                     return datatable.Rows.Count > 0;
                 }
-                
 
+
+            }
+
+        }
+
+        public bool Checked(string query, object[] parameter = null)
+        {
+
+            bool check = false;
+            DataTable data = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    if (parameter != null)
+                    {
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
+                        {
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
+                        }
+                    }
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(data);
+                    if (data.Rows.Count > 0) { check = true; }
+                }
+            }
+
+            return check;
+        }
+        public void add_newacc(string query, string name, string cccd, string phone, string user, string pass, int id, string date, int loaitk,int bank,int stk)
+        {
+
+
+            DataTable data = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
+                    command.Parameters.Add("@cccd", SqlDbType.Char).Value = cccd;
+                    command.Parameters.Add("@phone", SqlDbType.Char).Value = phone;
+                    command.Parameters.Add("@user", SqlDbType.Char).Value = user;
+
+                    command.Parameters.Add("@pass", SqlDbType.Char).Value = pass;
+                    command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                    command.Parameters.Add("@date", SqlDbType.SmallDateTime).Value = date;
+
+                    command.Parameters.Add("@loaitk", SqlDbType.Int).Value = loaitk;
+
+                    command.Parameters.Add("@bank", SqlDbType.Int).Value = bank;
+
+                    command.Parameters.Add("@stk", SqlDbType.Int).Value = stk;
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(data);
             }
             
         }
     }
-
 }
+
+
+
+
+
+
+
+        
+    

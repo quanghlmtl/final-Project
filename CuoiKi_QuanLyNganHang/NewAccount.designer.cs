@@ -78,7 +78,11 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.DimGray;
             this.txtName.Location = new System.Drawing.Point(183, 94);
+<<<<<<< HEAD
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 3b334f604b07cff0f43732357d47366bc21a0600
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
@@ -101,7 +105,11 @@
             this.txtCCCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCCCD.ForeColor = System.Drawing.Color.DimGray;
             this.txtCCCD.Location = new System.Drawing.Point(183, 167);
+<<<<<<< HEAD
+            this.txtCCCD.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.txtCCCD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 3b334f604b07cff0f43732357d47366bc21a0600
             this.txtCCCD.Multiline = true;
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
@@ -112,7 +120,7 @@
             this.txtCCCD.Texts = "Số CCCD";
             this.txtCCCD.UnderLinedStyle = true;
             this.txtCCCD.Enter += new System.EventHandler(this.NewAccount_Enter);
-            this.txtCCCD.Leave += new System.EventHandler(this.NewAccount_Leave);
+            this.txtCCCD.Leave += new System.EventHandler(this.txtCCCD_Leave);
             // 
             // txtPhoneNumb
             // 
@@ -124,7 +132,11 @@
             this.txtPhoneNumb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumb.ForeColor = System.Drawing.Color.DimGray;
             this.txtPhoneNumb.Location = new System.Drawing.Point(183, 239);
+<<<<<<< HEAD
+            this.txtPhoneNumb.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.txtPhoneNumb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 3b334f604b07cff0f43732357d47366bc21a0600
             this.txtPhoneNumb.Multiline = true;
             this.txtPhoneNumb.Name = "txtPhoneNumb";
             this.txtPhoneNumb.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
@@ -135,7 +147,7 @@
             this.txtPhoneNumb.Texts = "Số điện thoại";
             this.txtPhoneNumb.UnderLinedStyle = true;
             this.txtPhoneNumb.Enter += new System.EventHandler(this.NewAccount_Enter);
-            this.txtPhoneNumb.Leave += new System.EventHandler(this.NewAccount_Leave);
+            this.txtPhoneNumb.Leave += new System.EventHandler(this.txtPhoneNumb_Leave);
             // 
             // txtUsername
             // 
@@ -147,7 +159,11 @@
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.DimGray;
             this.txtUsername.Location = new System.Drawing.Point(183, 311);
+<<<<<<< HEAD
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 3b334f604b07cff0f43732357d47366bc21a0600
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
@@ -158,7 +174,7 @@
             this.txtUsername.Texts = "Tên tài khoản";
             this.txtUsername.UnderLinedStyle = true;
             this.txtUsername.Enter += new System.EventHandler(this.NewAccount_Enter);
-            this.txtUsername.Leave += new System.EventHandler(this.NewAccount_Leave);
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // lblNewAcc
             // 
@@ -260,7 +276,11 @@
             this.txtPassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword1.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassword1.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
+            this.txtPassword1.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.txtPassword1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 3b334f604b07cff0f43732357d47366bc21a0600
             this.txtPassword1.Multiline = false;
             this.txtPassword1.Name = "txtPassword1";
             this.txtPassword1.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
@@ -318,7 +338,11 @@
             this.txtPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword2.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassword2.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
+            this.txtPassword2.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.txtPassword2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> 3b334f604b07cff0f43732357d47366bc21a0600
             this.txtPassword2.Multiline = false;
             this.txtPassword2.Name = "txtPassword2";
             this.txtPassword2.Padding = new System.Windows.Forms.Padding(8, 15, 5, 5);
