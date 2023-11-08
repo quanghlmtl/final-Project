@@ -30,12 +30,12 @@ namespace CuoiKi_QuanLyNganHang
 
         private string tk;
         private string name;
-        private string id;
+        private int id;
         public FormMain(string tk, string name, string id)
         {
             this.tk = tk;
             this.name = name;
-            this.id = id;
+            this.id = int.Parse(id);
             InitializeComponent();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }

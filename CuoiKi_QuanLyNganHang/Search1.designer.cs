@@ -30,7 +30,7 @@
         {
             this.itemSearchTime = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxBorder2 = new CuoiKi_QuanLyNganHang.Class.cbBorder();
+            this.comboBoxBorder2 = new CuoiKi_QuanLyNganHang.Class.CustomComboBox();
             this.rjTextBox1 = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,15 +68,12 @@
             this.comboBoxBorder2.BackColor = System.Drawing.SystemColors.Window;
             this.comboBoxBorder2.BorderColor = System.Drawing.Color.MediumBlue;
             this.comboBoxBorder2.BorderSize = 2;
-            this.comboBoxBorder2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxBorder2.Font = new System.Drawing.Font("Averta Std CY", 10F);
             this.comboBoxBorder2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.comboBoxBorder2.FormattingEnabled = true;
             this.comboBoxBorder2.Location = new System.Drawing.Point(122, 131);
             this.comboBoxBorder2.Name = "comboBoxBorder2";
             this.comboBoxBorder2.Size = new System.Drawing.Size(445, 25);
             this.comboBoxBorder2.TabIndex = 14;
-            this.comboBoxBorder2.UnderLinedStyle = false;
             // 
             // rjTextBox1
             // 
@@ -175,7 +172,7 @@
         private RJControls.RJTextBox rjTextBox1;
         private System.Windows.Forms.DateTimePicker itemSearchTime;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private Class.cbBorder comboBoxBorder2;
+        private Class.CustomComboBox comboBoxBorder2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using CuoiKi_QuanLyNganHang.Properties;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
+
 namespace CuoiKi_QuanLyNganHang.Class
 {
     public class lineShape : Label

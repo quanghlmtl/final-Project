@@ -57,8 +57,8 @@
     <Compile Include="CardDetail.designer.cs">
       <DependentUpon>CardDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\cbBorder.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Class\CustomComboBox.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CustomMessageBox.cs">
       <SubType>Form</SubType>
@@ -66,7 +66,6 @@
     <Compile Include="CustomMessageBox.Designer.cs">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomParameter.cs" />
     <Compile Include="Forms\FormHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,7 +81,6 @@
     <Compile Include="Class\lineShape.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Class\ur.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
