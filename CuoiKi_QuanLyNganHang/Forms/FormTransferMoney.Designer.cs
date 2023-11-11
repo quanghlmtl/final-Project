@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtAccountBalance = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +44,8 @@
             this.txtContent = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.txtMoney = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.txtBankNumber = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +96,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.txtBank);
             this.groupBox2.Controls.Add(this.lblName1);
             this.groupBox2.Controls.Add(this.lblName);
@@ -279,6 +283,13 @@
             this.txtBankNumber.UnderLinedStyle = false;
             this.txtBankNumber.Leave += new System.EventHandler(this.txtBankNumber_Leave);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(528, 125);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 17;
+            // 
             // FormTransferMoney
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,5 +325,7 @@
         private System.Windows.Forms.Label lblName1;
         private System.Windows.Forms.Label lblName;
         private Class.CustomComboBox txtBank;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -45,7 +45,7 @@ namespace CuoiKi_QuanLyNganHang
         {
             if (checkStaff(tk) == 1)
             {
-                Home form = new Home(name);
+                Home form = new Home(name, id);
                 OpenChildForm(form, btnHome.Text);
                 ButtonViable(1, true);
                 ButtonViable(0, false);
@@ -110,7 +110,7 @@ namespace CuoiKi_QuanLyNganHang
         //Button click 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Home(name), btnTransfer.Text);
+            OpenChildForm(new Home(name, id), btnTransfer.Text);
             EnableButton(btnHome);
         }
         private void btnTransfer_Click(object sender, EventArgs e)

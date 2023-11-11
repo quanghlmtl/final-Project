@@ -44,6 +44,13 @@ namespace CuoiKi_QuanLyNganHang
         //        return result;
         //    }
         //}
+
+        //get
+        public static int GetDataFromDTB2(string query, int id)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { id });
+            return (int)result.Rows[0][0];
+        }
         public static string GetDataFromDTB(string query, int id)
         {
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { id });
@@ -71,5 +78,8 @@ namespace CuoiKi_QuanLyNganHang
         {
             combobox.Items.Add(string.Join(", ", row));
         }
+
+        //set
+      
     }
 }

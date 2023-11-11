@@ -292,19 +292,27 @@ namespace CuoiKi_QuanLyNganHang.RJControls
             base.OnPaddingChanged(e);
             this.Invalidate();
         }
+        private bool formattingText = false;
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //if (_TextChanged != null)
+            if (numberMoney && !formattingText)
             {
-                if (numberMoney == true)
-                {
-                    string text = textBox1.Text;
-                    string formattedText = FormatNumberWithCommas(text);
-                    textBox1.Text = formattedText;
-                    textBox1.SelectionStart = formattedText.Length;
-                    //_TextChanged.Invoke(sender, e);
-                }
+                formattingText = true;
+
+                string text = textBox1.Text;
+                string formattedText = FormatNumberWithCommas(text);
+                textBox1.Text = formattedText;
+                textBox1.SelectionStart = formattedText.Length;
+
+                formattingText = false;
+
+                // Invoke the custom TextChanged event
+                OnCustomTextChanged(EventArgs.Empty);
             }
+        }
+        protected virtual void OnCustomTextChanged(EventArgs e)
+        {
+            _TextChanged?.Invoke(this, e);
         }
         private string FormatNumberWithCommas(string text)
         {

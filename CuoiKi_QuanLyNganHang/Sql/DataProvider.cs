@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace CuoiKi_QuanLyNganHang.Sql
 {
@@ -65,7 +67,36 @@ namespace CuoiKi_QuanLyNganHang.Sql
             }
             return data;
         }
-        public DataTable ExecuteQuery2(string query, object[] parameters = null)
+        public DataTable ExecuteQuery2(string query, string Notes, object[] parameter = null)
+        {
+            DataTable data = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+
+                if (parameter != null)
+                {
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
+                    
+                    }
+                }
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                connection.Close();
+                adapter.Fill(data);
+            }
+            return data;
+        }
+        public DataTable ExecuteQuery3(string query, object[] parameters = null)
         {
             DataTable data = new DataTable();
             using (SqlConnection connection = new SqlConnection(connectionSTR))
@@ -80,14 +111,12 @@ namespace CuoiKi_QuanLyNganHang.Sql
                         command.Parameters.AddWithValue($"@p{i}", parameters[i]);
                     }
                 }
-
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(data);
                 connection.Close();
             }
             return data;
         }
-
         public bool checkforgot2(string name, string cccd, string phone, string username)
         {
             string query = "[CHECK_FORGOT] @name, @cccd, @Phone, @userName";
@@ -107,7 +136,6 @@ namespace CuoiKi_QuanLyNganHang.Sql
                 }
             }
         }
-
         public void ExecuteNonQueryProvider(string name, string query, object[] parameter = null)
         {
             using (SqlConnection connection = new SqlConnection(connectionSTR))
@@ -166,12 +194,8 @@ namespace CuoiKi_QuanLyNganHang.Sql
                     adapter.Fill(datatable);
                     return datatable.Rows.Count > 0;
                 }
-
-
             }
-
         }
-
         public bool Checked(string query, object[] parameter = null)
         {
 
@@ -207,8 +231,6 @@ namespace CuoiKi_QuanLyNganHang.Sql
         }
         public void add_newacc(string query, string name, string cccd, string phone, string user, string pass, int id, string date, int loaitk,int bank,int stk)
         {
-
-
             DataTable data = new DataTable();
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
@@ -233,6 +255,48 @@ namespace CuoiKi_QuanLyNganHang.Sql
             }
             
         }
+        public void SetDataToGiaoDich(string query, int IDGD, int IDTo, int IDFrom, int SoTien, string DateGD, string Notes)
+        {
+            DataTable data = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.Add("@IDGD", SqlDbType.Int).Value = IDGD;
+                command.Parameters.Add("@IDTo", SqlDbType.Int).Value = IDTo;
+                command.Parameters.Add("@IDFrom", SqlDbType.Int).Value = IDFrom;
+                command.Parameters.Add("@SoTien", SqlDbType.Decimal).Value = SoTien;
+                command.Parameters.Add("@DateGD", SqlDbType.SmallDateTime).Value = DateGD;
+                command.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = Notes;
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+            }
+        }
+        public void UpdateBalance(int MoneyFrom, int IdFrom, int MoneyTo, int IdTo)
+        {
+            string updateQuery = "UPDATE [TaiKhoan] SET [SoDuTK] = [SoDuTK] + @sodutk WHERE ID = @id";
+
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                // Update for the recipient
+                using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@id", IdTo);
+                    command.Parameters.AddWithValue("@sodutk", MoneyTo);
+                    command.ExecuteNonQuery();
+                }
+
+                // Update for the sender
+                using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@id", IdFrom);
+                    command.Parameters.AddWithValue("@sodutk", MoneyFrom);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
     }
 }
 
