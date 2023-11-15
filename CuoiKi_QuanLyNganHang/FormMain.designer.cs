@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnStatistics = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnHomeAdmin = new System.Windows.Forms.Button();
             this.btnInformation = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
             this.btnSaving = new System.Windows.Forms.Button();
             this.btnTransfer = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.btn = new System.Windows.Forms.Button();
             this.btnMaximum = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
-            this.btnHomeAdmin = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnStatistics = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -69,9 +69,65 @@
             this.panelMenu.Size = new System.Drawing.Size(220, 617);
             this.panelMenu.TabIndex = 0;
             // 
+            // btnStatistics
+            // 
+            this.btnStatistics.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnStatistics.FlatAppearance.BorderSize = 0;
+            this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistics.ForeColor = System.Drawing.Color.White;
+            this.btnStatistics.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStatistics.Location = new System.Drawing.Point(0, 500);
+            this.btnStatistics.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
+            this.btnStatistics.Name = "btnStatistics";
+            this.btnStatistics.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
+            this.btnStatistics.Size = new System.Drawing.Size(220, 60);
+            this.btnStatistics.TabIndex = 8;
+            this.btnStatistics.Text = "Thống kê ngân hàng";
+            this.btnStatistics.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStatistics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStatistics.UseVisualStyleBackColor = true;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(0, 440);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
+            this.btnSearch.Size = new System.Drawing.Size(220, 60);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.Text = "Tra  cứu giao dịch";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // btnHomeAdmin
+            // 
+            this.btnHomeAdmin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnHomeAdmin.FlatAppearance.BorderSize = 0;
+            this.btnHomeAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHomeAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHomeAdmin.ForeColor = System.Drawing.Color.White;
+            this.btnHomeAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHomeAdmin.Location = new System.Drawing.Point(0, 380);
+            this.btnHomeAdmin.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
+            this.btnHomeAdmin.Name = "btnHomeAdmin";
+            this.btnHomeAdmin.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
+            this.btnHomeAdmin.Size = new System.Drawing.Size(220, 60);
+            this.btnHomeAdmin.TabIndex = 6;
+            this.btnHomeAdmin.Text = "Home";
+            this.btnHomeAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHomeAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHomeAdmin.UseVisualStyleBackColor = true;
+            // 
             // btnInformation
             // 
-            this.btnInformation.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInformation.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnInformation.FlatAppearance.BorderSize = 0;
             this.btnInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -92,7 +148,6 @@
             // 
             // btnHistory
             // 
-            this.btnHistory.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHistory.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnHistory.FlatAppearance.BorderSize = 0;
             this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -113,7 +168,6 @@
             // 
             // btnSaving
             // 
-            this.btnSaving.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSaving.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnSaving.FlatAppearance.BorderSize = 0;
             this.btnSaving.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -134,7 +188,6 @@
             // 
             // btnTransfer
             // 
-            this.btnTransfer.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTransfer.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnTransfer.FlatAppearance.BorderSize = 0;
             this.btnTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -155,7 +208,6 @@
             // 
             // btnHome
             // 
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -183,6 +235,19 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(220, 80);
             this.panelLogo.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources.DNQT;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(220, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // lblTitle
             // 
@@ -268,79 +333,6 @@
             this.panelDesktopPane.Size = new System.Drawing.Size(810, 498);
             this.panelDesktopPane.TabIndex = 8;
             // 
-            // btnHomeAdmin
-            // 
-            this.btnHomeAdmin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHomeAdmin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnHomeAdmin.FlatAppearance.BorderSize = 0;
-            this.btnHomeAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomeAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomeAdmin.ForeColor = System.Drawing.Color.White;
-            this.btnHomeAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHomeAdmin.Location = new System.Drawing.Point(0, 380);
-            this.btnHomeAdmin.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
-            this.btnHomeAdmin.Name = "btnHomeAdmin";
-            this.btnHomeAdmin.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
-            this.btnHomeAdmin.Size = new System.Drawing.Size(220, 60);
-            this.btnHomeAdmin.TabIndex = 6;
-            this.btnHomeAdmin.Text = "Home";
-            this.btnHomeAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHomeAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHomeAdmin.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources.DNQT;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(220, 80);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(0, 440);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
-            this.btnSearch.Size = new System.Drawing.Size(220, 60);
-            this.btnSearch.TabIndex = 7;
-            this.btnSearch.Text = "Tra  cứu giao dịch";
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // btnStatistics
-            // 
-            this.btnStatistics.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStatistics.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnStatistics.FlatAppearance.BorderSize = 0;
-            this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatistics.ForeColor = System.Drawing.Color.White;
-            this.btnStatistics.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistics.Location = new System.Drawing.Point(0, 500);
-            this.btnStatistics.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
-            this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
-            this.btnStatistics.Size = new System.Drawing.Size(220, 60);
-            this.btnStatistics.TabIndex = 8;
-            this.btnStatistics.Text = "Thống kê ngân hàng";
-            this.btnStatistics.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnStatistics.UseVisualStyleBackColor = true;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,8 +349,8 @@
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            this.panelTitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelTitle.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

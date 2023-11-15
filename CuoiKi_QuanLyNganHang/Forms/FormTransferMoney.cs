@@ -16,19 +16,20 @@ namespace CuoiKi_QuanLyNganHang
 {
     public partial class FormTransferMoney : Method
     {
-        private static int IDGD = 11106;
+        private static int IDGD = 11100;
         private static int IDTO = 0;
         private int MONEY;
         private int Money2;
         private static string date = "";
+        private int id = 0;
+        private string name = "";
+        private string checkNumberBank;
         string query = "SELECT [NameBank] FROM [Bank]";
         string query2 = "SELECT [SoDuTK] FROM [TaiKhoan] Where ID = @id";
         string query5 = "SELECT [ID] FROM [TaiKhoan] Where Sotk = @sotk";
         string query3 = "[CHECK_ACCOUNT_EXISTENCE] @sotk  , @nameBank";
         string query4 = "[INSERT_GIAODICH] @IDGD , @IDTo , @IDFrom , @SoTien , @DateGD , @Notes";
-        private int id = 0;
-        private string name = "";
-        private string checkNumberBank;
+
         public FormTransferMoney()
         {
             InitializeComponent();
@@ -41,7 +42,6 @@ namespace CuoiKi_QuanLyNganHang
             timer1.Interval = 1000;
             timer1.Start();
             timer1.Tick += timer1_Tick;
-            FormTransferMoney_Load(this, EventArgs.Empty);
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -60,6 +60,7 @@ namespace CuoiKi_QuanLyNganHang
         {
             txtBankNumber.Texts = "";
             txtMoney.Texts = "";
+            lblName.Text = "";
             txtContent.Texts = "";
         }
         //event
@@ -74,8 +75,9 @@ namespace CuoiKi_QuanLyNganHang
             {
                 IDGD++;
                 DataProvider.Instance.SetDataToGiaoDich(query4, IDGD, IDTO, id, MONEY, date, contentTo);
-                DataProvider.Instance.UpdateBalance(Money2, id, MONEY, IDTO);
-                FormTransferMoney_Load(sender, e);
+                DataProvider.Instance.UpdateBalance(Money2, id);
+                DataProvider.Instance.UpdateBalance(MONEY, IDTO);
+                txtAccountBalance.Texts = HandleSql.GetDataFromDTB(query2, id);
                 Reset();
                 CustomMessageBox message = new CustomMessageBox("Chuyển tiền thành công.");
                 message.Show();
@@ -88,7 +90,21 @@ namespace CuoiKi_QuanLyNganHang
 
         private void txtBank_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            if (!string.IsNullOrEmpty(txtBankNumber.Texts))
+            {
+                int numberBank = 0;
+                if (int.TryParse(txtBankNumber.Texts, out numberBank))
+                {
+                    checkNumberBank = HandleSql.GetDataFromDTB(query3, numberBank, txtBank.Texts);
+                    if (checkNumberBank != "null")
+                    {
+                        lblName.Enabled = true;
+                        lblName.Text = checkNumberBank;
+                        contentTo = name + " chuyen tien";
+                        txtContent.Texts = contentTo;
+                    }
+                }
+            }
         }
         private void txtBankNumber_Leave(object sender, EventArgs e)
         {
@@ -102,6 +118,8 @@ namespace CuoiKi_QuanLyNganHang
                     {
                         lblName.Enabled = true;
                         lblName.Text = checkNumberBank;
+                        contentTo = name + " chuyen tien";
+                        txtContent.Texts = contentTo;
                     }
                     else
                     {
@@ -120,8 +138,6 @@ namespace CuoiKi_QuanLyNganHang
                 MessageBox.Show("Số tài khoản không được để trống");
                 lblName.Text = "";
             }
-            contentTo = name + " chuyen tien";
-            txtContent.Texts = contentTo;
 
         }
         private int money = 0;
@@ -129,25 +145,32 @@ namespace CuoiKi_QuanLyNganHang
         private static string content = "";
         private void txtMoney_Leave(object sender, EventArgs e)
         {
-            string txtmoney = txtMoney.Texts.Replace(".", "");
-            money = int.Parse(txtmoney);
-            if (money < 1000)
+            if (txtMoney.Texts != "")
             {
-                MessageBox.Show("Số tiền quá bé, vui lòng chuyển tiền lớn hơn 1.000 vnđ");
+                string txtmoney = txtMoney.Texts.Replace(".", "");
+                money = int.Parse(txtmoney);
+                if (money < 1000)
+                {
+                    MessageBox.Show("Số tiền quá bé, vui lòng chuyển tiền lớn hơn 1.000 vnđ");
+                }
             }
         }
 
         private void txtContent_Leave(object sender, EventArgs e)
-        { 
+        {
             content = contentTo;
-            if(txtContent.Texts == "")
+            if (txtContent.Texts == "")
             {
                 txtContent.Texts = contentTo;
             }
-            else if(content != txtContent.Texts)
+            else if (content != txtContent.Texts)
             {
                 content = txtContent.Texts;
             }
+        }
+        private void txtBank_Leave(object sender, EventArgs e)
+        {
+            
         }
     }
 }
