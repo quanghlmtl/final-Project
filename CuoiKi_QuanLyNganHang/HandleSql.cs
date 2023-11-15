@@ -98,10 +98,8 @@ namespace CuoiKi_QuanLyNganHang
                 result[1] = "-1";
                 return result;
             }
-
-
         }
-        //set
+        
       
     }
 }

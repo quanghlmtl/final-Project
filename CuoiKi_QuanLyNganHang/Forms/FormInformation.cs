@@ -23,7 +23,6 @@ namespace CuoiKi_QuanLyNganHang.Forms
         string pass = "";
         string sodutk = "";
         string username;
-        string newpass;
         public FormInformation(int id)
         {
             InitializeComponent();
@@ -32,14 +31,11 @@ namespace CuoiKi_QuanLyNganHang.Forms
         }
         private void FormInformation_Load(object sender, EventArgs e)
         {
-            
             select();
             rjTextBox1.Texts = name;
             rjTextBox2.Texts = phone;
             rjTextBox3.Texts = cccd;
             rjTextBox4.Texts = sodutk;
-            txtPassword1.Texts = pass;
-            newpass = txtPassword2.Texts;
         }
         //method 
         private void VisualChange(bool value)
@@ -90,13 +86,18 @@ namespace CuoiKi_QuanLyNganHang.Forms
         }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (txtPassword1.Texts != txtPassword2.Texts)
+            if (txtPassword2.Texts != txtPassword3.Texts)
             {
                 MessageBox.Show("Mật khẩu không trùng khớp!", "Thông báo!", MessageBoxButtons.RetryCancel);
             }
+            else if (txtPassword1.Texts == txtPassword2.Texts)
+            {
+                MessageBox.Show("Nhập mật khẩu khác Mật khẩu cũ! ");
+            }
             else
             {
-                DataProvider.Instance.UpdateAccount(username, newpass);
+                 string newpass = txtPassword2.Texts;
+                DataProvider.Instance.UpdateAccount(username,newpass);
                 MessageBox.Show("Thay đổi thành công!", "Thông báo!", MessageBoxButtons.OK);
                 VisualChange(false);
             }
@@ -113,6 +114,34 @@ namespace CuoiKi_QuanLyNganHang.Forms
             sodutk = listSTR[3];
             pass = listSTR[4];
             username = listSTR[5];
+        }
+        bool check(string query, int id, string pass)
+        {
+            return DataProvider.Instance.Checked(query, new object[] { id,pass });
+        }
+
+        private void txtPassword1__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword1_Leave(object sender, EventArgs e)
+        {
+            string psw = txtPassword1.Texts;
+            string query = "select Pass from Login where ID = @id and Pass = @pass";
+            if (check(query, id, psw) == true)
+            {
+            }
+            else
+            {
+                MessageBox.Show("Sai Mật Khẩu");
+                txtPassword1.Focus();
+            }
+        }
+
+        private void hidden_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
