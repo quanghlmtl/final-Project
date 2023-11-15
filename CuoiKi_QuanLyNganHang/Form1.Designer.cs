@@ -307,11 +307,9 @@
 
         #endregion
 
-<<<<<<< HEAD
         private RJControls.RJTextBox rjTextBox1;
         //private string label1;
         private System.Windows.Forms.Label label2;
-=======
         private System.Windows.Forms.Button btnSaving;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel menuContainer;
@@ -333,6 +331,5 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Timer transition;
->>>>>>> 70f0425bf4f3acaabde7361f084bd1992aa227e1
     }
 }

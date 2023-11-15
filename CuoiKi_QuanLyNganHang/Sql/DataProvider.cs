@@ -65,7 +65,6 @@ namespace CuoiKi_QuanLyNganHang.Sql
             }
             return data;
         }
-<<<<<<< HEAD
         public DataTable ExecuteQuery2(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -116,8 +115,6 @@ namespace CuoiKi_QuanLyNganHang.Sql
             }
             return data;
         }
-=======
->>>>>>> 70f0425bf4f3acaabde7361f084bd1992aa227e1
         public bool checkforgot2(string name, string cccd, string phone, string username)
         {
             string query = "[CHECK_FORGOT] @name, @cccd, @Phone, @userName";
@@ -189,11 +186,12 @@ namespace CuoiKi_QuanLyNganHang.Sql
         }
         public void add_newacc(string query, string name, string cccd, string phone, string user, string pass, int id, string date, int loaitk,int bank,int stk,int sodutk)
         {
+            
+            DataTable data = new DataTable();
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
-<<<<<<< HEAD
                     command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
                     command.Parameters.Add("@cccd", SqlDbType.Char).Value = cccd;
                     command.Parameters.Add("@phone", SqlDbType.Char).Value = phone;
@@ -207,19 +205,6 @@ namespace CuoiKi_QuanLyNganHang.Sql
                     command.Parameters.Add("@sodutk", SqlDbType.Int).Value = sodutk;
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
                     adapter.Fill(data);
-=======
-                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
-                command.Parameters.Add("@cccd", SqlDbType.Char).Value = cccd;
-                command.Parameters.Add("@phone", SqlDbType.Char).Value = phone;
-                command.Parameters.Add("@user", SqlDbType.Char).Value = user;
-                command.Parameters.Add("@pass", SqlDbType.Char).Value = pass;
-                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
-                command.Parameters.Add("@date", SqlDbType.SmallDateTime).Value = date;
-                command.Parameters.Add("@loaitk", SqlDbType.Int).Value = loaitk;
-                command.Parameters.Add("@bank", SqlDbType.Int).Value = bank;
-                command.Parameters.Add("@stk", SqlDbType.Int).Value = stk;
-                command.ExecuteNonQuery();
->>>>>>> 70f0425bf4f3acaabde7361f084bd1992aa227e1
             }
 
         }
