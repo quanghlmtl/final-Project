@@ -28,10 +28,11 @@ namespace CuoiKi_QuanLyNganHang.Forms
         {
             InitializeComponent();
             this.id = id;
+            VisualChange(false);
         }
         private void FormInformation_Load(object sender, EventArgs e)
         {
-            txtPassword1.Enabled = false;
+            
             select();
             rjTextBox1.Texts = name;
             rjTextBox2.Texts = phone;
@@ -40,6 +41,25 @@ namespace CuoiKi_QuanLyNganHang.Forms
             txtPassword1.Texts = pass;
             newpass = txtPassword2.Texts;
         }
+        //method 
+        private void VisualChange(bool value)
+        {
+            //lable
+            lblPass.Visible = value;
+            lblConfirmPass.Visible = value;
+            //textbox
+            txtPassword1.Visible = value;
+            txtPassword2.Visible = value;
+            //hidden,presently
+            hidden.Visible = value;
+            hidden1.Visible = value;
+            presently.Visible = value;
+            presently1.Visible = value;
+            btnConfirm.Visible = value;
+            value = !value;
+            btnChange.Visible = value;
+        }
+
         //hidden
         private void hidden_MouseUp(object sender, MouseEventArgs e)
         {
@@ -63,8 +83,7 @@ namespace CuoiKi_QuanLyNganHang.Forms
         //btn Change
         private void btnChange_Click(object sender, EventArgs e)
         {
-            VisualChange();
-            txtPassword1.Enabled = true;
+            VisualChange(true);
         }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
@@ -76,18 +95,10 @@ namespace CuoiKi_QuanLyNganHang.Forms
             {
                 DataProvider.Instance.UpdateAccount(username, newpass);
                 MessageBox.Show("Thay đổi thành công!", "Thông báo!", MessageBoxButtons.OK);
-                VisualChange();
+                VisualChange(false);
             }
         }
-        private void VisualChange()
-        {
-            btnChange.Visible = !btnChange.Visible;
-            lblConfirmPass.Visible = !lblConfirmPass.Visible;
-            txtPassword2.Visible = !txtPassword2.Visible;
-            presently1.Visible = !presently1.Visible;
-            hidden1.Visible = !hidden1.Visible;
-            btnConfirm.Visible = !btnConfirm.Visible;
-        }
+        
         private void select()
         {
             string query = "SELECT tt.Name,tt.Phone,tt.CCCD,tk.SoDuTK,lg.Pass,lg.Username FROM ThongTin tt join TaiKhoan tk on tt.ID=tk.ID join Login lg on tk.ID=lg.ID WHERE tt.ID = @id";
@@ -99,7 +110,6 @@ namespace CuoiKi_QuanLyNganHang.Forms
             sodutk = listSTR[3];
             pass = listSTR[4];
             username = listSTR[5];
-
         }
     }
 }

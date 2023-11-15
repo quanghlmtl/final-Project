@@ -172,3 +172,33 @@ C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\De
 C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe
 C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.pdb
 D:\C#\C# cuoi ky\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Form1.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe.config
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.pdb
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.AssemblyReference.cache
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Card_details_2.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.card_details.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.CustomMessageBox.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Form1.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormHistory.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormTransferMoney.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Class.lineShape.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormMain.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormLogin.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormInformation.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormSaving.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.Home.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.HomeAdmin.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Link_card.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.MoreForm.Method.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormNewAccount.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Newpass.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Properties.Resources.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.ResetPassword.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.RJControls.RJTextBox.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Search1.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.UserManagement.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.GenerateResource.cache
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.CoreCompileInputs.cache
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.exe
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.pdb
