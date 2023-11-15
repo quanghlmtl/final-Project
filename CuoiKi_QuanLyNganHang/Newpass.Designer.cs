@@ -80,6 +80,7 @@
             this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox1.Multiline = false;
             this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.NumberMoney = false;
             this.rjTextBox1.Padding = new System.Windows.Forms.Padding(5);
             this.rjTextBox1.PasswordChar = false;
             this.rjTextBox1.Size = new System.Drawing.Size(513, 27);
@@ -101,6 +102,7 @@
             this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox2.Multiline = false;
             this.rjTextBox2.Name = "rjTextBox2";
+            this.rjTextBox2.NumberMoney = false;
             this.rjTextBox2.Padding = new System.Windows.Forms.Padding(5);
             this.rjTextBox2.PasswordChar = false;
             this.rjTextBox2.Size = new System.Drawing.Size(513, 27);
@@ -120,7 +122,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(258, 224);
+            this.rjButton1.Location = new System.Drawing.Point(225, 224);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(150, 40);
             this.rjButton1.TabIndex = 5;

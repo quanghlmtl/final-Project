@@ -37,27 +37,33 @@
             this.rjTextBox2 = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.rjTextBox3 = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.rjTextBox4 = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
-            this.lblPass = new System.Windows.Forms.Label();
+            this.lblPassOld = new System.Windows.Forms.Label();
             this.txtPassword1 = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.txtPassword2 = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
-            this.lblConfirmPass = new System.Windows.Forms.Label();
+            this.lblPass = new System.Windows.Forms.Label();
             this.btnChange = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
             this.hidden = new System.Windows.Forms.PictureBox();
             this.presently = new System.Windows.Forms.PictureBox();
             this.presently1 = new System.Windows.Forms.PictureBox();
             this.hidden1 = new System.Windows.Forms.PictureBox();
             this.btnConfirm = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
+            this.hidden2 = new System.Windows.Forms.PictureBox();
+            this.presently2 = new System.Windows.Forms.PictureBox();
+            this.lblConfirmPass = new System.Windows.Forms.Label();
+            this.txtPassword3 = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.hidden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.presently)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.presently1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hidden1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidden2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.presently2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(84, 48);
+            this.label1.Location = new System.Drawing.Point(38, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 24);
             this.label1.TabIndex = 0;
@@ -67,7 +73,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(84, 117);
+            this.label2.Location = new System.Drawing.Point(38, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 24);
             this.label2.TabIndex = 1;
@@ -77,7 +83,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(84, 184);
+            this.label3.Location = new System.Drawing.Point(38, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 24);
             this.label3.TabIndex = 2;
@@ -87,7 +93,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(84, 249);
+            this.label4.Location = new System.Drawing.Point(38, 217);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(140, 24);
             this.label4.TabIndex = 3;
@@ -102,7 +108,7 @@
             this.rjTextBox1.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
             this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox1.Location = new System.Drawing.Point(271, 37);
+            this.rjTextBox1.Location = new System.Drawing.Point(270, 26);
             this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox1.Multiline = false;
             this.rjTextBox1.Name = "rjTextBox1";
@@ -124,7 +130,7 @@
             this.rjTextBox2.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
             this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox2.Location = new System.Drawing.Point(270, 106);
+            this.rjTextBox2.Location = new System.Drawing.Point(269, 81);
             this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox2.Multiline = false;
             this.rjTextBox2.Name = "rjTextBox2";
@@ -146,7 +152,7 @@
             this.rjTextBox3.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
             this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox3.Location = new System.Drawing.Point(270, 173);
+            this.rjTextBox3.Location = new System.Drawing.Point(269, 143);
             this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox3.Multiline = false;
             this.rjTextBox3.Name = "rjTextBox3";
@@ -168,7 +174,7 @@
             this.rjTextBox4.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
             this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox4.Location = new System.Drawing.Point(270, 238);
+            this.rjTextBox4.Location = new System.Drawing.Point(269, 206);
             this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox4.Multiline = false;
             this.rjTextBox4.Name = "rjTextBox4";
@@ -181,15 +187,15 @@
             this.rjTextBox4.Texts = "";
             this.rjTextBox4.UnderLinedStyle = false;
             // 
-            // lblPass
+            // lblPassOld
             // 
-            this.lblPass.AutoSize = true;
-            this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.Location = new System.Drawing.Point(84, 311);
-            this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(86, 24);
-            this.lblPass.TabIndex = 8;
-            this.lblPass.Text = "Mật khẩu";
+            this.lblPassOld.AutoSize = true;
+            this.lblPassOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassOld.Location = new System.Drawing.Point(38, 274);
+            this.lblPassOld.Name = "lblPassOld";
+            this.lblPassOld.Size = new System.Drawing.Size(151, 24);
+            this.lblPassOld.TabIndex = 8;
+            this.lblPassOld.Text = "Mật khẩu hiện tại";
             // 
             // txtPassword1
             // 
@@ -200,7 +206,7 @@
             this.txtPassword1.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
             this.txtPassword1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword1.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPassword1.Location = new System.Drawing.Point(270, 300);
+            this.txtPassword1.Location = new System.Drawing.Point(269, 263);
             this.txtPassword1.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword1.Multiline = false;
             this.txtPassword1.Name = "txtPassword1";
@@ -222,7 +228,7 @@
             this.txtPassword2.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
             this.txtPassword2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword2.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPassword2.Location = new System.Drawing.Point(271, 362);
+            this.txtPassword2.Location = new System.Drawing.Point(270, 320);
             this.txtPassword2.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword2.Multiline = false;
             this.txtPassword2.Name = "txtPassword2";
@@ -236,16 +242,16 @@
             this.txtPassword2.UnderLinedStyle = false;
             this.txtPassword2.Visible = false;
             // 
-            // lblConfirmPass
+            // lblPass
             // 
-            this.lblConfirmPass.AutoSize = true;
-            this.lblConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmPass.Location = new System.Drawing.Point(84, 372);
-            this.lblConfirmPass.Name = "lblConfirmPass";
-            this.lblConfirmPass.Size = new System.Drawing.Size(173, 24);
-            this.lblConfirmPass.TabIndex = 11;
-            this.lblConfirmPass.Text = "Xác nhận mật khẩu";
-            this.lblConfirmPass.Visible = false;
+            this.lblPass.AutoSize = true;
+            this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPass.Location = new System.Drawing.Point(38, 330);
+            this.lblPass.Name = "lblPass";
+            this.lblPass.Size = new System.Drawing.Size(122, 24);
+            this.lblPass.TabIndex = 11;
+            this.lblPass.Text = "Mật khẩu mới";
+            this.lblPass.Visible = false;
             // 
             // btnChange
             // 
@@ -258,7 +264,7 @@
             this.btnChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChange.ForeColor = System.Drawing.Color.White;
-            this.btnChange.Location = new System.Drawing.Point(358, 300);
+            this.btnChange.Location = new System.Drawing.Point(357, 263);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(146, 35);
             this.btnChange.TabIndex = 12;
@@ -270,7 +276,7 @@
             // hidden
             // 
             this.hidden.Image = ((System.Drawing.Image)(resources.GetObject("hidden.Image")));
-            this.hidden.Location = new System.Drawing.Point(636, 300);
+            this.hidden.Location = new System.Drawing.Point(635, 263);
             this.hidden.Name = "hidden";
             this.hidden.Size = new System.Drawing.Size(40, 35);
             this.hidden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -282,7 +288,7 @@
             // presently
             // 
             this.presently.Image = ((System.Drawing.Image)(resources.GetObject("presently.Image")));
-            this.presently.Location = new System.Drawing.Point(636, 300);
+            this.presently.Location = new System.Drawing.Point(635, 263);
             this.presently.Name = "presently";
             this.presently.Size = new System.Drawing.Size(39, 35);
             this.presently.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -292,7 +298,7 @@
             // presently1
             // 
             this.presently1.Image = ((System.Drawing.Image)(resources.GetObject("presently1.Image")));
-            this.presently1.Location = new System.Drawing.Point(636, 362);
+            this.presently1.Location = new System.Drawing.Point(635, 320);
             this.presently1.Name = "presently1";
             this.presently1.Size = new System.Drawing.Size(39, 34);
             this.presently1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -303,7 +309,7 @@
             // hidden1
             // 
             this.hidden1.Image = ((System.Drawing.Image)(resources.GetObject("hidden1.Image")));
-            this.hidden1.Location = new System.Drawing.Point(636, 362);
+            this.hidden1.Location = new System.Drawing.Point(636, 320);
             this.hidden1.Name = "hidden1";
             this.hidden1.Size = new System.Drawing.Size(39, 35);
             this.hidden1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -333,21 +339,81 @@
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
+            // hidden2
+            // 
+            this.hidden2.Image = ((System.Drawing.Image)(resources.GetObject("hidden2.Image")));
+            this.hidden2.Location = new System.Drawing.Point(636, 369);
+            this.hidden2.Name = "hidden2";
+            this.hidden2.Size = new System.Drawing.Size(39, 35);
+            this.hidden2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.hidden2.TabIndex = 22;
+            this.hidden2.TabStop = false;
+            this.hidden2.Visible = false;
+            // 
+            // presently2
+            // 
+            this.presently2.Image = ((System.Drawing.Image)(resources.GetObject("presently2.Image")));
+            this.presently2.Location = new System.Drawing.Point(634, 370);
+            this.presently2.Name = "presently2";
+            this.presently2.Size = new System.Drawing.Size(39, 34);
+            this.presently2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.presently2.TabIndex = 21;
+            this.presently2.TabStop = false;
+            this.presently2.Visible = false;
+            // 
+            // lblConfirmPass
+            // 
+            this.lblConfirmPass.AutoSize = true;
+            this.lblConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPass.Location = new System.Drawing.Point(37, 380);
+            this.lblConfirmPass.Name = "lblConfirmPass";
+            this.lblConfirmPass.Size = new System.Drawing.Size(214, 24);
+            this.lblConfirmPass.TabIndex = 20;
+            this.lblConfirmPass.Text = "Xác nhận mật khẩu mới ";
+            this.lblConfirmPass.Visible = false;
+            // 
+            // txtPassword3
+            // 
+            this.txtPassword3.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPassword3.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtPassword3.BorderSize = 2;
+            this.txtPassword3.ControlPadding = new System.Windows.Forms.Padding(0);
+            this.txtPassword3.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
+            this.txtPassword3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword3.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPassword3.Location = new System.Drawing.Point(269, 370);
+            this.txtPassword3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword3.Multiline = false;
+            this.txtPassword3.Name = "txtPassword3";
+            this.txtPassword3.NumberMoney = false;
+            this.txtPassword3.Padding = new System.Windows.Forms.Padding(5);
+            this.txtPassword3.PasswordChar = false;
+            this.txtPassword3.Size = new System.Drawing.Size(363, 35);
+            this.txtPassword3.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
+            this.txtPassword3.TabIndex = 19;
+            this.txtPassword3.Texts = "";
+            this.txtPassword3.UnderLinedStyle = false;
+            this.txtPassword3.Visible = false;
+            // 
             // FormInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 459);
+            this.Controls.Add(this.hidden2);
+            this.Controls.Add(this.presently2);
+            this.Controls.Add(this.lblConfirmPass);
+            this.Controls.Add(this.txtPassword3);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.hidden1);
             this.Controls.Add(this.presently1);
             this.Controls.Add(this.hidden);
             this.Controls.Add(this.presently);
             this.Controls.Add(this.btnChange);
-            this.Controls.Add(this.lblConfirmPass);
+            this.Controls.Add(this.lblPass);
             this.Controls.Add(this.txtPassword2);
             this.Controls.Add(this.txtPassword1);
-            this.Controls.Add(this.lblPass);
+            this.Controls.Add(this.lblPassOld);
             this.Controls.Add(this.rjTextBox4);
             this.Controls.Add(this.rjTextBox3);
             this.Controls.Add(this.rjTextBox2);
@@ -363,6 +429,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.presently)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.presently1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hidden1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidden2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.presently2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,15 +446,19 @@
         private RJControls.RJTextBox rjTextBox2;
         private RJControls.RJTextBox rjTextBox3;
         private RJControls.RJTextBox rjTextBox4;
-        private System.Windows.Forms.Label lblPass;
+        private System.Windows.Forms.Label lblPassOld;
         private RJControls.RJTextBox txtPassword1;
         private RJControls.RJTextBox txtPassword2;
-        private System.Windows.Forms.Label lblConfirmPass;
+        private System.Windows.Forms.Label lblPass;
         private RJControls.RJButton btnChange;
         private System.Windows.Forms.PictureBox hidden;
         private System.Windows.Forms.PictureBox presently;
         private System.Windows.Forms.PictureBox presently1;
         private System.Windows.Forms.PictureBox hidden1;
         private RJControls.RJButton btnConfirm;
+        private System.Windows.Forms.PictureBox hidden2;
+        private System.Windows.Forms.PictureBox presently2;
+        private System.Windows.Forms.Label lblConfirmPass;
+        private RJControls.RJTextBox txtPassword3;
     }
 }

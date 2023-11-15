@@ -45,19 +45,22 @@ namespace CuoiKi_QuanLyNganHang.Forms
         private void VisualChange(bool value)
         {
             //lable
+            lblPassOld.Visible = value;
             lblPass.Visible = value;
             lblConfirmPass.Visible = value;
             //textbox
             txtPassword1.Visible = value;
             txtPassword2.Visible = value;
+            txtPassword3.Visible = value;
             //hidden,presently
             hidden.Visible = value;
             hidden1.Visible = value;
+            hidden2.Visible = value;
             presently.Visible = value;
             presently1.Visible = value;
+            presently2.Visible = value;
             btnConfirm.Visible = value;
-            value = !value;
-            btnChange.Visible = value;
+            btnChange.Visible = !value;
         }
 
         //hidden
