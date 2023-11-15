@@ -78,7 +78,29 @@ namespace CuoiKi_QuanLyNganHang
         {
             combobox.Items.Add(string.Join(", ", row));
         }
+        public string[] select_acc(string query, int id)
+        {
+            string[] result = new string[6];
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { id });
+            if (data.Rows.Count > 0)
+            {
+                result[0] = data.Rows[0]["Name"].ToString();
+                result[1] = data.Rows[0]["Phone"].ToString();
+                result[2] = data.Rows[0]["CCCD"].ToString();
+                result[3] = data.Rows[0]["SoDuTK"].ToString();
+                result[4] = data.Rows[0]["Pass"].ToString();
+                result[5] = data.Rows[0]["Username"].ToString();
+                return result;
+            }
+            else
+            {
+                result[0] = "Không tìm thấy tên người dùng.";
+                result[1] = "-1";
+                return result;
+            }
 
+
+        }
         //set
       
     }

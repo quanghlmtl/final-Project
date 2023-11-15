@@ -125,12 +125,12 @@ namespace CuoiKi_QuanLyNganHang
         }
         private void btnHistory_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormHistory(), btnHistory.Text);
+            OpenChildForm(new FormHistory(id), btnHistory.Text);
             EnableButton(btnHistory);
         }
         private void btnInformation_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormInformation(), btnInformation.Text);
+            OpenChildForm(new Forms.FormInformation(id), btnInformation.Text);
             EnableButton(btnInformation);
         }
         //Move form

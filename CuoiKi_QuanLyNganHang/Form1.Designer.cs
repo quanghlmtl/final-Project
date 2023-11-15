@@ -81,7 +81,7 @@
         #endregion
 
         private RJControls.RJTextBox rjTextBox1;
-        private string label1;
+        //private string label1;
         private System.Windows.Forms.Label label2;
     }
 }

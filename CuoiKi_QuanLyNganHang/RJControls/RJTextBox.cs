@@ -312,7 +312,10 @@ namespace CuoiKi_QuanLyNganHang.RJControls
         }
         protected virtual void OnCustomTextChanged(EventArgs e)
         {
-            _TextChanged?.Invoke(this, e);
+            if (_TextChanged != null)
+            {
+                _TextChanged.Invoke(this, e);
+            }
         }
         private string FormatNumberWithCommas(string text)
         {

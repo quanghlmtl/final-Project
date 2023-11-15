@@ -150,6 +150,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLNHDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNHDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLNHDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNHDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLNHDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNHDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ResetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +296,39 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLNHDataSet.xsc">
+      <DependentUpon>QLNHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLNHDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLNHDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLNHDataSet.xss">
+      <DependentUpon>QLNHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLNHDataSet1.xsc">
+      <DependentUpon>QLNHDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLNHDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLNHDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLNHDataSet1.xss">
+      <DependentUpon>QLNHDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLNHDataSet2.xsc">
+      <DependentUpon>QLNHDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLNHDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLNHDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLNHDataSet2.xss">
+      <DependentUpon>QLNHDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Resources\cool-background.png" />
   </ItemGroup>
   <ItemGroup>

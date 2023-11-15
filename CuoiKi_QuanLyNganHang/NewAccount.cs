@@ -15,7 +15,8 @@ namespace CuoiKi_QuanLyNganHang
 {
     public partial class FormNewAccount : Method
     {
-        static int i = 2;
+        static int i = 2004;
+        static int tk = 653170845;
         DateTime datetime = DateTime.Now;
         public FormNewAccount()
         {
@@ -142,7 +143,7 @@ namespace CuoiKi_QuanLyNganHang
         }
         public void checkadd()
         {
-            string query = "[dbo].[add_account] @name, @cccd, @phone, @user, @pass, @id, @date, @loaitk,@bank,@stk";
+            string query = "[dbo].[add_account] @name, @cccd, @phone, @user, @pass, @id, @date, @loaitk,@bank,@stk,@sodutk";
             string name = txtName.Texts;
             string cccd = txtCCCD.Texts;
             string phone = txtPhoneNumb.Texts;
@@ -150,10 +151,11 @@ namespace CuoiKi_QuanLyNganHang
             string pass = txtPassword1.Texts;
             string date = datetime.ToString();
             int bank = 1210001;
-            int stk = 0;
+            int stk = ++tk;
+            int sodutk= 0;
             int loaitk = 1;
             int id = ++i;
-            DataProvider.Instance.add_newacc(query, name, cccd, phone, user, pass, id, date, loaitk,bank,stk);
+            DataProvider.Instance.add_newacc(query, name, cccd, phone, user, pass, id, date, loaitk,bank,stk,sodutk);
             //DataTable reasul = DataProvider.Instance.add_newacc(query, name, cccd, phone, user, pass, id, date, loaitk);
             //if (reasul.Rows.Count > 0) { return true; }
             //else return false;

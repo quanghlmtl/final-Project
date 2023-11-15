@@ -142,3 +142,33 @@ D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLy
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.CoreCompileInputs.cache
 D:\C#\C# cuoi ky\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.HomeAdmin.resources
 D:\C# winform\github\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Form1.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe.config
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.exe
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.pdb
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csprojResolveAssemblyReference.cache
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Card_details_2.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.card_details.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.CustomMessageBox.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Form1.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormHistory.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormTransferMoney.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Class.lineShape.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormMain.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormLogin.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormInformation.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormSaving.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.Home.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.HomeAdmin.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Link_card.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.MoreForm.Method.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.FormNewAccount.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Newpass.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Properties.Resources.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.ResetPassword.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.RJControls.RJTextBox.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Search1.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.UserManagement.resources
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.GenerateResource.Cache
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe
+C:\Users\nhub3\Downloads\QLNS_N2\CSDL\final-Project\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.pdb
+D:\C#\C# cuoi ky\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Form1.resources

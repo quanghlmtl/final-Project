@@ -7,14 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace CuoiKi_QuanLyNganHang.Sql
 {
     public class DataProvider
     {
-        public string connectionSTR = "Data Source=HUYENMYDANG\\SQL;Initial Catalog=QLNH;Integrated Security=True";
-            //"Data Source=.;Initial Catalog=QLNH;Integrated Security=True";
+        public string connectionSTR = //"Data Source=HUYENMYDANG\\SQL;Initial Catalog=QLNH;Integrated Security=True";
+            "Data Source=.;Initial Catalog=QLNH;Integrated Security=True";
 
         private static DataProvider instance;
 
@@ -67,7 +66,7 @@ namespace CuoiKi_QuanLyNganHang.Sql
             }
             return data;
         }
-        public DataTable ExecuteQuery2(string query, string Notes, object[] parameter = null)
+        public DataTable ExecuteQuery2(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
             using (SqlConnection connection = new SqlConnection(connectionSTR))
@@ -75,7 +74,7 @@ namespace CuoiKi_QuanLyNganHang.Sql
 
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
-
+                command.CommandType = CommandType.StoredProcedure;
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
@@ -90,9 +89,9 @@ namespace CuoiKi_QuanLyNganHang.Sql
                     
                     }
                 }
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                data.Load(command.ExecuteReader());
                 connection.Close();
-                adapter.Fill(data);
+                
             }
             return data;
         }
@@ -108,7 +107,7 @@ namespace CuoiKi_QuanLyNganHang.Sql
                 {
                     for (int i = 0; i < parameters.Length; i++)
                     {
-                        command.Parameters.AddWithValue($"@p{i}", parameters[i]);
+                        command.Parameters.AddWithValue("@p{i}", parameters[i]);
                     }
                 }
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -229,7 +228,7 @@ namespace CuoiKi_QuanLyNganHang.Sql
 
             return check;
         }
-        public void add_newacc(string query, string name, string cccd, string phone, string user, string pass, int id, string date, int loaitk,int bank,int stk)
+        public void add_newacc(string query, string name, string cccd, string phone, string user, string pass, int id, string date, int loaitk,int bank,int stk,int sodutk)
         {
             DataTable data = new DataTable();
             using (SqlConnection connection = new SqlConnection(connectionSTR))
@@ -240,16 +239,13 @@ namespace CuoiKi_QuanLyNganHang.Sql
                     command.Parameters.Add("@cccd", SqlDbType.Char).Value = cccd;
                     command.Parameters.Add("@phone", SqlDbType.Char).Value = phone;
                     command.Parameters.Add("@user", SqlDbType.Char).Value = user;
-
                     command.Parameters.Add("@pass", SqlDbType.Char).Value = pass;
                     command.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     command.Parameters.Add("@date", SqlDbType.SmallDateTime).Value = date;
-
                     command.Parameters.Add("@loaitk", SqlDbType.Int).Value = loaitk;
-
                     command.Parameters.Add("@bank", SqlDbType.Int).Value = bank;
-
                     command.Parameters.Add("@stk", SqlDbType.Int).Value = stk;
+                    command.Parameters.Add("@sodutk", SqlDbType.Int).Value = sodutk;
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
                     adapter.Fill(data);
             }
@@ -294,6 +290,32 @@ namespace CuoiKi_QuanLyNganHang.Sql
                     command.Parameters.AddWithValue("@sodutk", MoneyFrom);
                     command.ExecuteNonQuery();
                 }
+            }
+        }
+        public DataTable SelectData(string sql, string tukhoa,int id)
+        {
+            SqlConnection connection = new SqlConnection(connectionSTR);
+            try
+            {
+
+                connection.Open();
+                //sql = "exec SelectAllSinhVien";
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.CommandType = CommandType.StoredProcedure; // Khai báo sử dụng storeprocedure 
+                command.Parameters.AddWithValue("TuKhoa", tukhoa);
+                command.Parameters.AddWithValue("id", id);
+                DataTable data = new DataTable();
+                data.Load(command.ExecuteReader());
+                return data;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi Load dữ liệu: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
