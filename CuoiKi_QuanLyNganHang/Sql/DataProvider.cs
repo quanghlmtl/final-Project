@@ -37,7 +37,6 @@ namespace CuoiKi_QuanLyNganHang.Sql
                 instance = value;
             }
         }
-
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -66,6 +65,7 @@ namespace CuoiKi_QuanLyNganHang.Sql
             }
             return data;
         }
+<<<<<<< HEAD
         public DataTable ExecuteQuery2(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -116,6 +116,8 @@ namespace CuoiKi_QuanLyNganHang.Sql
             }
             return data;
         }
+=======
+>>>>>>> 70f0425bf4f3acaabde7361f084bd1992aa227e1
         public bool checkforgot2(string name, string cccd, string phone, string username)
         {
             string query = "[CHECK_FORGOT] @name, @cccd, @Phone, @userName";
@@ -135,47 +137,6 @@ namespace CuoiKi_QuanLyNganHang.Sql
                 }
             }
         }
-        public void ExecuteNonQueryProvider(string name, string query, object[] parameter = null)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
-            {
-                connection.Open();
-
-                SqlCommand command = new SqlCommand(name, connection);
-                command.CommandType = CommandType.StoredProcedure;
-                if (parameter != null)
-                {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
-                    {
-                        if (item.Contains('@'))
-                        {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
-                        }
-                    }
-                }
-                command.ExecuteNonQuery();
-                connection.Close();
-            }
-        }
-        public DataTable ExecuteQueryProc(string procName, string username)
-        {
-            DataTable data = new DataTable();
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand(procName, connection);
-                command.CommandType = CommandType.StoredProcedure; // Xác định loại command là stored procedure
-
-                command.Parameters.AddWithValue("@userName", username); // Truyền tham số cho stored procedure
-
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(data);
-            }
-            return data;
-        }
         public bool UpdateAccount(string username, string newpass)
         {
             string query = "update Login set Pass = @newpass where Username = @username";
@@ -187,9 +148,7 @@ namespace CuoiKi_QuanLyNganHang.Sql
                 {
                     command.Parameters.AddWithValue("@username", username);
                     command.Parameters.AddWithValue("@newpass", newpass);
-
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
-
                     adapter.Fill(datatable);
                     return datatable.Rows.Count > 0;
                 }
@@ -230,11 +189,11 @@ namespace CuoiKi_QuanLyNganHang.Sql
         }
         public void add_newacc(string query, string name, string cccd, string phone, string user, string pass, int id, string date, int loaitk,int bank,int stk,int sodutk)
         {
-            DataTable data = new DataTable();
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
+<<<<<<< HEAD
                     command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
                     command.Parameters.Add("@cccd", SqlDbType.Char).Value = cccd;
                     command.Parameters.Add("@phone", SqlDbType.Char).Value = phone;
@@ -248,12 +207,24 @@ namespace CuoiKi_QuanLyNganHang.Sql
                     command.Parameters.Add("@sodutk", SqlDbType.Int).Value = sodutk;
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
                     adapter.Fill(data);
+=======
+                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
+                command.Parameters.Add("@cccd", SqlDbType.Char).Value = cccd;
+                command.Parameters.Add("@phone", SqlDbType.Char).Value = phone;
+                command.Parameters.Add("@user", SqlDbType.Char).Value = user;
+                command.Parameters.Add("@pass", SqlDbType.Char).Value = pass;
+                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                command.Parameters.Add("@date", SqlDbType.SmallDateTime).Value = date;
+                command.Parameters.Add("@loaitk", SqlDbType.Int).Value = loaitk;
+                command.Parameters.Add("@bank", SqlDbType.Int).Value = bank;
+                command.Parameters.Add("@stk", SqlDbType.Int).Value = stk;
+                command.ExecuteNonQuery();
+>>>>>>> 70f0425bf4f3acaabde7361f084bd1992aa227e1
             }
-            
+
         }
         public void SetDataToGiaoDich(string query, int IDGD, int IDTo, int IDFrom, int SoTien, string DateGD, string Notes)
         {
-            DataTable data = new DataTable();
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
@@ -261,14 +232,32 @@ namespace CuoiKi_QuanLyNganHang.Sql
                 command.Parameters.Add("@IDGD", SqlDbType.Int).Value = IDGD;
                 command.Parameters.Add("@IDTo", SqlDbType.Int).Value = IDTo;
                 command.Parameters.Add("@IDFrom", SqlDbType.Int).Value = IDFrom;
-                command.Parameters.Add("@SoTien", SqlDbType.Decimal).Value = SoTien;
+                command.Parameters.Add("@SoTien", SqlDbType.Int).Value = SoTien;
                 command.Parameters.Add("@DateGD", SqlDbType.SmallDateTime).Value = DateGD;
                 command.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = Notes;
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(data);
+                command.ExecuteNonQuery();
             }
         }
-        public void UpdateBalance(int MoneyFrom, int IdFrom, int MoneyTo, int IdTo)
+
+        public void SetDataToDichVu(string query, int ID, double MucLS, string LoaiDichvu, int MoneyStart, int MoneyEnd,
+            string DateStart, string DateEnd)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
+                command.Parameters.Add("@MucLS", SqlDbType.Float).Value = MucLS;
+                command.Parameters.Add("@LoaiDichvu", SqlDbType.NVarChar).Value = LoaiDichvu;
+                command.Parameters.Add("@MoneyStart", SqlDbType.Int).Value = MoneyStart;
+                command.Parameters.Add("@MoneyEnd", SqlDbType.Int).Value = MoneyEnd;
+                command.Parameters.Add("@DateStart", SqlDbType.SmallDateTime).Value = DateTime.Parse(DateStart);
+                command.Parameters.Add("@DateEnd", SqlDbType.SmallDateTime).Value = DateTime.Parse(DateEnd);
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public void UpdateBalance(int Money, int Id)
         {
             string updateQuery = "UPDATE [TaiKhoan] SET [SoDuTK] = [SoDuTK] + @sodutk WHERE ID = @id";
 
@@ -278,16 +267,8 @@ namespace CuoiKi_QuanLyNganHang.Sql
                 // Update for the recipient
                 using (SqlCommand command = new SqlCommand(updateQuery, connection))
                 {
-                    command.Parameters.AddWithValue("@id", IdTo);
-                    command.Parameters.AddWithValue("@sodutk", MoneyTo);
-                    command.ExecuteNonQuery();
-                }
-
-                // Update for the sender
-                using (SqlCommand command = new SqlCommand(updateQuery, connection))
-                {
-                    command.Parameters.AddWithValue("@id", IdFrom);
-                    command.Parameters.AddWithValue("@sodutk", MoneyFrom);
+                    command.Parameters.AddWithValue("@id", Id);
+                    command.Parameters.AddWithValue("@sodutk", Money);
                     command.ExecuteNonQuery();
                 }
             }

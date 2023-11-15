@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
+            this.txtAccountBalance = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rjButton1 = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
-            this.rjTextBox5 = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
-            this.rjTextBox4 = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
-            this.rjTextBox3 = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
-            this.rjTextBox2 = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
+            this.txtSendingTerm = new CuoiKi_QuanLyNganHang.Class.CustomComboBox();
+            this.btnConfirm = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
+            this.txtDateEnd = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
+            this.txtInterest = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
+            this.txtMoney = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +52,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.rjTextBox1);
+            this.groupBox1.Controls.Add(this.txtAccountBalance);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -68,26 +70,27 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Thông tin tài khoản";
             // 
-            // rjTextBox1
+            // txtAccountBalance
             // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.ControlPadding = new System.Windows.Forms.Padding(0);
-            this.rjTextBox1.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox1.Location = new System.Drawing.Point(240, 45);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.Size = new System.Drawing.Size(511, 36);
-            this.rjTextBox1.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
-            this.rjTextBox1.TabIndex = 0;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderLinedStyle = false;
+            this.txtAccountBalance.BackColor = System.Drawing.SystemColors.Window;
+            this.txtAccountBalance.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtAccountBalance.BorderSize = 2;
+            this.txtAccountBalance.ControlPadding = new System.Windows.Forms.Padding(0);
+            this.txtAccountBalance.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
+            this.txtAccountBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAccountBalance.ForeColor = System.Drawing.Color.DimGray;
+            this.txtAccountBalance.Location = new System.Drawing.Point(240, 45);
+            this.txtAccountBalance.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAccountBalance.Multiline = false;
+            this.txtAccountBalance.Name = "txtAccountBalance";
+            this.txtAccountBalance.NumberMoney = true;
+            this.txtAccountBalance.Padding = new System.Windows.Forms.Padding(5);
+            this.txtAccountBalance.PasswordChar = false;
+            this.txtAccountBalance.Size = new System.Drawing.Size(469, 36);
+            this.txtAccountBalance.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
+            this.txtAccountBalance.TabIndex = 0;
+            this.txtAccountBalance.Texts = "";
+            this.txtAccountBalance.UnderLinedStyle = false;
             // 
             // label1
             // 
@@ -101,11 +104,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.rjButton1);
-            this.groupBox2.Controls.Add(this.rjTextBox5);
-            this.groupBox2.Controls.Add(this.rjTextBox4);
-            this.groupBox2.Controls.Add(this.rjTextBox3);
-            this.groupBox2.Controls.Add(this.rjTextBox2);
+            this.groupBox2.Controls.Add(this.txtSendingTerm);
+            this.groupBox2.Controls.Add(this.btnConfirm);
+            this.groupBox2.Controls.Add(this.txtDateEnd);
+            this.groupBox2.Controls.Add(this.txtInterest);
+            this.groupBox2.Controls.Add(this.txtMoney);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
@@ -117,107 +120,118 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
-            // rjButton1
+            // txtSendingTerm
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(312, 283);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(150, 40);
-            this.rjButton1.TabIndex = 9;
-            this.rjButton1.Text = "rjButton1";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.txtSendingTerm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSendingTerm.BorderColor = System.Drawing.Color.HotPink;
+            this.txtSendingTerm.BorderSize = 2;
+            this.txtSendingTerm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.txtSendingTerm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtSendingTerm.ForeColor = System.Drawing.Color.DimGray;
+            this.txtSendingTerm.IconColor = System.Drawing.Color.HotPink;
+            this.txtSendingTerm.Items.AddRange(new object[] {
+            "Một Tháng",
+            "Ba Tháng",
+            "Sáu Tháng",
+            "Một Năm",
+            "Ba Năm",
+            "Mười Năm"});
+            this.txtSendingTerm.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.txtSendingTerm.ListTextColor = System.Drawing.Color.DimGray;
+            this.txtSendingTerm.Location = new System.Drawing.Point(240, 103);
+            this.txtSendingTerm.MinimumSize = new System.Drawing.Size(200, 30);
+            this.txtSendingTerm.Name = "txtSendingTerm";
+            this.txtSendingTerm.Padding = new System.Windows.Forms.Padding(2);
+            this.txtSendingTerm.Size = new System.Drawing.Size(469, 30);
+            this.txtSendingTerm.TabIndex = 10;
+            this.txtSendingTerm.Texts = "";
+            this.txtSendingTerm.OnSelectedIndexChanged += new System.EventHandler(this.txtSendingTerm_OnSelectedIndexChanged);
             // 
-            // rjTextBox5
+            // btnConfirm
             // 
-            this.rjTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox5.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox5.BorderSize = 2;
-            this.rjTextBox5.ControlPadding = new System.Windows.Forms.Padding(0);
-            this.rjTextBox5.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
-            this.rjTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox5.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox5.Location = new System.Drawing.Point(240, 191);
-            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox5.Multiline = false;
-            this.rjTextBox5.Name = "rjTextBox5";
-            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(5);
-            this.rjTextBox5.PasswordChar = false;
-            this.rjTextBox5.Size = new System.Drawing.Size(469, 27);
-            this.rjTextBox5.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
-            this.rjTextBox5.TabIndex = 8;
-            this.rjTextBox5.Texts = "";
-            this.rjTextBox5.UnderLinedStyle = false;
+            this.btnConfirm.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnConfirm.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnConfirm.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnConfirm.BorderRadius = 0;
+            this.btnConfirm.BorderSize = 0;
+            this.btnConfirm.FlatAppearance.BorderSize = 0;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnConfirm.Location = new System.Drawing.Point(312, 283);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(150, 40);
+            this.btnConfirm.TabIndex = 9;
+            this.btnConfirm.Text = "Xác nhận";
+            this.btnConfirm.TextColor = System.Drawing.Color.White;
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // rjTextBox4
+            // txtDateEnd
             // 
-            this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.ControlPadding = new System.Windows.Forms.Padding(0);
-            this.rjTextBox4.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
-            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox4.Location = new System.Drawing.Point(240, 149);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(5);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.Size = new System.Drawing.Size(469, 27);
-            this.rjTextBox4.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
-            this.rjTextBox4.TabIndex = 7;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderLinedStyle = false;
+            this.txtDateEnd.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDateEnd.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtDateEnd.BorderSize = 2;
+            this.txtDateEnd.ControlPadding = new System.Windows.Forms.Padding(0);
+            this.txtDateEnd.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
+            this.txtDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDateEnd.ForeColor = System.Drawing.Color.DimGray;
+            this.txtDateEnd.Location = new System.Drawing.Point(240, 191);
+            this.txtDateEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDateEnd.Multiline = false;
+            this.txtDateEnd.Name = "txtDateEnd";
+            this.txtDateEnd.NumberMoney = false;
+            this.txtDateEnd.Padding = new System.Windows.Forms.Padding(5);
+            this.txtDateEnd.PasswordChar = false;
+            this.txtDateEnd.Size = new System.Drawing.Size(469, 27);
+            this.txtDateEnd.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
+            this.txtDateEnd.TabIndex = 8;
+            this.txtDateEnd.Texts = "";
+            this.txtDateEnd.UnderLinedStyle = false;
             // 
-            // rjTextBox3
+            // txtInterest
             // 
-            this.rjTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox3.BorderSize = 2;
-            this.rjTextBox3.ControlPadding = new System.Windows.Forms.Padding(0);
-            this.rjTextBox3.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
-            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox3.Location = new System.Drawing.Point(240, 103);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.Size = new System.Drawing.Size(469, 27);
-            this.rjTextBox3.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
-            this.rjTextBox3.TabIndex = 6;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderLinedStyle = false;
+            this.txtInterest.BackColor = System.Drawing.SystemColors.Window;
+            this.txtInterest.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtInterest.BorderSize = 2;
+            this.txtInterest.ControlPadding = new System.Windows.Forms.Padding(0);
+            this.txtInterest.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
+            this.txtInterest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInterest.ForeColor = System.Drawing.Color.DimGray;
+            this.txtInterest.Location = new System.Drawing.Point(240, 149);
+            this.txtInterest.Margin = new System.Windows.Forms.Padding(4);
+            this.txtInterest.Multiline = false;
+            this.txtInterest.Name = "txtInterest";
+            this.txtInterest.NumberMoney = true;
+            this.txtInterest.Padding = new System.Windows.Forms.Padding(5);
+            this.txtInterest.PasswordChar = false;
+            this.txtInterest.Size = new System.Drawing.Size(469, 27);
+            this.txtInterest.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
+            this.txtInterest.TabIndex = 7;
+            this.txtInterest.Texts = "";
+            this.txtInterest.UnderLinedStyle = false;
             // 
-            // rjTextBox2
+            // txtMoney
             // 
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.ControlPadding = new System.Windows.Forms.Padding(0);
-            this.rjTextBox2.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.rjTextBox2.Location = new System.Drawing.Point(240, 55);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.Size = new System.Drawing.Size(469, 27);
-            this.rjTextBox2.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
-            this.rjTextBox2.TabIndex = 5;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderLinedStyle = false;
+            this.txtMoney.BackColor = System.Drawing.SystemColors.Window;
+            this.txtMoney.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtMoney.BorderSize = 2;
+            this.txtMoney.ControlPadding = new System.Windows.Forms.Padding(0);
+            this.txtMoney.CTextAlign = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose2.Left;
+            this.txtMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMoney.ForeColor = System.Drawing.Color.DimGray;
+            this.txtMoney.Location = new System.Drawing.Point(240, 55);
+            this.txtMoney.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMoney.Multiline = false;
+            this.txtMoney.Name = "txtMoney";
+            this.txtMoney.NumberMoney = true;
+            this.txtMoney.Padding = new System.Windows.Forms.Padding(5);
+            this.txtMoney.PasswordChar = false;
+            this.txtMoney.Size = new System.Drawing.Size(469, 27);
+            this.txtMoney.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.Number;
+            this.txtMoney.TabIndex = 5;
+            this.txtMoney.Texts = "";
+            this.txtMoney.UnderLinedStyle = false;
+            this.txtMoney._TextChanged += new System.EventHandler(this.txtMoney__TextChanged);
             // 
             // label7
             // 
@@ -289,18 +303,19 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
-        private RJControls.RJTextBox rjTextBox1;
+        private RJControls.RJTextBox txtAccountBalance;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private RJControls.RJTextBox rjTextBox5;
-        private RJControls.RJTextBox rjTextBox4;
-        private RJControls.RJTextBox rjTextBox3;
-        private RJControls.RJTextBox rjTextBox2;
+        private RJControls.RJTextBox txtDateEnd;
+        private RJControls.RJTextBox txtInterest;
+        private RJControls.RJTextBox txtMoney;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private RJControls.RJButton rjButton1;
+        private RJControls.RJButton btnConfirm;
+        private Class.CustomComboBox txtSendingTerm;
+        private System.Windows.Forms.Timer timer1;
     }
 }

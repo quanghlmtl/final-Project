@@ -16,12 +16,60 @@ namespace CuoiKi_QuanLyNganHang
         {
             InitializeComponent();
         }
-        int money = 0;
-        private void Form1_Load(object sender, EventArgs e)
+
+        private bool menuExpand = false;
+        private void menuTransition_Tick(object sender, EventArgs e)
         {
-            string txt = rjTextBox1.Texts.Replace(".", "");
-            money = int.Parse(txt);
-            label2.Text = money.ToString();
+            //if (menuExpand == false)
+            //{
+            //    menuContainer.Height += 100;
+            //    if (menuContainer.Height >= 196)
+            //    {
+            //        menuTransition.Stop();
+            //        menuExpand = true;
+            //    }
+            //    else
+            //    {
+            //        menuContainer.Height -= 100;
+            //        if (menuContainer.Height <= 60)
+            //        {
+            //            menuTransition.Stop();
+            //            menuExpand = false;
+            //        }
+            //    }
+            //}
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            menuTransition.Start();
+        }
+
+        private void transition_Tick(object sender, EventArgs e)
+        {
+            if (menuExpand == false)
+            {
+                menu.Height += 100;
+                if (menu.Height >= 149)
+                {
+                    transition.Stop();
+                    menuExpand = true;
+                }
+                else
+                {
+                    menu.Height -= 100;
+                    if (menu.Height <= 49)
+                    {
+                        transition.Stop();
+                        menuExpand = false;
+                    }
+                }
+            }
+        }
+
+        private void home_Click(object sender, EventArgs e)
+        { 
+            transition.Start();
         }
     }
 }

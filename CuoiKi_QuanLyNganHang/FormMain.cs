@@ -120,7 +120,7 @@ namespace CuoiKi_QuanLyNganHang
         }
         private void btnSaving_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormSaving(), btnSaving.Text);
+            OpenChildForm(new Forms.FormSaving(id), btnSaving.Text);
             EnableButton(btnSaving);
         }
         private void btnHistory_Click(object sender, EventArgs e)
