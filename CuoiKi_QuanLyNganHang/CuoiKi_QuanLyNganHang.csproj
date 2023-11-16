@@ -72,6 +72,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormCardManegement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCardManegement.Designer.cs">
+      <DependentUpon>FormCardManegement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,12 @@
     </Compile>
     <Compile Include="LinkCard.designer.cs">
       <DependentUpon>LinkCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoreForm\Card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MoreForm\Card.Designer.cs">
+      <DependentUpon>Card.cs</DependentUpon>
     </Compile>
     <Compile Include="MoreForm\Method.cs">
       <SubType>Form</SubType>
@@ -221,6 +233,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCardManegement.resx">
+      <DependentUpon>FormCardManegement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormHistory.resx">
       <DependentUpon>FormHistory.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LinkCard.resx">
       <DependentUpon>LinkCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoreForm\Card.resx">
+      <DependentUpon>Card.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoreForm\Method.resx">
       <DependentUpon>Method.cs</DependentUpon>
@@ -369,6 +387,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-no-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sell-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-transfer-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-history-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-card-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-card-33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-statistic-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DNQT-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DNQT-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh-ve-hoa-anh-dao-png_102505264.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

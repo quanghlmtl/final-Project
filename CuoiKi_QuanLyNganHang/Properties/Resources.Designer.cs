@@ -73,6 +73,16 @@ namespace CuoiKi_QuanLyNganHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap anh_ve_hoa_anh_dao_png_102505264 {
+            get {
+                object obj = ResourceManager.GetObject("anh-ve-hoa-anh-dao-png_102505264", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cool_background {
             get {
                 object obj = ResourceManager.GetObject("cool-background", resourceCulture);
@@ -86,6 +96,26 @@ namespace CuoiKi_QuanLyNganHang.Properties {
         internal static System.Drawing.Bitmap DNQT {
             get {
                 object obj = ResourceManager.GetObject("DNQT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DNQT_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("DNQT-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DNQT_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("DNQT-removebg-preview1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +173,26 @@ namespace CuoiKi_QuanLyNganHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_card_33 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-card-33", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_card_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-card-40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_chevron_down_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-chevron-down-64", resourceCulture);
@@ -193,9 +243,59 @@ namespace CuoiKi_QuanLyNganHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_history_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-history-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_no_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-no-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sell_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sell-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_statistic_36 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-statistic-36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_transfer_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-transfer-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_user_33 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-user-33", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

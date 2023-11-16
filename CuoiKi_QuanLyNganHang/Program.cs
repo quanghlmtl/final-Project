@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CuoiKi_QuanLyNganHang.Forms;
 
 namespace CuoiKi_QuanLyNganHang
 {
@@ -16,7 +17,7 @@ namespace CuoiKi_QuanLyNganHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            Application.Run(new FormCardManegement());
         }
     }
 }

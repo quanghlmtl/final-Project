@@ -202,3 +202,5 @@ D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_Qua
 D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.CoreCompileInputs.cache
 D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.exe
 D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.pdb
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.Forms.FormCardManegement.resources
+D:\C# winform\final rac\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.MoreForm.Card.resources

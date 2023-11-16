@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnInformation = new System.Windows.Forms.Button();
+            this.btnCard = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnHomeAdmin = new System.Windows.Forms.Button();
-            this.btnInformation = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
             this.btnSaving = new System.Windows.Forms.Button();
             this.btnTransfer = new System.Windows.Forms.Button();
@@ -54,10 +55,11 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(57)))), ((int)(((byte)(85)))));
+            this.panelMenu.Controls.Add(this.btnInformation);
+            this.panelMenu.Controls.Add(this.btnCard);
             this.panelMenu.Controls.Add(this.btnStatistics);
             this.panelMenu.Controls.Add(this.btnSearch);
             this.panelMenu.Controls.Add(this.btnHomeAdmin);
-            this.panelMenu.Controls.Add(this.btnInformation);
             this.panelMenu.Controls.Add(this.btnHistory);
             this.panelMenu.Controls.Add(this.btnSaving);
             this.panelMenu.Controls.Add(this.btnTransfer);
@@ -69,90 +71,121 @@
             this.panelMenu.Size = new System.Drawing.Size(220, 617);
             this.panelMenu.TabIndex = 0;
             // 
+            // btnInformation
+            // 
+            this.btnInformation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInformation.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnInformation.FlatAppearance.BorderSize = 0;
+            this.btnInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformation.ForeColor = System.Drawing.Color.White;
+            this.btnInformation.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources.icons8_user_33;
+            this.btnInformation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInformation.Location = new System.Drawing.Point(0, 560);
+            this.btnInformation.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
+            this.btnInformation.Name = "btnInformation";
+            this.btnInformation.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
+            this.btnInformation.Size = new System.Drawing.Size(220, 60);
+            this.btnInformation.TabIndex = 8;
+            this.btnInformation.Text = "    Thông tin người dùng";
+            this.btnInformation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInformation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInformation.UseVisualStyleBackColor = true;
+            this.btnInformation.Click += new System.EventHandler(this.btnInformation_Click);
+            // 
+            // btnCard
+            // 
+            this.btnCard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCard.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCard.FlatAppearance.BorderSize = 0;
+            this.btnCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCard.ForeColor = System.Drawing.Color.White;
+            this.btnCard.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources.icons8_card_33;
+            this.btnCard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCard.Location = new System.Drawing.Point(0, 500);
+            this.btnCard.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
+            this.btnCard.Name = "btnCard";
+            this.btnCard.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
+            this.btnCard.Size = new System.Drawing.Size(220, 60);
+            this.btnCard.TabIndex = 5;
+            this.btnCard.Text = "    Quản lý thẻ";
+            this.btnCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCard.UseVisualStyleBackColor = true;
+            // 
             // btnStatistics
             // 
+            this.btnStatistics.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStatistics.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnStatistics.FlatAppearance.BorderSize = 0;
             this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatistics.ForeColor = System.Drawing.Color.White;
+            this.btnStatistics.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources.icons8_statistic_36;
             this.btnStatistics.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistics.Location = new System.Drawing.Point(0, 500);
+            this.btnStatistics.Location = new System.Drawing.Point(0, 440);
             this.btnStatistics.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
             this.btnStatistics.Size = new System.Drawing.Size(220, 60);
             this.btnStatistics.TabIndex = 8;
-            this.btnStatistics.Text = "Thống kê ngân hàng";
+            this.btnStatistics.Text = "   Thống kê ngân hàng";
             this.btnStatistics.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStatistics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStatistics.UseVisualStyleBackColor = true;
             // 
             // btnSearch
             // 
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources.icons8_history_30;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(0, 440);
+            this.btnSearch.Location = new System.Drawing.Point(0, 380);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
             this.btnSearch.Size = new System.Drawing.Size(220, 60);
             this.btnSearch.TabIndex = 7;
-            this.btnSearch.Text = "Tra  cứu giao dịch";
+            this.btnSearch.Text = "     Tra  cứu giao dịch";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // btnHomeAdmin
             // 
+            this.btnHomeAdmin.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHomeAdmin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnHomeAdmin.FlatAppearance.BorderSize = 0;
             this.btnHomeAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHomeAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHomeAdmin.ForeColor = System.Drawing.Color.White;
+            this.btnHomeAdmin.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources.home1;
             this.btnHomeAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHomeAdmin.Location = new System.Drawing.Point(0, 380);
+            this.btnHomeAdmin.Location = new System.Drawing.Point(0, 320);
             this.btnHomeAdmin.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
             this.btnHomeAdmin.Name = "btnHomeAdmin";
             this.btnHomeAdmin.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
             this.btnHomeAdmin.Size = new System.Drawing.Size(220, 60);
             this.btnHomeAdmin.TabIndex = 6;
-            this.btnHomeAdmin.Text = "Home";
+            this.btnHomeAdmin.Text = "   Home";
             this.btnHomeAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHomeAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHomeAdmin.UseVisualStyleBackColor = true;
             // 
-            // btnInformation
-            // 
-            this.btnInformation.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnInformation.FlatAppearance.BorderSize = 0;
-            this.btnInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInformation.ForeColor = System.Drawing.Color.White;
-            this.btnInformation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInformation.Location = new System.Drawing.Point(0, 320);
-            this.btnInformation.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
-            this.btnInformation.Name = "btnInformation";
-            this.btnInformation.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
-            this.btnInformation.Size = new System.Drawing.Size(220, 60);
-            this.btnInformation.TabIndex = 5;
-            this.btnInformation.Text = "Thông tin người dùng";
-            this.btnInformation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInformation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInformation.UseVisualStyleBackColor = true;
-            this.btnInformation.Click += new System.EventHandler(this.btnInformation_Click);
-            // 
             // btnHistory
             // 
+            this.btnHistory.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHistory.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnHistory.FlatAppearance.BorderSize = 0;
             this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistory.ForeColor = System.Drawing.Color.White;
+            this.btnHistory.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources.icons8_history_30;
             this.btnHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHistory.Location = new System.Drawing.Point(0, 260);
             this.btnHistory.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
@@ -160,7 +193,7 @@
             this.btnHistory.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
             this.btnHistory.Size = new System.Drawing.Size(220, 60);
             this.btnHistory.TabIndex = 4;
-            this.btnHistory.Text = "Lịch sử giao dịch";
+            this.btnHistory.Text = "     Lịch sử giao dịch";
             this.btnHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHistory.UseVisualStyleBackColor = true;
@@ -168,11 +201,13 @@
             // 
             // btnSaving
             // 
+            this.btnSaving.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSaving.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnSaving.FlatAppearance.BorderSize = 0;
             this.btnSaving.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaving.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaving.ForeColor = System.Drawing.Color.White;
+            this.btnSaving.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources.icons8_sell_26;
             this.btnSaving.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSaving.Location = new System.Drawing.Point(0, 200);
             this.btnSaving.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
@@ -180,7 +215,7 @@
             this.btnSaving.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
             this.btnSaving.Size = new System.Drawing.Size(220, 60);
             this.btnSaving.TabIndex = 3;
-            this.btnSaving.Text = "Lập sổ tiết kiệm";
+            this.btnSaving.Text = "       Lập sổ tiết kiệm";
             this.btnSaving.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSaving.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSaving.UseVisualStyleBackColor = true;
@@ -188,11 +223,13 @@
             // 
             // btnTransfer
             // 
+            this.btnTransfer.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTransfer.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnTransfer.FlatAppearance.BorderSize = 0;
             this.btnTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTransfer.ForeColor = System.Drawing.Color.White;
+            this.btnTransfer.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources.icons8_transfer_32;
             this.btnTransfer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTransfer.Location = new System.Drawing.Point(0, 140);
             this.btnTransfer.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
@@ -200,7 +237,7 @@
             this.btnTransfer.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
             this.btnTransfer.Size = new System.Drawing.Size(220, 60);
             this.btnTransfer.TabIndex = 2;
-            this.btnTransfer.Text = "Chuyển tiền";
+            this.btnTransfer.Text = "     Chuyển tiền";
             this.btnTransfer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTransfer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTransfer.UseVisualStyleBackColor = true;
@@ -208,11 +245,13 @@
             // 
             // btnHome
             // 
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources.home1;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(0, 80);
             this.btnHome.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
@@ -220,7 +259,7 @@
             this.btnHome.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
             this.btnHome.Size = new System.Drawing.Size(220, 60);
             this.btnHome.TabIndex = 1;
-            this.btnHome.Text = "Home";
+            this.btnHome.Text = "   Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = true;
@@ -360,6 +399,7 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Button btnCard;
         private System.Windows.Forms.Button btnInformation;
         private System.Windows.Forms.Button btnHistory;
         private System.Windows.Forms.Button btnSaving;
@@ -374,6 +414,7 @@
         private System.Windows.Forms.Button btnHomeAdmin;
         private System.Windows.Forms.Button btnStatistics;
         private System.Windows.Forms.Button btnSearch;
+
     }
 }
 

@@ -168,9 +168,6 @@ namespace CuoiKi_QuanLyNganHang
                 content = txtContent.Texts;
             }
         }
-        private void txtBank_Leave(object sender, EventArgs e)
-        {
-            
-        }
+       
     }
 }
