@@ -128,6 +128,11 @@ namespace CuoiKi_QuanLyNganHang
             OpenChildForm(new FormHistory(id), btnHistory.Text);
             EnableButton(btnHistory);
         }
+        private void btnCard_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormCardManegement(id), btnCard.Text);
+            EnableButton(btnCard);
+        }
         private void btnInformation_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormInformation(id), btnInformation.Text);

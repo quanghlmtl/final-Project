@@ -45,7 +45,7 @@ namespace CuoiKi_QuanLyNganHang
         //    }
         //}
 
-        //get
+        //get data
         public static int GetDataFromDTB2(string query, int id)
         {
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { id });
@@ -74,6 +74,18 @@ namespace CuoiKi_QuanLyNganHang
             }
             return data.Rows[0]["NameBank"].ToString();
         }
+        public static Queue<DataRow> GetDataFromDTB0(string query, int id)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { id });
+            Queue<DataRow> dataQueue = new Queue<DataRow>();
+            foreach (DataRow row in result.Rows)
+            {
+                dataQueue.Enqueue(row);
+            }
+            return dataQueue;
+        }
+
+        //set data
         public static void AddData(Class.CustomComboBox combobox, params object[] row)
         {
             combobox.Items.Add(string.Join(", ", row));
@@ -98,10 +110,8 @@ namespace CuoiKi_QuanLyNganHang
                 result[1] = "-1";
                 return result;
             }
-
-
         }
-        //set
+        
       
     }
 }

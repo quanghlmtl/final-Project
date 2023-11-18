@@ -54,7 +54,7 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(57)))), ((int)(((byte)(85)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.panelMenu.Controls.Add(this.btnInformation);
             this.panelMenu.Controls.Add(this.btnCard);
             this.panelMenu.Controls.Add(this.btnStatistics);
@@ -68,7 +68,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 617);
+            this.panelMenu.Size = new System.Drawing.Size(220, 668);
             this.panelMenu.TabIndex = 0;
             // 
             // btnInformation
@@ -113,6 +113,7 @@
             this.btnCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCard.UseVisualStyleBackColor = true;
+            this.btnCard.Click += new System.EventHandler(this.btnCard_Click);
             // 
             // btnStatistics
             // 
@@ -290,10 +291,10 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.BackColor = System.Drawing.SystemColors.Highlight;
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(826, 80);
@@ -318,7 +319,7 @@
             // btn
             // 
             this.btn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn.BackColor = System.Drawing.Color.Transparent;
+            this.btn.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn.FlatAppearance.BorderSize = 0;
             this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -334,7 +335,7 @@
             // btnMaximum
             // 
             this.btnMaximum.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnMaximum.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaximum.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnMaximum.FlatAppearance.BorderSize = 0;
             this.btnMaximum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -350,7 +351,7 @@
             // btnClose
             // 
             this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -367,7 +368,7 @@
             // 
             this.panelDesktopPane.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelDesktopPane.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelDesktopPane.Location = new System.Drawing.Point(228, 99);
+            this.panelDesktopPane.Location = new System.Drawing.Point(228, 125);
             this.panelDesktopPane.Name = "panelDesktopPane";
             this.panelDesktopPane.Size = new System.Drawing.Size(810, 498);
             this.panelDesktopPane.TabIndex = 8;
@@ -376,7 +377,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 617);
+            this.ClientSize = new System.Drawing.Size(1046, 668);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);

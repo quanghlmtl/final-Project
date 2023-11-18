@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblNameCard = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNumberCard = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel2.Controls.Add(this.lblNameCard);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.lblNumberCard);
             this.panel2.Controls.Add(this.label12);
@@ -50,6 +52,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(483, 248);
             this.panel2.TabIndex = 24;
+            // 
+            // lblNameCard
+            // 
+            this.lblNameCard.AutoSize = true;
+            this.lblNameCard.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.lblNameCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameCard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNameCard.Location = new System.Drawing.Point(51, 197);
+            this.lblNameCard.Name = "lblNameCard";
+            this.lblNameCard.Size = new System.Drawing.Size(125, 25);
+            this.lblNameCard.TabIndex = 25;
+            this.lblNameCard.Text = "HO VA TEN";
             // 
             // pictureBox1
             // 
@@ -67,7 +81,7 @@
             this.lblNumberCard.BackColor = System.Drawing.SystemColors.HotTrack;
             this.lblNumberCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumberCard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumberCard.Location = new System.Drawing.Point(59, 155);
+            this.lblNumberCard.Location = new System.Drawing.Point(50, 148);
             this.lblNumberCard.Name = "lblNumberCard";
             this.lblNumberCard.Size = new System.Drawing.Size(367, 33);
             this.lblNumberCard.TabIndex = 23;
@@ -143,6 +157,7 @@
             this.rjButton1.Text = "Thông tin";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // Card
             // 
@@ -174,5 +189,6 @@
         private RJControls.RJButton rjButton1;
         private RJControls.RJButton rjButton2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblNameCard;
     }
 }

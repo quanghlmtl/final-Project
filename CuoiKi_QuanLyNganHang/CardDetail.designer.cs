@@ -28,111 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tb1 = new System.Windows.Forms.TextBox();
+            this.tb2 = new System.Windows.Forms.TextBox();
+            this.tb3 = new System.Windows.Forms.TextBox();
+            this.tb4 = new System.Windows.Forms.TextBox();
+            this.lb1 = new System.Windows.Forms.Label();
+            this.lb2 = new System.Windows.Forms.Label();
+            this.lb3 = new System.Windows.Forms.Label();
+            this.lb4 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblNameCard = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblNumberCard = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox2
+            // tb1
             // 
-            this.textBox2.Location = new System.Drawing.Point(576, 128);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 29);
-            this.textBox2.TabIndex = 4;
+            this.tb1.Location = new System.Drawing.Point(575, 128);
+            this.tb1.Multiline = true;
+            this.tb1.Name = "tb1";
+            this.tb1.Size = new System.Drawing.Size(190, 29);
+            this.tb1.TabIndex = 4;
             // 
-            // textBox3
+            // tb2
             // 
-            this.textBox3.Location = new System.Drawing.Point(576, 196);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(190, 29);
-            this.textBox3.TabIndex = 5;
+            this.tb2.Location = new System.Drawing.Point(576, 196);
+            this.tb2.Multiline = true;
+            this.tb2.Name = "tb2";
+            this.tb2.Size = new System.Drawing.Size(190, 29);
+            this.tb2.TabIndex = 5;
             // 
-            // textBox4
+            // tb3
             // 
-            this.textBox4.Location = new System.Drawing.Point(576, 269);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(190, 29);
-            this.textBox4.TabIndex = 6;
+            this.tb3.Location = new System.Drawing.Point(576, 269);
+            this.tb3.Multiline = true;
+            this.tb3.Name = "tb3";
+            this.tb3.Size = new System.Drawing.Size(190, 29);
+            this.tb3.TabIndex = 6;
             // 
-            // textBox5
+            // tb4
             // 
-            this.textBox5.Location = new System.Drawing.Point(576, 347);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(190, 30);
-            this.textBox5.TabIndex = 7;
+            this.tb4.Location = new System.Drawing.Point(576, 347);
+            this.tb4.Multiline = true;
+            this.tb4.Name = "tb4";
+            this.tb4.Size = new System.Drawing.Size(190, 30);
+            this.tb4.TabIndex = 7;
             // 
-            // label4
+            // lb1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(572, 93);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Expiration date";
+            this.lb1.AutoSize = true;
+            this.lb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb1.Location = new System.Drawing.Point(572, 93);
+            this.lb1.Name = "lb1";
+            this.lb1.Size = new System.Drawing.Size(130, 20);
+            this.lb1.TabIndex = 8;
+            this.lb1.Text = "Expiration date";
             // 
-            // label5
+            // lb2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(581, 173);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 20);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "CVV";
+            this.lb2.AutoSize = true;
+            this.lb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb2.Location = new System.Drawing.Point(581, 173);
+            this.lb2.Name = "lb2";
+            this.lb2.Size = new System.Drawing.Size(45, 20);
+            this.lb2.TabIndex = 9;
+            this.lb2.Text = "CVV";
             // 
-            // label6
+            // lb3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(581, 237);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 20);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Expiration date";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.lb3.AutoSize = true;
+            this.lb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb3.Location = new System.Drawing.Point(581, 237);
+            this.lb3.Name = "lb3";
+            this.lb3.Size = new System.Drawing.Size(130, 20);
+            this.lb3.TabIndex = 10;
+            this.lb3.Text = "Expiration date";
+            this.lb3.Click += new System.EventHandler(this.label6_Click);
             // 
-            // label7
+            // lb4
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(581, 311);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 20);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Expiration date";
+            this.lb4.AutoSize = true;
+            this.lb4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb4.Location = new System.Drawing.Point(581, 311);
+            this.lb4.Name = "lb4";
+            this.lb4.Size = new System.Drawing.Size(130, 20);
+            this.lb4.TabIndex = 11;
+            this.lb4.Text = "Expiration date";
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button1.Location = new System.Drawing.Point(558, 431);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(224, 45);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnSave.Location = new System.Drawing.Point(558, 431);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(224, 45);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -158,43 +161,69 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(919, 72);
+            this.panel1.Size = new System.Drawing.Size(818, 72);
             this.panel1.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 25);
+            this.label1.Font = new System.Drawing.Font("Averta Std CY Bold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(273, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 33);
+            this.label1.Size = new System.Drawing.Size(222, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Card details";
+            this.label1.Text = "Card Details";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.lblNameCard);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.lblNumberCard);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Location = new System.Drawing.Point(53, 102);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(483, 248);
-            this.panel2.TabIndex = 23;
+            this.panel2.TabIndex = 25;
             // 
-            // label13
+            // lblNameCard
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(59, 155);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(367, 33);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "XXXX  XXXX  XXXX  XXXX";
+            this.lblNameCard.AutoSize = true;
+            this.lblNameCard.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.lblNameCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameCard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNameCard.Location = new System.Drawing.Point(51, 197);
+            this.lblNameCard.Name = "lblNameCard";
+            this.lblNameCard.Size = new System.Drawing.Size(124, 25);
+            this.lblNameCard.TabIndex = 25;
+            this.lblNameCard.Text = "hello quang";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources.anh_ve_hoa_anh_dao_png_102505264;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(202, 107);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblNumberCard
+            // 
+            this.lblNumberCard.AutoSize = true;
+            this.lblNumberCard.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.lblNumberCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberCard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNumberCard.Location = new System.Drawing.Point(50, 148);
+            this.lblNumberCard.Name = "lblNumberCard";
+            this.lblNumberCard.Size = new System.Drawing.Size(367, 33);
+            this.lblNumberCard.TabIndex = 23;
+            this.lblNumberCard.Text = "XXXX  XXXX  XXXX  XXXX";
             // 
             // label12
             // 
@@ -216,44 +245,48 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.lb4);
+            this.Controls.Add(this.lb3);
+            this.Controls.Add(this.lb2);
+            this.Controls.Add(this.lb1);
+            this.Controls.Add(this.tb4);
+            this.Controls.Add(this.tb3);
+            this.Controls.Add(this.tb2);
+            this.Controls.Add(this.tb1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "card_details";
             this.Text = "card_details";
+            this.Load += new System.EventHandler(this.card_details_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tb1;
+        private System.Windows.Forms.TextBox tb2;
+        private System.Windows.Forms.TextBox tb3;
+        private System.Windows.Forms.TextBox tb4;
+        private System.Windows.Forms.Label lb1;
+        private System.Windows.Forms.Label lb2;
+        private System.Windows.Forms.Label lb3;
+        private System.Windows.Forms.Label lb4;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblNameCard;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblNumberCard;
         private System.Windows.Forms.Label label12;
     }
 }

@@ -216,8 +216,9 @@
             this.txtPassword1.Size = new System.Drawing.Size(364, 35);
             this.txtPassword1.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
             this.txtPassword1.TabIndex = 9;
-            this.txtPassword1.Texts = "You_read_you_gay";
+            this.txtPassword1.Texts = "";
             this.txtPassword1.UnderLinedStyle = false;
+            this.txtPassword1.Leave += new System.EventHandler(this.txtPassword1_Leave);
             // 
             // txtPassword2
             // 
@@ -234,7 +235,7 @@
             this.txtPassword2.Name = "txtPassword2";
             this.txtPassword2.NumberMoney = false;
             this.txtPassword2.Padding = new System.Windows.Forms.Padding(5);
-            this.txtPassword2.PasswordChar = false;
+            this.txtPassword2.PasswordChar = true;
             this.txtPassword2.Size = new System.Drawing.Size(363, 35);
             this.txtPassword2.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
             this.txtPassword2.TabIndex = 10;
@@ -349,6 +350,8 @@
             this.hidden2.TabIndex = 22;
             this.hidden2.TabStop = false;
             this.hidden2.Visible = false;
+            this.hidden2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.hidden2_MouseDown);
+            this.hidden2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.hidden2_MouseUp);
             // 
             // presently2
             // 
@@ -387,7 +390,7 @@
             this.txtPassword3.Name = "txtPassword3";
             this.txtPassword3.NumberMoney = false;
             this.txtPassword3.Padding = new System.Windows.Forms.Padding(5);
-            this.txtPassword3.PasswordChar = false;
+            this.txtPassword3.PasswordChar = true;
             this.txtPassword3.Size = new System.Drawing.Size(363, 35);
             this.txtPassword3.StateValue = CuoiKi_QuanLyNganHang.RJControls.RJTextBox.Choose.All;
             this.txtPassword3.TabIndex = 19;

@@ -13,11 +13,37 @@ namespace CuoiKi_QuanLyNganHang.Forms
 {
     public partial class FormCardManegement : Form
     {
+        private Queue<DataRow> temporaryQueue;
+        private string nameCardAcc = "";
+        private string query = "SELECT [NameTK] FROM [TaiKhoan] Where ID = @id";
+        private string query2 = "select CardNumber, IssueDate, ExpirationDate, CVV from Cards where ID = @id";
         public FormCardManegement()
         {
             InitializeComponent();
         }
+        public FormCardManegement(int id)
+        {
+            InitializeComponent();
+            nameCardAcc = HandleSql.GetDataFromDTB(query, id);
+            temporaryQueue = HandleSql.GetDataFromDTB0(query2, id);
+        }
 
+        private void FormCardManegement_Load(object sender, EventArgs e)
+        {
+            int i = 2;
+            Card newcard1 = new Card();
+            flowLayoutPanel.Controls.Add(newcard1);
+            newcard1.Hide();
+            while (temporaryQueue.Count > 0)
+            {
+                i++;
+                string doi = i.ToString();
+                string newFormName = "newcard" + doi;
+                DataRow row = temporaryQueue.Dequeue();
+                Card name = new Card(row, nameCardAcc);
+                flowLayoutPanel.Controls.Add(name);
+            }
+        }
         private int x = 0;
         private void button3_Click(object sender, EventArgs e)
         {
@@ -35,18 +61,6 @@ namespace CuoiKi_QuanLyNganHang.Forms
                 x -= 488;
                 flowLayoutPanel.AutoScrollPosition = new System.Drawing.Point(x, flowLayoutPanel.AutoScrollPosition.Y);
             }
-        }
-
-        private void FormCardManegement_Load(object sender, EventArgs e)
-        {
-            Card newcard1 = new Card(561396725596);
-            Card newcard2 = new Card(123456789012);
-            Card newcard3 = new Card(654321567865);
-            Card newcard4 = new Card(261220032312);
-            flowLayoutPanel.Controls.Add(newcard1);
-            flowLayoutPanel.Controls.Add(newcard2);
-            flowLayoutPanel.Controls.Add(newcard3);
-            flowLayoutPanel.Controls.Add(newcard4);
         }
     }
 }

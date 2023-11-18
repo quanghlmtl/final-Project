@@ -65,55 +65,36 @@ namespace CuoiKi_QuanLyNganHang.Sql
             }
             return data;
         }
-        public DataTable ExecuteQuery2(string query, object[] parameter = null)
+        public bool Update(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
 
                 connection.Open();
-                SqlCommand command = new SqlCommand(query, connection);
-                command.CommandType = CommandType.StoredProcedure;
-                if (parameter != null)
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
+                    if (parameter != null)
                     {
-                        if (item.Contains('@'))
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
                         {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
+
                         }
-                    
                     }
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(data);
+                    return data.Rows.Count > 0;
                 }
-                data.Load(command.ExecuteReader());
-                connection.Close();
                 
             }
-            return data;
-        }
-        public DataTable ExecuteQuery3(string query, object[] parameters = null)
-        {
-            DataTable data = new DataTable();
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand(query, connection);
-
-                if (parameters != null)
-                {
-                    for (int i = 0; i < parameters.Length; i++)
-                    {
-                        command.Parameters.AddWithValue("@p{i}", parameters[i]);
-                    }
-                }
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(data);
-                connection.Close();
-            }
-            return data;
         }
         public bool checkforgot2(string name, string cccd, string phone, string username)
         {

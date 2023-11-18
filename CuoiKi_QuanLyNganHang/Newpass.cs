@@ -20,10 +20,12 @@ namespace CuoiKi_QuanLyNganHang
         {
             this.username = username;
             InitializeComponent();
+            CenterToScreen();
         }
-        bool addnewpass(string username, string newpass)
+
+        private void Newpass_Load(object sender, EventArgs e)
         {
-             return DataProvider.Instance.UpdateAccount(username,newpass);
+            lblName.Text = "Hi " + username;
         }
         private void success()
         {
@@ -44,13 +46,10 @@ namespace CuoiKi_QuanLyNganHang
                 else
                 {
                     DataProvider.Instance.UpdateAccount(username, newpass);
-                     MessageBox.Show("Tao mat khau moi thanh cong");
+                     MessageBox.Show("Tạo mật khẩu mới thành công");
                      FormLogin flg = new FormLogin();
                      this.Hide();
                      flg.ShowDialog();
-
-                    
-                    
                 }
             }
 
@@ -59,13 +58,5 @@ namespace CuoiKi_QuanLyNganHang
         {
             success();
         }
-
-        private void Newpass_Load(object sender, EventArgs e)
-        {
-            label1.Text = username;
-        }
-        
-        
-        
     }
 }

@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using CuoiKi_QuanLyNganHang.MoreForm;
 using CuoiKi_QuanLyNganHang.Class;
 using CuoiKi_QuanLyNganHang.Sql;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CuoiKi_QuanLyNganHang.Forms
 {
     public partial class FormInformation : Method
     {
+        string query = "select Pass from Login where ID = @id and Pass = @pass";
         int id;
         string[] listSTR = new string[] { };
         string name = "";
@@ -23,7 +25,6 @@ namespace CuoiKi_QuanLyNganHang.Forms
         string pass = "";
         string sodutk = "";
         string username;
-        string newpass;
         public FormInformation(int id)
         {
             InitializeComponent();
@@ -32,14 +33,15 @@ namespace CuoiKi_QuanLyNganHang.Forms
         }
         private void FormInformation_Load(object sender, EventArgs e)
         {
-            
             select();
             rjTextBox1.Texts = name;
             rjTextBox2.Texts = phone;
             rjTextBox3.Texts = cccd;
             rjTextBox4.Texts = sodutk;
-            txtPassword1.Texts = pass;
-            newpass = txtPassword2.Texts;
+            rjTextBox1.Enabled = false;
+            rjTextBox2.Enabled = false;
+            rjTextBox3.Enabled = false;
+            rjTextBox4.Enabled = false;
         }
         //method 
         private void VisualChange(bool value)
@@ -66,22 +68,37 @@ namespace CuoiKi_QuanLyNganHang.Forms
         //hidden
         private void hidden_MouseUp(object sender, MouseEventArgs e)
         {
-            HandleMouesUpActions(sender, e, txtPassword1, "");
+            txtPassword1.PasswordChar = true;
+            hidden.BringToFront();
         }
 
         private void hidden_MouseDown(object sender, MouseEventArgs e)
         {
-            HandleMouseDownActions(sender, e, txtPassword1, "Mật khẩu");
+            hidden.SendToBack();
+            txtPassword1.PasswordChar = false;
         }
-
+        //hidden1
         private void hidden1_MouseUp(object sender, MouseEventArgs e)
         {
-            HandleMouesUpActions(sender, e, txtPassword2, "Nhập lại mật khẩu");
+            txtPassword2.PasswordChar = true;
+            hidden1.BringToFront();
         }
 
         private void hidden1_MouseDown(object sender, MouseEventArgs e)
         {
-            HandleMouseDownActions(sender, e, txtPassword2, "Nhập lại mật khẩu");
+            hidden1.SendToBack();
+            txtPassword2.PasswordChar = false;
+        }
+        //hidden3
+        private void hidden2_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtPassword3.PasswordChar = true;
+            hidden2.BringToFront();
+        }
+        private void hidden2_MouseDown(object sender, MouseEventArgs e)
+        {
+            hidden2.SendToBack();
+            txtPassword3.PasswordChar = false;
         }
         //btn Change
         private void btnChange_Click(object sender, EventArgs e)
@@ -90,13 +107,24 @@ namespace CuoiKi_QuanLyNganHang.Forms
         }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (txtPassword1.Texts != txtPassword2.Texts)
+            if (!check(query, id, txtPassword1.Texts))
+            {
+                MessageBox.Show("Sai Mật Khẩu");
+                txtPassword1.Focus();
+                return;
+            }
+            if (txtPassword2.Texts != txtPassword3.Texts)
             {
                 MessageBox.Show("Mật khẩu không trùng khớp!", "Thông báo!", MessageBoxButtons.RetryCancel);
             }
+            else if (txtPassword1.Texts == txtPassword2.Texts)
+            {
+                MessageBox.Show("Nhập mật khẩu khác Mật khẩu cũ! ");
+            }
             else
             {
-                DataProvider.Instance.UpdateAccount(username, newpass);
+                 string newpass = txtPassword2.Texts;
+                DataProvider.Instance.UpdateAccount(username,newpass);
                 MessageBox.Show("Thay đổi thành công!", "Thông báo!", MessageBoxButtons.OK);
                 VisualChange(false);
             }
@@ -113,6 +141,18 @@ namespace CuoiKi_QuanLyNganHang.Forms
             sodutk = listSTR[3];
             pass = listSTR[4];
             username = listSTR[5];
+        }
+        bool check(string query, int id, string pass)
+        {
+            return DataProvider.Instance.Checked(query, new object[] { id,pass });
+        }
+
+        private void txtPassword1_Leave(object sender, EventArgs e)
+        {
+            if (!check(query, id, txtPassword1.Texts))
+            {
+                MessageBox.Show("Sai Mật Khẩu");
+            }
         }
     }
 }

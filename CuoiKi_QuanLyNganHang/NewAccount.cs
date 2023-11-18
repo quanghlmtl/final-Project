@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace CuoiKi_QuanLyNganHang
             lblNewAcc.Parent = pictureBox1;
             lblMessage.Parent = pictureBox1;
             btnHome.Parent = pictureBox1;
+            CenterToScreen();
         }
 
         public void HideHomeButton()
@@ -151,7 +153,7 @@ namespace CuoiKi_QuanLyNganHang
             string pass = txtPassword1.Texts;
             string date = datetime.ToString();
             int bank = 1210001;
-            int stk = ++tk;
+            int stk = tk + 12342;
             int sodutk= 0;
             int loaitk = 1;
             int id = ++i;
