@@ -28,5 +28,15 @@ namespace CuoiKi_QuanLyNganHang
         {
             this.Close();
         }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            Graphics graph = e.Graphics;
+            //Draw border
+            using (Pen penBorder = new Pen(Color.Black, 3))
+            {
+                graph.DrawRectangle(penBorder, 0, 0, 543, 210);
+            }
+        }
     }
 }

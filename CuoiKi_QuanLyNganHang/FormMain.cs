@@ -43,6 +43,9 @@ namespace CuoiKi_QuanLyNganHang
         //Even form load
         private void FormMain_Load(object sender, EventArgs e)
         {
+            btnClose.Parent = lblTitle;
+            btnMaximum.Parent = lblTitle;
+            btn.Parent = lblTitle;
             if (checkStaff(tk) == 1)
             {
                 Home form = new Home(name, id);
@@ -71,6 +74,7 @@ namespace CuoiKi_QuanLyNganHang
             btnSaving.Enabled = true;
             btnHistory.Enabled = true;
             btnInformation.Enabled = true;
+            btnCard.Enabled = true;
             choiceButtton.Enabled = false;
         } 
         void ButtonViable(int tk, bool check)
@@ -90,7 +94,7 @@ namespace CuoiKi_QuanLyNganHang
                 btnStatistics.Visible = check;
             }
         }
-        private void OpenChildForm(Form childForm, string text)
+        protected void OpenChildForm(Form childForm, string text)
         {
             if (activeForm != null)
             {
@@ -160,5 +164,6 @@ namespace CuoiKi_QuanLyNganHang
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
     }
 }

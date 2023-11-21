@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CuoiKi_QuanLyNganHang.Sql;
+using System;
 using System.Windows.Forms;
-using CuoiKi_QuanLyNganHang.MoreForm;
-using CuoiKi_QuanLyNganHang.Sql;
 
 namespace CuoiKi_QuanLyNganHang
 {
@@ -43,7 +35,7 @@ namespace CuoiKi_QuanLyNganHang
         }
         private void load()
         {
-            tuKhoa = dateTimePicker1.Value.ToString("dd-MM-yyyy");
+            tuKhoa = dateTimePicker1.Value.ToString("dd-mm-yyyy");
             string query = "[dbo].[SelectAllGiaoDich]";
             //DataProvider.Instance.ExecuteQuery2(query, new object[] { tukhoa });
             dataGridView1.DataSource = new DataProvider().SelectData(query, tuKhoa,id);
@@ -59,11 +51,5 @@ namespace CuoiKi_QuanLyNganHang
         {
 
         }
-
-        private void l(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

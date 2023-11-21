@@ -34,29 +34,29 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblDatepicker = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.giaoDichBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLNHDataSet = new CuoiKi_QuanLyNganHang.QLNHDataSet();
-            this.giaoDichTableAdapter = new CuoiKi_QuanLyNganHang.QLNHDataSetTableAdapters.GiaoDichTableAdapter();
-            this.qLNHDataSet1 = new CuoiKi_QuanLyNganHang.QLNHDataSet1();
-            this.selectAllGiaoDichBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.selectAllGiaoDichTableAdapter = new CuoiKi_QuanLyNganHang.QLNHDataSet1TableAdapters.SelectAllGiaoDichTableAdapter();
-            this.qLNHDataSet2 = new CuoiKi_QuanLyNganHang.QLNHDataSet2();
-            this.selectAllGiaoDichBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.selectAllGiaoDichTableAdapter1 = new CuoiKi_QuanLyNganHang.QLNHDataSet2TableAdapters.SelectAllGiaoDichTableAdapter();
-            this.rjButton1 = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
             this.iDGDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameTK1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateGDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.selectAllGiaoDichBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.qLNHDataSet2 = new CuoiKi_QuanLyNganHang.QLNHDataSet2();
+            this.giaoDichBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLNHDataSet = new CuoiKi_QuanLyNganHang.QLNHDataSet();
+            this.giaoDichTableAdapter = new CuoiKi_QuanLyNganHang.QLNHDataSetTableAdapters.GiaoDichTableAdapter();
+            this.qLNHDataSet1 = new CuoiKi_QuanLyNganHang.QLNHDataSet1();
+            this.selectAllGiaoDichBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.selectAllGiaoDichTableAdapter = new CuoiKi_QuanLyNganHang.QLNHDataSet1TableAdapters.SelectAllGiaoDichTableAdapter();
+            this.selectAllGiaoDichTableAdapter1 = new CuoiKi_QuanLyNganHang.QLNHDataSet2TableAdapters.SelectAllGiaoDichTableAdapter();
+            this.rjButton1 = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAllGiaoDichBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLNHDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoDichBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLNHDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLNHDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectAllGiaoDichBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLNHDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selectAllGiaoDichBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -111,68 +111,6 @@
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // giaoDichBindingSource
-            // 
-            this.giaoDichBindingSource.DataMember = "GiaoDich";
-            this.giaoDichBindingSource.DataSource = this.qLNHDataSet;
-            // 
-            // qLNHDataSet
-            // 
-            this.qLNHDataSet.DataSetName = "QLNHDataSet";
-            this.qLNHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // giaoDichTableAdapter
-            // 
-            this.giaoDichTableAdapter.ClearBeforeFill = true;
-            // 
-            // qLNHDataSet1
-            // 
-            this.qLNHDataSet1.DataSetName = "QLNHDataSet1";
-            this.qLNHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // selectAllGiaoDichBindingSource
-            // 
-            this.selectAllGiaoDichBindingSource.DataMember = "SelectAllGiaoDich";
-            this.selectAllGiaoDichBindingSource.DataSource = this.qLNHDataSet1;
-            // 
-            // selectAllGiaoDichTableAdapter
-            // 
-            this.selectAllGiaoDichTableAdapter.ClearBeforeFill = true;
-            // 
-            // qLNHDataSet2
-            // 
-            this.qLNHDataSet2.DataSetName = "QLNHDataSet2";
-            this.qLNHDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // selectAllGiaoDichBindingSource1
-            // 
-            this.selectAllGiaoDichBindingSource1.DataMember = "SelectAllGiaoDich";
-            this.selectAllGiaoDichBindingSource1.DataSource = this.qLNHDataSet2;
-            // 
-            // selectAllGiaoDichTableAdapter1
-            // 
-            this.selectAllGiaoDichTableAdapter1.ClearBeforeFill = true;
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(10, 29);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(136, 26);
-            this.rjButton1.TabIndex = 4;
-            this.rjButton1.Text = "Tìm kiếm theo ngày";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
-            // 
             // iDGDDataGridViewTextBoxColumn
             // 
             this.iDGDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -224,10 +162,73 @@
             this.notesDataGridViewTextBoxColumn.ReadOnly = true;
             this.notesDataGridViewTextBoxColumn.Width = 200;
             // 
+            // selectAllGiaoDichBindingSource1
+            // 
+            this.selectAllGiaoDichBindingSource1.DataMember = "SelectAllGiaoDich";
+            this.selectAllGiaoDichBindingSource1.DataSource = this.qLNHDataSet2;
+            // 
+            // qLNHDataSet2
+            // 
+            this.qLNHDataSet2.DataSetName = "QLNHDataSet2";
+            this.qLNHDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // giaoDichBindingSource
+            // 
+            this.giaoDichBindingSource.DataMember = "GiaoDich";
+            this.giaoDichBindingSource.DataSource = this.qLNHDataSet;
+            // 
+            // qLNHDataSet
+            // 
+            this.qLNHDataSet.DataSetName = "QLNHDataSet";
+            this.qLNHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // giaoDichTableAdapter
+            // 
+            this.giaoDichTableAdapter.ClearBeforeFill = true;
+            // 
+            // qLNHDataSet1
+            // 
+            this.qLNHDataSet1.DataSetName = "QLNHDataSet1";
+            this.qLNHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // selectAllGiaoDichBindingSource
+            // 
+            this.selectAllGiaoDichBindingSource.DataMember = "SelectAllGiaoDich";
+            this.selectAllGiaoDichBindingSource.DataSource = this.qLNHDataSet1;
+            // 
+            // selectAllGiaoDichTableAdapter
+            // 
+            this.selectAllGiaoDichTableAdapter.ClearBeforeFill = true;
+            // 
+            // selectAllGiaoDichTableAdapter1
+            // 
+            this.selectAllGiaoDichTableAdapter1.ClearBeforeFill = true;
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 0;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(10, 29);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(136, 26);
+            this.rjButton1.TabIndex = 4;
+            this.rjButton1.Text = "Tìm kiếm theo ngày";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            // 
             // FormHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CuoiKi_QuanLyNganHang.Properties.Resources.cool_background2;
             this.ClientSize = new System.Drawing.Size(840, 459);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.rjButton1);
@@ -237,12 +238,12 @@
             this.Text = "Lịch sử giao dịch";
             this.Load += new System.EventHandler(this.FormHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAllGiaoDichBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLNHDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoDichBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLNHDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLNHDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectAllGiaoDichBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLNHDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selectAllGiaoDichBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

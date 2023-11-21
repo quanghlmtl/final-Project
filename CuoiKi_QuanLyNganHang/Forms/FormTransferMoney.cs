@@ -66,13 +66,14 @@ namespace CuoiKi_QuanLyNganHang
         //event
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            string txtmoney = txtMoney.Texts.Replace(".", "");
-            money = int.Parse(txtmoney);
-            MONEY = money;
-            Money2 = -MONEY;
-            IDTO = HandleSql.GetDataFromDTB2(query5, int.Parse(txtBankNumber.Texts));
-            if (!string.IsNullOrEmpty(txtMoney.Texts))
+            if (!string.IsNullOrEmpty(txtMoney.Texts) && !string.IsNullOrEmpty(txtBankNumber.Texts))
             {
+                IDTO = HandleSql.GetDataFromDTB2(query5, int.Parse(txtBankNumber.Texts));
+
+                string txtmoney = txtMoney.Texts.Replace(".", "");
+                money = int.Parse(txtmoney);
+                MONEY = money;
+                Money2 = -MONEY;
                 IDGD++;
                 DataProvider.Instance.SetDataToGiaoDich(query4, IDGD, IDTO, id, MONEY, date, contentTo);
                 DataProvider.Instance.UpdateBalance(Money2, id);
@@ -84,7 +85,7 @@ namespace CuoiKi_QuanLyNganHang
             }
             else
             {
-                MessageBox.Show("Vui lòng nhập số tiền.");
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
             }
         }
 
@@ -100,7 +101,7 @@ namespace CuoiKi_QuanLyNganHang
                     {
                         lblName.Enabled = true;
                         lblName.Text = checkNumberBank;
-                        contentTo = name + " chuyen tien";
+                        contentTo = name + " Chuyển tiền";
                         txtContent.Texts = contentTo;
                     }
                 }
@@ -118,7 +119,7 @@ namespace CuoiKi_QuanLyNganHang
                     {
                         lblName.Enabled = true;
                         lblName.Text = checkNumberBank;
-                        contentTo = name + " chuyen tien";
+                        contentTo = name + " Chuyển tiền";
                         txtContent.Texts = contentTo;
                     }
                     else

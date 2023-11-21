@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using CuoiKi_QuanLyNganHang.MoreForm;
+﻿using CuoiKi_QuanLyNganHang.MoreForm;
 using CuoiKi_QuanLyNganHang.Sql;
+using System;
 
 namespace CuoiKi_QuanLyNganHang.Forms
 {
@@ -33,17 +25,9 @@ namespace CuoiKi_QuanLyNganHang.Forms
             txtAccountBalance.Enabled = false;
             txtInterest.Enabled = false;
             txtDateEnd.Enabled = false;
-            timer1.Interval = 1000;
-            timer1.Start();
-            timer1.Tick += timer1_Tick;
             txtAccountBalance.Texts = HandleSql.GetDataFromDTB(query, id);
         }
         DateTime currentTime = DateTime.Now;
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            dateStart = currentTime.ToString("dd/MM/yyyy");
-        }
-
         //method
         private void Reset()
         {
@@ -111,12 +95,14 @@ namespace CuoiKi_QuanLyNganHang.Forms
         }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            dateStart = currentTime.ToString("dd/MM/yyyy");
             int money3 = -money;
             DataProvider.Instance.SetDataToDichVu(query2, id, laiSuat, "Sổ tiết kiệm", money, money2, dateStart, dateEnd);
             DataProvider.Instance.UpdateBalance(money3, id);
             txtAccountBalance.Texts = HandleSql.GetDataFromDTB(query, id);
             CustomMessageBox message = new CustomMessageBox("Đăng kí dịch vụ sổ tiết kiệm online thành công.");
             message.Show();
+            Reset();
         }
 
         private void txtMoney__TextChanged(object sender, EventArgs e)

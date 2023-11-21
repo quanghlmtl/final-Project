@@ -11,9 +11,9 @@ using CuoiKi_QuanLyNganHang.MoreForm;
 
 namespace CuoiKi_QuanLyNganHang.Forms
 {
-    public partial class FormCardManegement : Form
+    internal partial class FormCardManegement : Form
     {
-        private Queue<DataRow> temporaryQueue;
+        private Queue<DataRow> temporaryQueue = new Queue<DataRow>();
         private string nameCardAcc = "";
         private string query = "SELECT [NameTK] FROM [TaiKhoan] Where ID = @id";
         private string query2 = "select CardNumber, IssueDate, ExpirationDate, CVV from Cards where ID = @id";
@@ -21,33 +21,60 @@ namespace CuoiKi_QuanLyNganHang.Forms
         {
             InitializeComponent();
         }
+        
+        private int id = 0;
+        private int count = 0;
         public FormCardManegement(int id)
         {
             InitializeComponent();
             nameCardAcc = HandleSql.GetDataFromDTB(query, id);
-            temporaryQueue = HandleSql.GetDataFromDTB0(query2, id);
+            this.id = id;
+        }
+        //method 
+        public void ReLoadForm()
+        {
+            flowLayoutPanel.Controls.Clear();
+            FormCardManegement_Load(this, EventArgs.Empty);
         }
 
         private void FormCardManegement_Load(object sender, EventArgs e)
         {
-            int i = 2;
-            Card newcard1 = new Card();
-            flowLayoutPanel.Controls.Add(newcard1);
-            newcard1.Hide();
-            while (temporaryQueue.Count > 0)
+            temporaryQueue = HandleSql.GetDataFromDTB0(query2, id);
+            count = temporaryQueue.Count;
+            int i = 1;
+            if (count == 0)
             {
-                i++;
-                string doi = i.ToString();
-                string newFormName = "newcard" + doi;
-                DataRow row = temporaryQueue.Dequeue();
-                Card name = new Card(row, nameCardAcc);
-                flowLayoutPanel.Controls.Add(name);
+                flowLayoutPanel.Visible = false;
+                left.Visible = false;
+                right.Visible = false;
+                btnCreatCard.Visible = true;
             }
+            else
+            {
+                flowLayoutPanel.Visible = true;
+                left.Visible = true;
+                right.Visible = true;
+                btnCreatCard.Visible = false;
+                while (temporaryQueue.Count > 0)
+                {
+                    i++;
+                    string doi = i.ToString();
+                    string newFormName = "newcard" + doi;
+                    DataRow row = temporaryQueue.Dequeue();
+                    string numberCard = row["CardNumber"].ToString();
+                    string issueDate = row["IssueDate"].ToString();
+                    string expirationDate = row["ExpirationDate"].ToString();
+                    string cVV = row["CVV"].ToString();
+                    Card name = new Card(id, numberCard, issueDate, expirationDate, cVV, nameCardAcc);
+                    flowLayoutPanel.Controls.Add(name);
+                }
+            }
+           
         }
         private int x = 0;
         private void button3_Click(object sender, EventArgs e)
         {
-            if (x >= 0 && x < 488 * 3)
+            if (x >= 0 && x < 488 * (count - 1))
             {
                 x += 488;
                 flowLayoutPanel.AutoScrollPosition = new System.Drawing.Point(x, flowLayoutPanel.AutoScrollPosition.Y);
@@ -56,11 +83,22 @@ namespace CuoiKi_QuanLyNganHang.Forms
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (x > 0 && x <= 488 * 3)
+            if (x > 0 && x <= 488 * (count -1))
             {
                 x -= 488;
                 flowLayoutPanel.AutoScrollPosition = new System.Drawing.Point(x, flowLayoutPanel.AutoScrollPosition.Y);
             }
+        }
+
+        private void FormCardManegement_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            Link_card newCard = new Link_card(id);
+            newCard.Show();
         }
     }
 }

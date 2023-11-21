@@ -12,8 +12,8 @@ namespace CuoiKi_QuanLyNganHang.Forms
 {
     public partial class Home : Form
     {
-        string query2 = "SELECT [SoDuTK] FROM [TaiKhoan] Where ID = @id";
         string query = "SELECT [Sotk] FROM [TaiKhoan] Where ID = @id";
+        string query2 = "SELECT [SoDuTK] FROM [TaiKhoan] Where ID = @id";
         private int id = 0;
         public Home()
         {
@@ -27,8 +27,8 @@ namespace CuoiKi_QuanLyNganHang.Forms
         }
         private void Home_Load(object sender, EventArgs e)
         {
-            txtAccountBalance.Texts = HandleSql.GetDataFromDTB(query2, id);
             lblNumberBank.Text = HandleSql.GetDataFromDTB(query, id);
+            txtAccountBalance.Texts = HandleSql.GetDataFromDTB(query2, id);
         }
         private void hideMoreButton(bool value)
         {

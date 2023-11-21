@@ -23,6 +23,7 @@ namespace CuoiKi_QuanLyNganHang
             txtCCCD.Enter += ResetPassword_Enter;
             txtNumberPhone.Enter += ResetPassword_Enter;
             txtUser.Enter += ResetPassword_Enter;
+            CenterToScreen();
         }
 
         bool checkforgot(string name,string cccd,string phone,string username)
@@ -42,7 +43,7 @@ namespace CuoiKi_QuanLyNganHang
                 this.Hide();
                 newpass.ShowDialog();
             }
-            else MessageBox.Show("ERRo");
+            else MessageBox.Show("Sai thông tin cần xác thực ");
         }
 
 

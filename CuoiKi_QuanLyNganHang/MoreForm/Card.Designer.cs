@@ -32,7 +32,7 @@
             this.lblNameCard = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNumberCard = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblBank = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rjButton2 = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
@@ -47,7 +47,7 @@
             this.panel2.Controls.Add(this.lblNameCard);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.lblNumberCard);
-            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.lblBank);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(483, 248);
@@ -88,17 +88,17 @@
             this.lblNumberCard.Text = "XXXX  XXXX  XXXX  XXXX";
             this.lblNumberCard.TextChanged += new System.EventHandler(this.lblNumberCard_TextChanged);
             // 
-            // label12
+            // lblBank
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(390, 23);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 29);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Card";
+            this.lblBank.AutoSize = true;
+            this.lblBank.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.lblBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBank.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblBank.Location = new System.Drawing.Point(390, 18);
+            this.lblBank.Name = "lblBank";
+            this.lblBank.Size = new System.Drawing.Size(65, 29);
+            this.lblBank.TabIndex = 23;
+            this.lblBank.Text = "Card";
             // 
             // label1
             // 
@@ -183,7 +183,7 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblNumberCard;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblBank;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private RJControls.RJButton rjButton1;

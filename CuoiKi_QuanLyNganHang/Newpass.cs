@@ -58,5 +58,12 @@ namespace CuoiKi_QuanLyNganHang
         {
             success();
         }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLogin flg = new FormLogin();
+            flg.ShowDialog();
+        }
     }
 }

@@ -224,6 +224,7 @@
             this.txtUser.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.txtUser.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.txtUser.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtUser.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtUser.BorderSize = 2;
             this.txtUser.ControlPadding = new System.Windows.Forms.Padding(0);

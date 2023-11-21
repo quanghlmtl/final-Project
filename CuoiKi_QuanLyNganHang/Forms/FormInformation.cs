@@ -10,15 +10,14 @@ using System.Windows.Forms;
 using CuoiKi_QuanLyNganHang.MoreForm;
 using CuoiKi_QuanLyNganHang.Class;
 using CuoiKi_QuanLyNganHang.Sql;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace CuoiKi_QuanLyNganHang.Forms
 {
     public partial class FormInformation : Method
     {
         string query = "select Pass from Login where ID = @id and Pass = @pass";
-        int id;
         string[] listSTR = new string[] { };
+        int id;
         string name = "";
         string phone = "";
         string cccd = "";
@@ -62,6 +61,7 @@ namespace CuoiKi_QuanLyNganHang.Forms
             presently1.Visible = value;
             presently2.Visible = value;
             btnConfirm.Visible = value;
+            btnCancel.Visible = value;
             btnChange.Visible = !value;
         }
 
@@ -129,7 +129,10 @@ namespace CuoiKi_QuanLyNganHang.Forms
                 VisualChange(false);
             }
         }
-        
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            VisualChange(false);
+        }
         private void select()
         {
             string query = "SELECT tt.Name,tt.Phone,tt.CCCD,tk.SoDuTK,lg.Pass,lg.Username FROM ThongTin tt join TaiKhoan tk on tt.ID=tk.ID join Login lg on tk.ID=lg.ID WHERE tt.ID = @id";

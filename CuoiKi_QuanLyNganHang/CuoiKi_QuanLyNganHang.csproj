@@ -45,12 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CardDetail2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CardDetail2.designer.cs">
-      <DependentUpon>CardDetail2.cs</DependentUpon>
-    </Compile>
     <Compile Include="CardDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,17 +54,14 @@
     <Compile Include="Class\CustomComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Class\PaddedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CustomMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomMessageBox.Designer.cs">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormCardManegement.cs">
       <SubType>Form</SubType>
@@ -221,17 +212,11 @@
     <Compile Include="UserManagement.designer.cs">
       <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CardDetail2.resx">
-      <DependentUpon>CardDetail2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CardDetail.resx">
       <DependentUpon>CardDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomMessageBox.resx">
       <DependentUpon>CustomMessageBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCardManegement.resx">
       <DependentUpon>FormCardManegement.cs</DependentUpon>
@@ -417,6 +402,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\anh-ve-hoa-anh-dao-png_102505264.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-left-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-right-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-down-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-down-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DNQT-removebg-preview2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cool-background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cool-background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cool-background3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cool-background4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cool-background5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

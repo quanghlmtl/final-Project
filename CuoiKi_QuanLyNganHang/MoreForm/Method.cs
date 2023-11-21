@@ -15,7 +15,7 @@ namespace CuoiKi_QuanLyNganHang.MoreForm
     {
         public Method()
         {
-            InitializeComponent();
+        
         }
         //Mouse up
         protected void HandleMouesUpActions(object sender, MouseEventArgs e, RJControls.RJTextBox txt, string placeholderText)
@@ -96,6 +96,16 @@ namespace CuoiKi_QuanLyNganHang.MoreForm
                 return true;
             }
             else return false;
+        }
+
+        private void Method_Load(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Method_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

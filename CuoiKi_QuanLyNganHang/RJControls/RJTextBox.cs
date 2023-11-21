@@ -204,7 +204,7 @@ namespace CuoiKi_QuanLyNganHang.RJControls
 
                 if (isForcued)
                 {
-                    
+                    penBorder.Color = borderFocusColor;
                     if (underLinedStyle)//line style
                         graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
                     else//normal style
@@ -212,7 +212,6 @@ namespace CuoiKi_QuanLyNganHang.RJControls
                 }
                 else
                 {
-                    penBorder.Color = borderFocusColor;
                     if (underLinedStyle)//line style
                         graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
                     else//normal style

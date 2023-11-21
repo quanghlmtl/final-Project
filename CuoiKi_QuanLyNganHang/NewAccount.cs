@@ -12,12 +12,13 @@ using System.Windows.Forms;
 using CuoiKi_QuanLyNganHang.MoreForm;
 using CuoiKi_QuanLyNganHang.Class;
 using CuoiKi_QuanLyNganHang.Sql;
+using System.Text.RegularExpressions;
 namespace CuoiKi_QuanLyNganHang
 {
     public partial class FormNewAccount : Method
     {
-        static int i = 2004;
-        static int tk = 653170845;
+        static int i = 20011;
+        static int stk = 653170845;
         DateTime datetime = DateTime.Now;
         public FormNewAccount()
         {
@@ -59,16 +60,11 @@ namespace CuoiKi_QuanLyNganHang
             else
             {
                 lblMessage.Visible = false;
-                //if (checkadd() == true)
-                //{
                 checkadd();
                 MessageBox.Show("Thêm tài khoản thành công");
                 FormLogin flg = new FormLogin();
                 this.Hide();
                 flg.ShowDialog();
-                //}
-                //else MessageBox.Show("Không thể thêm tài khoản");
-                
             }
         }
 
@@ -145,7 +141,7 @@ namespace CuoiKi_QuanLyNganHang
         }
         public void checkadd()
         {
-            string query = "[dbo].[add_account] @name, @cccd, @phone, @user, @pass, @id, @date, @loaitk,@bank,@stk,@sodutk";
+            string query = "[dbo].[ADD_ACCOUNT] @name, @cccd, @phone, @user, @pass, @id, @date, @loaitk , @bank , @stk , @sodutk , @Nametk";
             string name = txtName.Texts;
             string cccd = txtCCCD.Texts;
             string phone = txtPhoneNumb.Texts;
@@ -153,17 +149,13 @@ namespace CuoiKi_QuanLyNganHang
             string pass = txtPassword1.Texts;
             string date = datetime.ToString();
             int bank = 1210001;
-            int stk = tk + 12342;
+            stk += 12341;
             int sodutk= 0;
             int loaitk = 1;
-            int id = ++i;
-            DataProvider.Instance.add_newacc(query, name, cccd, phone, user, pass, id, date, loaitk,bank,stk,sodutk);
-            //DataTable reasul = DataProvider.Instance.add_newacc(query, name, cccd, phone, user, pass, id, date, loaitk);
-            //if (reasul.Rows.Count > 0) { return true; }
-            //else return false;
+            i++;
+            string Nametk = ChuyenChuoiKhongDau(name);
+            DataProvider.Instance.add_newacc(query, name, cccd, phone, user, pass, i, date, loaitk,bank,stk,sodutk, Nametk);
         }
-
-       
 
         private void txtCCCD_Leave(object sender, EventArgs e)
         {
@@ -179,7 +171,7 @@ namespace CuoiKi_QuanLyNganHang
                 string query = "select CCCD from ThongTin where CCCD = @cccd ";
                 if (check(query, cccd) == true)
                 {
-                    MessageBox.Show("Căn cước công dân đã tốn tại");
+                    MessageBox.Show("Căn cước công dân đã tồn tại");
                     txtCCCD.Focus();
                     txtCCCD.Texts = "";
                 }
@@ -226,12 +218,21 @@ namespace CuoiKi_QuanLyNganHang
                 string query = "select Username from Login where Username = @user ";
                 if (check(query, user) == true)
                 {
-                    MessageBox.Show("Username đã tốn tại");
+                    MessageBox.Show("Username đã tồn tại");
                     txtUsername.Focus();
                     txtUsername.Texts = "";
                 }
 
             }
+        }
+        //method
+        static string ChuyenChuoiKhongDau(string input)
+        {
+            // Chuyển sang chữ hoa
+            string uppercase = input.ToUpper();
+            Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
+            string temp = uppercase.Normalize(NormalizationForm.FormD);
+            return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
         }
     }
 }
