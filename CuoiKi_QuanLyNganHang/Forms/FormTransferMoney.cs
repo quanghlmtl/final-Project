@@ -16,7 +16,7 @@ namespace CuoiKi_QuanLyNganHang
 {
     public partial class FormTransferMoney : Method
     {
-        private static int IDGD = 11100;
+        private static int IDGD = 11110;
         private static int IDTO = 0;
         private int MONEY;
         private int Money2;

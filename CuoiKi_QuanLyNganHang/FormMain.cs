@@ -76,7 +76,6 @@ namespace CuoiKi_QuanLyNganHang
             btnInformation.Enabled = true;
             btnCard.Enabled = true;
             choiceButtton.Enabled = false;
-            btnExit.Enabled = false;
         } 
         void ButtonViable(int tk, bool check)
         {

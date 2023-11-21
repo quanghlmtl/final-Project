@@ -133,9 +133,9 @@
             // 
             this.panelDesktopPane.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelDesktopPane.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelDesktopPane.Location = new System.Drawing.Point(220, 64);
+            this.panelDesktopPane.Location = new System.Drawing.Point(220, 80);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(826, 558);
+            this.panelDesktopPane.Size = new System.Drawing.Size(826, 542);
             this.panelDesktopPane.TabIndex = 8;
             // 
             // panelMenu
