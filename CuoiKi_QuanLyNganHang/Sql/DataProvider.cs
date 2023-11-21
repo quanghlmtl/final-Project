@@ -8,8 +8,8 @@ namespace CuoiKi_QuanLyNganHang.Sql
 {
     public class DataProvider
     {
-        public string connectionSTR = //"Data Source=HUYENMYDANG\\SQL;Initial Catalog=QLNH;Integrated Security=True";
-           "Data Source=.;Initial Catalog=QLNH;Integrated Security=True";
+        public string connectionSTR = "Data Source=HUYENMYDANG\\SQL;Initial Catalog=QLNH;Integrated Security=True";
+           //"Data Source=.;Initial Catalog=QLNH;Integrated Security=True";
 
         private static DataProvider instance;
 

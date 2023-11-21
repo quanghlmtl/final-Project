@@ -73,7 +73,7 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 26);
             this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.Visible = false;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.FormHistory_Load);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.rjButton1_Click);
             // 
             // lblDatepicker
             // 

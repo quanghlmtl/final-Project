@@ -22,13 +22,15 @@ namespace CuoiKi_QuanLyNganHang.Forms
         public Home(string name, int id)
         {
             InitializeComponent();
-            lblName.Text = name;
+            lblHello.Text = lblHello.Text + " " + name;
             this.id = id;
         }
         private void Home_Load(object sender, EventArgs e)
         {
             lblNumberBank.Text = HandleSql.GetDataFromDTB(query, id);
             txtAccountBalance.Texts = HandleSql.GetDataFromDTB(query2, id);
+            txtAccountBalance.Enabled = false;
+            txtAccountBalance.BackColor = Color.White;
         }
         private void hideMoreButton(bool value)
         {

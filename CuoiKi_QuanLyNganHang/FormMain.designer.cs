@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTitle = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.btn = new System.Windows.Forms.Button();
             this.btnMaximum = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnInformation = new System.Windows.Forms.Button();
             this.btnCard = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
@@ -51,21 +52,6 @@
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.BackColor = System.Drawing.SystemColors.Highlight;
-            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblTitle.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources._1;
-            this.lblTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(826, 80);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "HOME";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
             // panelTitle
             // 
@@ -128,19 +114,35 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lblTitle
+            // 
+            this.lblTitle.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblTitle.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources._1;
+            this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(826, 80);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "HOME";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            // 
             // panelDesktopPane
             // 
             this.panelDesktopPane.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelDesktopPane.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panelDesktopPane.Location = new System.Drawing.Point(220, 80);
+            this.panelDesktopPane.Location = new System.Drawing.Point(220, 64);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(826, 544);
+            this.panelDesktopPane.Size = new System.Drawing.Size(826, 558);
             this.panelDesktopPane.TabIndex = 8;
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.panelMenu.BackgroundImage = global::CuoiKi_QuanLyNganHang.Properties.Resources._12;
+            this.panelMenu.Controls.Add(this.btnExit);
             this.panelMenu.Controls.Add(this.btnInformation);
             this.panelMenu.Controls.Add(this.btnCard);
             this.panelMenu.Controls.Add(this.btnStatistics);
@@ -154,8 +156,31 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 617);
+            this.panelMenu.Size = new System.Drawing.Size(220, 622);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = global::CuoiKi_QuanLyNganHang.Properties.Resources.icons8_exit_40;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(0, 620);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(0, 12, 0, 8);
+            this.btnExit.Size = new System.Drawing.Size(220, 60);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.Text = "    Thông tin người dùng";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnInformation
             // 
@@ -388,7 +413,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1046, 617);
+            this.ClientSize = new System.Drawing.Size(1046, 622);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
@@ -427,6 +452,7 @@
         private System.Windows.Forms.Button btnStatistics;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

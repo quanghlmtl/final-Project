@@ -20,7 +20,7 @@ namespace CuoiKi_QuanLyNganHang
         {
             dateTimePicker1.Visible = true;
             lblDatepicker.Text = dateTimePicker1.Text;
-            tuKhoa = dateTimePicker1.Value.ToString("dd-mm-yyyy");
+            tuKhoa = dateTimePicker1.Value.ToString("dd-MM-yyyy");
             load();
         }
 

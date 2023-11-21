@@ -31,9 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.lblNumberBank = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblHello = new System.Windows.Forms.Label();
             this.btnShow = new System.Windows.Forms.Button();
             this.hidden = new System.Windows.Forms.PictureBox();
             this.presently = new System.Windows.Forms.PictureBox();
@@ -43,6 +41,7 @@
             this.item2 = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
             this.item1 = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
             this.txtAccountBalance = new CuoiKi_QuanLyNganHang.RJControls.RJTextBox();
+            this.lblHello = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hidden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.presently)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,19 +71,6 @@
             this.label2.TabIndex = 37;
             this.label2.Text = "Tài khoản nguồn : ";
             // 
-            // lblName
-            // 
-            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblName.AutoSize = true;
-            this.lblName.BackColor = System.Drawing.Color.Transparent;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(277, 61);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 37);
-            this.lblName.TabIndex = 35;
-            this.lblName.Text = "0";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -96,17 +82,6 @@
             this.label4.Size = new System.Drawing.Size(88, 29);
             this.label4.TabIndex = 31;
             this.label4.Text = "Số dư :";
-            // 
-            // lblHello
-            // 
-            this.lblHello.AutoSize = true;
-            this.lblHello.BackColor = System.Drawing.Color.Transparent;
-            this.lblHello.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHello.Location = new System.Drawing.Point(303, 24);
-            this.lblHello.Name = "lblHello";
-            this.lblHello.Size = new System.Drawing.Size(158, 37);
-            this.lblHello.TabIndex = 30;
-            this.lblHello.Text = "Xin Chào,";
             // 
             // btnShow
             // 
@@ -250,6 +225,17 @@
             this.txtAccountBalance.Texts = "";
             this.txtAccountBalance.UnderLinedStyle = false;
             // 
+            // lblHello
+            // 
+            this.lblHello.AutoSize = true;
+            this.lblHello.BackColor = System.Drawing.Color.Transparent;
+            this.lblHello.Font = new System.Drawing.Font("Averta Std CY Bold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHello.Location = new System.Drawing.Point(145, 58);
+            this.lblHello.Name = "lblHello";
+            this.lblHello.Size = new System.Drawing.Size(192, 49);
+            this.lblHello.TabIndex = 44;
+            this.lblHello.Text = "Xin Chào,";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,6 +243,7 @@
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BackgroundImage = global::CuoiKi_QuanLyNganHang.Properties.Resources.cool_background1;
             this.ClientSize = new System.Drawing.Size(810, 498);
+            this.Controls.Add(this.lblHello);
             this.Controls.Add(this.btnHide);
             this.Controls.Add(this.item3);
             this.Controls.Add(this.item2);
@@ -264,12 +251,10 @@
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.lblNumberBank);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtAccountBalance);
             this.Controls.Add(this.hidden);
             this.Controls.Add(this.presently);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblHello);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
@@ -291,13 +276,12 @@
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.Label lblNumberBank;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblName;
         private RJControls.RJTextBox txtAccountBalance;
         private System.Windows.Forms.PictureBox hidden;
         private System.Windows.Forms.PictureBox presently;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblHello;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnHide;
+        private System.Windows.Forms.Label lblHello;
     }
 }

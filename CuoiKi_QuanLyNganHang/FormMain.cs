@@ -76,6 +76,7 @@ namespace CuoiKi_QuanLyNganHang
             btnInformation.Enabled = true;
             btnCard.Enabled = true;
             choiceButtton.Enabled = false;
+            btnExit.Enabled = false;
         } 
         void ButtonViable(int tk, bool check)
         {
@@ -142,6 +143,12 @@ namespace CuoiKi_QuanLyNganHang
             OpenChildForm(new Forms.FormInformation(id), btnInformation.Text);
             EnableButton(btnInformation);
         }
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            this.Hide();
+            formLogin.ShowDialog();
+        }
         //Move form
         private void label1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -164,6 +171,5 @@ namespace CuoiKi_QuanLyNganHang
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
     }
 }
