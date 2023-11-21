@@ -20,6 +20,7 @@ namespace CuoiKi_QuanLyNganHang
         {
             dateTimePicker1.Visible = true;
             lblDatepicker.Text = dateTimePicker1.Text;
+            tuKhoa = dateTimePicker1.Value.ToString("dd-mm-yyyy");
             load();
         }
 
@@ -35,7 +36,7 @@ namespace CuoiKi_QuanLyNganHang
         }
         private void load()
         {
-            tuKhoa = dateTimePicker1.Value.ToString("dd-mm-yyyy");
+            //tuKhoa = dateTimePicker1.Value.ToString("dd-mm-yyyy");
             string query = "[dbo].[SelectAllGiaoDich]";
             //DataProvider.Instance.ExecuteQuery2(query, new object[] { tukhoa });
             dataGridView1.DataSource = new DataProvider().SelectData(query, tuKhoa,id);

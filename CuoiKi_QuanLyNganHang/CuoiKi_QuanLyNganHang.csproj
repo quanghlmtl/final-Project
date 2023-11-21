@@ -168,6 +168,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLNHDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLNHDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNHDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ResetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,6 +336,17 @@
     </None>
     <None Include="QLNHDataSet2.xss">
       <DependentUpon>QLNHDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLNHDataSet3.xsc">
+      <DependentUpon>QLNHDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLNHDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLNHDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLNHDataSet3.xss">
+      <DependentUpon>QLNHDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Resources\cool-background.png" />
   </ItemGroup>

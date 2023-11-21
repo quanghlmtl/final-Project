@@ -40,6 +40,8 @@
             this.soTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateGDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.selectAllGiaoDichBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.qLNHDataSet3 = new CuoiKi_QuanLyNganHang.QLNHDataSet3();
             this.selectAllGiaoDichBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.qLNHDataSet2 = new CuoiKi_QuanLyNganHang.QLNHDataSet2();
             this.giaoDichBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -49,8 +51,11 @@
             this.selectAllGiaoDichBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.selectAllGiaoDichTableAdapter = new CuoiKi_QuanLyNganHang.QLNHDataSet1TableAdapters.SelectAllGiaoDichTableAdapter();
             this.selectAllGiaoDichTableAdapter1 = new CuoiKi_QuanLyNganHang.QLNHDataSet2TableAdapters.SelectAllGiaoDichTableAdapter();
+            this.selectAllGiaoDichTableAdapter2 = new CuoiKi_QuanLyNganHang.QLNHDataSet3TableAdapters.SelectAllGiaoDichTableAdapter();
             this.rjButton1 = new CuoiKi_QuanLyNganHang.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAllGiaoDichBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLNHDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectAllGiaoDichBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLNHDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoDichBindingSource)).BeginInit();
@@ -102,7 +107,7 @@
             this.soTienDataGridViewTextBoxColumn,
             this.dateGDDataGridViewTextBoxColumn,
             this.notesDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.selectAllGiaoDichBindingSource1;
+            this.dataGridView1.DataSource = this.selectAllGiaoDichBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(6, 100);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -162,6 +167,16 @@
             this.notesDataGridViewTextBoxColumn.ReadOnly = true;
             this.notesDataGridViewTextBoxColumn.Width = 200;
             // 
+            // selectAllGiaoDichBindingSource2
+            // 
+            this.selectAllGiaoDichBindingSource2.DataMember = "SelectAllGiaoDich";
+            this.selectAllGiaoDichBindingSource2.DataSource = this.qLNHDataSet3;
+            // 
+            // qLNHDataSet3
+            // 
+            this.qLNHDataSet3.DataSetName = "QLNHDataSet3";
+            this.qLNHDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // selectAllGiaoDichBindingSource1
             // 
             this.selectAllGiaoDichBindingSource1.DataMember = "SelectAllGiaoDich";
@@ -204,6 +219,10 @@
             // 
             this.selectAllGiaoDichTableAdapter1.ClearBeforeFill = true;
             // 
+            // selectAllGiaoDichTableAdapter2
+            // 
+            this.selectAllGiaoDichTableAdapter2.ClearBeforeFill = true;
+            // 
             // rjButton1
             // 
             this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -238,6 +257,8 @@
             this.Text = "Lịch sử giao dịch";
             this.Load += new System.EventHandler(this.FormHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectAllGiaoDichBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLNHDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectAllGiaoDichBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLNHDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoDichBindingSource)).EndInit();
@@ -270,5 +291,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn soTienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateGDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource selectAllGiaoDichBindingSource2;
+        private QLNHDataSet3 qLNHDataSet3;
+        private QLNHDataSet3TableAdapters.SelectAllGiaoDichTableAdapter selectAllGiaoDichTableAdapter2;
     }
 }
