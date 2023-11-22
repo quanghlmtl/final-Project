@@ -1,0 +1,22 @@
+báo cáo ppt:
+1 hình nền chờ
+2 giới thiệu thành viên
+3 nôi dung bài thuyết trình
+- sơ lược về project
+   + text giới thiệu
+   + giới thiệu về các form chính
+   + giới thiệu database
+   + tài nguyên và phần mềm
+- Winfomr c# và Database
+   1)
+   + form login
+   + form newacc
+   + form main
+   + sơ qua về các form con trong form main
+   + form card tập trung hơn 1 xíu vì nhiều tính năng nè
+   2) 
+   + giới thiệu chi tiết hơn về các bảng
+   + giới thiệu về các proc và trigger
+   3)
+   + giới thiệu 1 vài ý tiêu biểu về xử lý c# và database.
+- Demo trực tiếp trên máy.
