@@ -264,3 +264,6 @@ D:\C# winform\thamkhaocuoiki\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiK
 D:\C# winform\thamkhaocuoiki\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.csproj.CoreCompileInputs.cache
 D:\C# winform\thamkhaocuoiki\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.exe
 D:\C# winform\thamkhaocuoiki\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.pdb
+C:\beo\final-Project\CuoiKi_QuanLyNganHang\bin\Debug\CuoiKi_QuanLyNganHang.exe.config
+C:\beo\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.exe
+C:\beo\final-Project\CuoiKi_QuanLyNganHang\obj\Debug\CuoiKi_QuanLyNganHang.pdb
